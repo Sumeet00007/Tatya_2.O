@@ -21,9 +21,9 @@ public class PlayerAim : MonoBehaviour
                     {
                         hit.transform.GetComponent<KeypadKey>().SendKey();
                     }
-                    else if(hit.transform.name=="DoorMesh")
+                    else if(hit.transform.name=="Door")
                     {
-                        hit.transform.GetComponent<DoorController>().OpenClose();
+                        hit.transform.GetComponent<DoorController>().OpenDoor();
                     }
                 }
             }

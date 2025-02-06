@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class KeypadController : MonoBehaviour
 {
     public DoorController door;
     public string password;
     public int passwordLimit;
-    public Text passwordText;
+    public TMP_Text passwordText;
 
-    [Header("Audio")]
-    public AudioSource audioSource;
-    public AudioClip correctSound;
-    public AudioClip wrongSound;
+    //[Header("Audio")]
+    //public AudioSource audioSource;
+    //public AudioClip correctSound;
+    //public AudioClip wrongSound;
 
     private void Start()
     {
@@ -27,14 +28,14 @@ public class KeypadController : MonoBehaviour
             Clear();
             return;
         }
-        else if(number == "Enter")
+        else if (number == "Enter")
         {
             Enter();
             return;
         }
 
         int length = passwordText.text.ToString().Length;
-        if(length<passwordLimit)
+        if (length < passwordLimit)
         {
             passwordText.text = passwordText.text + number;
         }
@@ -50,18 +51,18 @@ public class KeypadController : MonoBehaviour
     {
         if (passwordText.text == password)
         {
-            door.lockedByPassword = false;
+            door.OpenDoor();
 
-            if (audioSource != null)
-                audioSource.PlayOneShot(correctSound);
+            //if (audioSource != null)
+            //    audioSource.PlayOneShot(correctSound);
 
             passwordText.color = Color.green;
             StartCoroutine(waitAndClear());
         }
         else
         {
-            if (audioSource != null)
-                audioSource.PlayOneShot(wrongSound);
+            //if (audioSource != null)
+            //    audioSource.PlayOneShot(wrongSound);
 
             passwordText.color = Color.red;
             StartCoroutine(waitAndClear());
@@ -70,9 +71,9 @@ public class KeypadController : MonoBehaviour
 
     IEnumerator waitAndClear()
     {
+
         yield return new WaitForSeconds(0.75f);
         Clear();
     }
-
 
 }

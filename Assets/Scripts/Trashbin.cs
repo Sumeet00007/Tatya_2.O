@@ -8,6 +8,9 @@ public class Trashbin : MonoBehaviour
     // Update is called once per frame
     private void OnTriggerEnter(Collider other)
     {
-       Destroy(other.gameObject);
+        if(other.CompareTag("Item"))
+        {
+           Destroy(other.gameObject);
+        }
     }
 }
