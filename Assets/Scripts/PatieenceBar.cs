@@ -74,7 +74,7 @@ public class PatienceBar : MonoBehaviour
     {
         if (isPlayerAlive)
         {
-           // Debug.Log("Player has died due to enemy’s patience running out!");
+            Debug.Log("Player has died due to enemy’s patience running out!");
             isPlayerAlive = false;
             // Add game over logic here (disable movement, show UI, restart level, etc.)
             Invoke(nameof(ZeroFill), 1.5f);
