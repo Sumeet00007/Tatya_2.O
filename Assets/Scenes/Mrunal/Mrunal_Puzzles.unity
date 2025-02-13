@@ -7087,12 +7087,24 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
+  - text: Meow Meow Nigga Sayonara
+    voiceClip: {fileID: 8300000, guid: d39da341fe97f3744a9a80b1aa1a7948, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
   dialogueInterval: 3
   typingSpeed: 0.05
   dialogueCanvas: {fileID: 1442274177}
   dialogueText: {fileID: 326706921}
   audioSource: {fileID: 736042824}
   questUIText: {fileID: 1090967534}
+  itemContainer: {fileID: 1161982400}
+  interactionRange: 2
 --- !u!1 &946111286
 GameObject:
   m_ObjectHideFlags: 0
@@ -16072,7 +16084,7 @@ GameObject:
   - component: {fileID: 1974151639}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
