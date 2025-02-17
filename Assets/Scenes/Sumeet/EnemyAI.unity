@@ -2615,11 +2615,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 1062731813}
-  mouseSensitivity: 100
+  mouseSensitivity: 200
   maxLookUp: -90
   maxLookDown: 90
   playerController: {fileID: 331152819}
-  moveSpeed: 10
+  moveSpeed: 15
   jumpHeight: 5
   groundCheckPoint: {fileID: 1764622611}
   groundLayerMask:
@@ -6880,14 +6880,21 @@ MonoBehaviour:
   - {fileID: 882991945}
   anim: {fileID: 251021381}
   walkSpeed: 5
-  chaseSpeed: 6
+  chaseSpeed: 15
   idleTime: 0
+  sightDistance: 15
+  catchDistance: 3
+  chaseTime: 0
+  minchaseTime: 10
+  maxchaseTime: 25
+  jumpScareTime: 2
   minIdleTime: 2
   maxIdleTime: 9
   walking: 0
   chasing: 0
   destinationAmount: 11
   player: {fileID: 331152820}
+  raycastOffset: {x: 0, y: 0, z: 0}
 --- !u!43 &1221695660
 Mesh:
   m_ObjectHideFlags: 0
