@@ -15468,6 +15468,7 @@ MonoBehaviour:
   checkSphereRadius: 0.2
   groundedDownVelocity: -2
   itemContainer: {fileID: 1161982400}
+  isHandsFree: 0
   sphereCastRadius: 0.15
   sphereCastRange: 5
   sphereCastDeviation: 0.7
@@ -16244,6 +16245,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 712915135}
+    - target: {fileID: 7649827144547930198, guid: eeae0aca1d8dace46923ec448a414b62, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7961489089247884289, guid: eeae0aca1d8dace46923ec448a414b62, type: 3}
       propertyPath: m_Mesh
       value: 

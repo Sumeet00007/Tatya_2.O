@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class DepositeSite : MonoBehaviour
+public class DepositeSite : MonoBehaviour, IInteractable
 {
     [SerializeField] Transform[] itemsPosition;
     [SerializeField] Transform finalItemPosition;
@@ -13,6 +13,10 @@ public class DepositeSite : MonoBehaviour
     [SerializeField] float checkSphereRadius = 0.2f;
 
     List<string> itemsDeposited;
+    Player player;
+    Transform item;
+    Rigidbody itemRB;
+    Collider itemColl;
     bool[] isSlotFilled;
 
     void Start()
@@ -20,6 +24,7 @@ public class DepositeSite : MonoBehaviour
         itemsNeeded.Sort();
         isSlotFilled = new bool[itemsPosition.Length];
         itemsDeposited = new List<string>();
+        player = FindFirstObjectByType<Player>();
     }
 
     void Update()
@@ -89,6 +94,26 @@ public class DepositeSite : MonoBehaviour
         }
 
         return Vector3.zero;
+    }
+
+    public void PlayerInteracted()
+    {
+        //Debug.Log("Press E to deposite " + objectHit.transform.name);
+        //Add UI prompt "Press e to deposite _itemName." instead of debug.....
+        if (!player.isHandsFree)
+        {
+            item = player.GetCurrentItem();
+            itemRB = item.GetComponent<Rigidbody>();
+            itemColl = item.GetComponent<Collider>();
+
+            itemRB.isKinematic = false;
+            itemColl.isTrigger = false;
+            item.transform.SetParent(null);
+            item.transform.position = GetUnoccupiedPlace();
+            item.transform.localRotation = Quaternion.identity;
+
+            player.isHandsFree = true;
+        }
     }
 
     void OnDrawGizmos()

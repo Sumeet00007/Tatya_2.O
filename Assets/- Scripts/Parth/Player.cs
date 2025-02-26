@@ -34,7 +34,9 @@ public class Player : MonoBehaviour
 
     [Header("Interactions Variables")]
 
-    [SerializeField] Transform itemContainer;
+    public Transform itemContainer;
+    public bool isHandsFree;
+
     [SerializeField] float sphereCastRadius;
     [SerializeField] float sphereCastRange;
     [SerializeField] float sphereCastDeviation;
@@ -45,12 +47,11 @@ public class Player : MonoBehaviour
     Transform currentItem;
     Rigidbody currentItemRigidBody;
     Collider currentItemCollider;
-    DepositeSite depositeSite;
-    bool isHandsFree;
 
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        isHandsFree = itemContainer.transform.childCount == 0;
     }
 
     void Update()
@@ -106,66 +107,46 @@ public class Player : MonoBehaviour
 
     void Interactions()
     {
-        isHandsFree = itemContainer.transform.childCount == 0;
         Vector3 castOriginPlace = playerCamera.transform.position + playerCamera.transform.forward * sphereCastDeviation;
         if (Physics.SphereCast(castOriginPlace, sphereCastRadius, playerCamera.transform.forward, out objectHit, sphereCastRange))
         {
-            //Debug.Log(objectHit.transform.name);
-            if (objectHit.collider.CompareTag("Item") && isHandsFree)
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                CollectItem();
-            }
-
-            if (objectHit.collider.CompareTag("Deposite Site") && !isHandsFree)
-            {
-                DepositeItem();
+                if (objectHit.collider.gameObject.TryGetComponent(out IInteractable interactable))
+                {
+                    interactable.PlayerInteracted();
+                }
             }
         }
     }
 
-    void CollectItem()
+    public Vector3 GetHitPoint()
     {
-        //Debug.Log("Press E to collect " + objectHit.transform.name);
-        //Add UI prompt "Press e to collect _itemName." instead of debug.....
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            objectHit.rigidbody.isKinematic = true;
-            objectHit.collider.isTrigger = true;
-            objectHit.transform.SetParent(itemContainer);
-            objectHit.transform.localPosition = Vector3.zero;
-            objectHit.transform.localRotation = Quaternion.identity;
-
-            currentItem = itemContainer.transform.GetChild(0);
-            currentItemRigidBody = currentItem.GetComponent<Rigidbody>();
-            currentItemCollider = currentItem.GetComponent<Collider>();
-        }
+        return objectHit.point;
     }
 
-    void DepositeItem()
+    public Transform GetCurrentItem()
     {
-        Debug.Log("Press E to deposite " + objectHit.transform.name);
-        //Add UI prompt "Press e to deposite _itemName." instead of debug.....
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            depositeSite = objectHit.transform.GetComponent<DepositeSite>();
-            currentItemRigidBody.isKinematic = false;
-            currentItemCollider.isTrigger = false;
-            currentItem.transform.SetParent(null);
-            currentItem.transform.position = depositeSite.GetUnoccupiedPlace();
-            currentItem.transform.localRotation = Quaternion.identity;
-        }
+        currentItem = itemContainer.transform.GetChild(0);
+        return currentItem;
     }
 
     void DropCurrentItem()
     {
         if (Input.GetKey(KeyCode.Q) && !isHandsFree)
         {
+            currentItem = GetCurrentItem();
+            currentItemRigidBody = currentItem.GetComponent<Rigidbody>();
+            currentItemCollider = currentItem.GetComponent<Collider>();
+
             currentItemRigidBody.isKinematic = false;
             currentItemCollider.isTrigger = false;
-            currentItem.transform.SetParent(null);
+            currentItem.SetParent(null);
             currentItemRigidBody.linearVelocity = playerController.velocity;
             currentItemRigidBody.AddForce(playerCamera.transform.forward * dropForwardForce, ForceMode.Impulse);
             currentItemRigidBody.AddForce(playerCamera.transform.up * dropUpwardForce, ForceMode.Impulse);
+
+            isHandsFree = true;
         }
     }
 
