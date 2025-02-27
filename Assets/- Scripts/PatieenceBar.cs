@@ -86,7 +86,7 @@ public class PatienceBar : MonoBehaviour
     {
         currentPatience = 0;
         UpdatePatienceBar();
-        SetMaxPatienceTime(20.0f);
+       // SetMaxPatienceTime(20.0f);
     }
 
     //call this fuction after completing level i.e( in 1st level after unlocking Door)
