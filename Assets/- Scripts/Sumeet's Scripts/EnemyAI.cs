@@ -36,7 +36,9 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         direction = player.position - transform.position;
+
         RaycastHit hit;
         if (Physics.Raycast(transform.position + raycastOffset, direction, out hit, sightDistance))
         {
@@ -125,6 +127,7 @@ public class EnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(jumpScareTime);
         // SceneManager.LoadScene(deathScene);
+
     }
 
     private void OnDrawGizmos()
