@@ -590,7 +590,7 @@ GameObject:
   - component: {fileID: 334895808}
   - component: {fileID: 334895807}
   - component: {fileID: 334895812}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Lemon
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -739,7 +739,7 @@ GameObject:
   - component: {fileID: 335181604}
   - component: {fileID: 335181603}
   - component: {fileID: 335181608}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Green Chilli
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -888,7 +888,7 @@ GameObject:
   - component: {fileID: 466466142}
   - component: {fileID: 466466141}
   - component: {fileID: 466466146}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Thread
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -1451,8 +1451,8 @@ GameObject:
   - component: {fileID: 1785664133}
   - component: {fileID: 1785664134}
   m_Layer: 8
-  m_Name: Deposite Site
-  m_TagString: Deposite Site
+  m_Name: Item Combiner
+  m_TagString: Item Combiner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1885,6 +1885,10 @@ PrefabInstance:
     - target: {fileID: 1565025216020714448, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
       propertyPath: m_Name
       value: Nimbu-Mirchi
+      objectReference: {fileID: 0}
+    - target: {fileID: 1565025216020714448, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
       propertyPath: m_LocalPosition.x

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeypadKey : MonoBehaviour
+public class KeypadKey : MonoBehaviour, IInteractable
 {
     public string key;
 
-    public void SendKey()
+    public void PlayerInteracted()
     {
         this.transform.GetComponentInParent<KeypadController>().PasswordEntry(key);
     }
