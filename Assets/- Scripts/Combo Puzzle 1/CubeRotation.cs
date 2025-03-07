@@ -1,9 +1,7 @@
-
-
 using UnityEngine;
 using System; // For Action event
 
-public class CubeRotation : MonoBehaviour
+public class CubeRotation : MonoBehaviour, IInteractable
 {
     [Header("Rotation Settings")]
     [SerializeField] float rotationSpeed = 50f;
@@ -25,23 +23,9 @@ public class CubeRotation : MonoBehaviour
 
     public static event Action OnCubeRotated; // Event for notifying PuzzleManager
 
-    void Update()
+    public void PlayerInteracted()
     {
-        float distanceToPlayer = Vector3.Distance(player.position, transform.position);
-        canRotate = distanceToPlayer <= activationRange;
-
-        RaycastHit hit;
-        Ray ray = playerCamera.ScreenPointToRay(new Vector2(Screen.width / 2, Screen.height / 2));
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
-        {
-            isLookingAtCube = hit.transform == transform;
-        }
-        else
-        {
-            isLookingAtCube = false;
-        }
-
-        if (canRotate && isLookingAtCube && /*Input.GetKeyDown(KeyCode.E)*/ Input.GetKeyDown(KeyCode.Mouse0) && !isRotating)
+        if (!isRotating)
         {
             StartCoroutine(RotateCubeSmoothly());
         }
