@@ -3,7 +3,17 @@ guid: c5f84d683b9e0a341afbecd377024b02
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tali_metal
+    second: {fileID: 2100000, guid: 92f91dfbfd50d014e902c15e0ab8db39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tali_thread
+    second: {fileID: 2100000, guid: 5b2dda1033dc6d84cb6e8a39f61a1d6f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

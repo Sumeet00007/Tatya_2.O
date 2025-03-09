@@ -3,7 +3,12 @@ guid: 6ce0c21fd9a4167408216d38ceb608ee
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mantra_plate
+    second: {fileID: 2100000, guid: 18e8d7081a65e6e4b8f67e232d22a242, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

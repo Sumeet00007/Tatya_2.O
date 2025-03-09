@@ -3,7 +3,17 @@ guid: 7e9a36805e20dfe4ba51cbd383e9fec3
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dining_table
+    second: {fileID: 2100000, guid: 283c88013bc06144aaa3e0fcbab75f9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cloth_wood_middle
+    second: {fileID: 2100000, guid: a97d24bcbe81e264db4473a156bc2982, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

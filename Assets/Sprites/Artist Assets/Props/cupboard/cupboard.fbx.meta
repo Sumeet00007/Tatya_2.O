@@ -3,7 +3,22 @@ guid: 0af84bf2ed3646c45b5bc2ba57fb7cf8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cupboard_opens
+    second: {fileID: 2100000, guid: 7ece36a934d71144595da445cf4d800a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metals
+    second: {fileID: 2100000, guid: 7f4e378556d4a324f92b11edd5bd29ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mirror
+    second: {fileID: 2100000, guid: 5c6914b4af97c79418d4f6d5ed902dde, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
