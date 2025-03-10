@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wall_Mat_2
+  m_Name: Wall_Mat_2 White Side
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 2100000, guid: 524b47f9a1cfac64da79b91c1f797300, type: 2}
   m_ModifiedSerializedProperties: 16
@@ -68,6 +68,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Cull: 0
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _Surface: 0
