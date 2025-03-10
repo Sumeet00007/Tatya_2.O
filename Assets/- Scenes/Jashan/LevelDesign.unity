@@ -33,7 +33,7 @@ RenderSettings:
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 2048
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
@@ -94,7 +94,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: a9bced41a3ed77f4c98fbf439ac46435, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: d97b425c42fb94bd6b9c9ed101dc4078, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 8a75bc1e9a93a8a47833a4467ef7c3ec, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1254,7 +1254,7 @@ Transform:
   m_GameObject: {fileID: 92933801}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -197.50742, y: 110.47457, z: -49.924255}
+  m_LocalPosition: {x: -197.50742, y: 110.57, z: -49.924255}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1294,10 +1294,10 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 22.4
-  m_Range: 20.35
-  m_SpotAngle: 116.51269
-  m_InnerSpotAngle: 0
+  m_Intensity: 22.92
+  m_Range: 32.8
+  m_SpotAngle: 116.512695
+  m_InnerSpotAngle: 47.999928
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -1333,10 +1333,10 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 11.4
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -3289,6 +3289,26 @@ PrefabInstance:
     - target: {fileID: 459908, guid: e2402d4ef4fe747ae9ad59bdccad4556, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472398, guid: e2402d4ef4fe747ae9ad59bdccad4556, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 472398, guid: e2402d4ef4fe747ae9ad59bdccad4556, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 472398, guid: e2402d4ef4fe747ae9ad59bdccad4556, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472398, guid: e2402d4ef4fe747ae9ad59bdccad4556, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 472398, guid: e2402d4ef4fe747ae9ad59bdccad4556, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -47097,8 +47117,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078881352}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.022296581, w: 0.9997514}
-  m_LocalPosition: {x: 12.978212, y: 91.42552, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.978212, y: 87.304016, z: 2.5114365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47129,7 +47149,7 @@ Transform:
   - {fileID: 44927663}
   - {fileID: 212448683}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 2.555}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097508080
 GameObject:
   m_ObjectHideFlags: 0
