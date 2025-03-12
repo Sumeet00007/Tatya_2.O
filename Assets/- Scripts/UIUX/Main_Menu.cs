@@ -7,13 +7,13 @@ public class Main_Menu : MonoBehaviour
 {
     public void PlayGame()
     {
-        Debug.Log("Balle Balle Paaji Game shuru Hoya!");
-        //SceneManager.LoadScene("Stage 1");
+
+        SceneManager.LoadScene("DemoLevelDesign");
     }
 
-    public void Settings()
+    public void Credits()
     {
-        Debug.Log("Kuch nahi Paaji Settings mai");
+        SceneManager.LoadScene("Credits");
     }
 
     public void QuitGame()
@@ -21,14 +21,8 @@ public class Main_Menu : MonoBehaviour
         Debug.Log("Game quit hoya Guru!");
         Application.Quit();
     }
-
-    //public void Back()
-    //{
-    //    SceneManager.LoadScene("Main Menu");
-    //}
-
-    //public void Credits()
-    //{
-    //    //SceneManager.LoadScene("Credits");
-    //}
+    public void Back()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 }
