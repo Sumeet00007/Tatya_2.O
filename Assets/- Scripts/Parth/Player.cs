@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Diagnostics;
 using UnityEngine.Scripting.APIUpdating;
 
@@ -10,12 +11,15 @@ public class Player : MonoBehaviour
     [SerializeField] float mouseSensitivity = 100f;
     [SerializeField] float maxLookUp, maxLookDown;
 
-    float xRotation = 0f;
+    Vector2 lookInput;
+    float cameraXRotation = 0f;
 
     [Header("Movement Variables")]
 
     [SerializeField] CharacterController playerController;
     [SerializeField] float moveSpeed = 5f;
+
+    Vector2 moveInput;
 
     [Header("Jumping Variables")]
 
@@ -23,8 +27,6 @@ public class Player : MonoBehaviour
 
     [Header("Gravity Variables")]
 
-    [SerializeField] Transform groundCheckPoint;
-    [SerializeField] LayerMask groundLayerMask;
     [SerializeField] float gravity = -9.81f;
     [SerializeField] float checkSphereRadius = 0.4f;
     [SerializeField] float groundedDownVelocity = -2f;
@@ -51,6 +53,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         isHandsFree = itemContainer.transform.childCount == 0;
     }
 
@@ -58,35 +61,39 @@ public class Player : MonoBehaviour
     {
         Look();
         Move();
-        Jump();
         Gravity();
-        Interactions();
-        DropCurrentItem();
+    }
+
+    void OnLook(InputValue value)
+    {
+        lookInput = value.Get<Vector2>();
     }
 
     void Look()
     {
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-        xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, maxLookUp, maxLookDown);
+        float mouseX = lookInput.x * mouseSensitivity * Time.deltaTime;
+        float mouseY = lookInput.y * mouseSensitivity * Time.deltaTime;
+        cameraXRotation -= mouseY;
+        cameraXRotation = Mathf.Clamp(cameraXRotation, maxLookUp, maxLookDown);
 
         transform.Rotate(Vector3.up * mouseX);
-        playerCamera.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        playerCamera.transform.localRotation = Quaternion.Euler(cameraXRotation, 0f, 0f);
+    }
+
+    void OnMove(InputValue value)
+    {
+        moveInput = value.Get<Vector2>();
     }
 
     void Move()
     {
-        float xMovement = Input.GetAxis("Horizontal");
-        float zMovement = Input.GetAxis("Vertical");
-
-        Vector3 moveAmount = transform.right * xMovement + transform.forward * zMovement;
+        Vector3 moveAmount = transform.right * moveInput.x + transform.forward * moveInput.y;
         playerController.Move(moveAmount * moveSpeed * Time.deltaTime);
     }
 
-    void Jump()
+    void OnJump(InputValue value)
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (value.isPressed && playerController.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
@@ -94,9 +101,7 @@ public class Player : MonoBehaviour
 
     void Gravity()
     {
-        isGrounded = Physics.CheckSphere(groundCheckPoint.position, checkSphereRadius, groundLayerMask);
-
-        if (isGrounded && velocity.y < 0)
+        if (playerController.isGrounded && velocity.y < 0)
         {
             velocity.y = groundedDownVelocity;
         }
@@ -105,19 +110,48 @@ public class Player : MonoBehaviour
         playerController.Move(velocity * Time.deltaTime);
     }
 
+    void OnInteract(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            Interactions();
+        }
+    }
+
     void Interactions()
     {
         Vector3 castOriginPlace = playerCamera.transform.position + playerCamera.transform.forward * sphereCastDeviation;
         if (Physics.SphereCast(castOriginPlace, sphereCastRadius, playerCamera.transform.forward, out objectHit, sphereCastRange))
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (objectHit.collider.gameObject.TryGetComponent(out IInteractable interactable))
             {
-                if (objectHit.collider.gameObject.TryGetComponent(out IInteractable interactable))
-                {
-                    interactable.PlayerInteracted();
-                }
+                interactable.PlayerInteracted();
             }
         }
+    }
+
+    void OnDrop(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            DropCurrentItem();
+        }
+    }
+
+    void DropCurrentItem()
+    {
+        currentItem = GetCurrentItem();
+        currentItemRigidBody = currentItem.GetComponent<Rigidbody>();
+        currentItemCollider = currentItem.GetComponent<Collider>();
+
+        currentItemRigidBody.isKinematic = false;
+        currentItemCollider.isTrigger = false;
+        currentItem.SetParent(null);
+        currentItemRigidBody.linearVelocity = playerController.velocity;
+        currentItemRigidBody.AddForce(playerCamera.transform.forward * dropForwardForce, ForceMode.Impulse);
+        currentItemRigidBody.AddForce(playerCamera.transform.up * dropUpwardForce, ForceMode.Impulse);
+
+        isHandsFree = true;
     }
 
     public Vector3 GetHitPoint()
@@ -129,25 +163,6 @@ public class Player : MonoBehaviour
     {
         currentItem = itemContainer.transform.GetChild(0);
         return currentItem;
-    }
-
-    void DropCurrentItem()
-    {
-        if (Input.GetKey(KeyCode.Q) && !isHandsFree)
-        {
-            currentItem = GetCurrentItem();
-            currentItemRigidBody = currentItem.GetComponent<Rigidbody>();
-            currentItemCollider = currentItem.GetComponent<Collider>();
-
-            currentItemRigidBody.isKinematic = false;
-            currentItemCollider.isTrigger = false;
-            currentItem.SetParent(null);
-            currentItemRigidBody.linearVelocity = playerController.velocity;
-            currentItemRigidBody.AddForce(playerCamera.transform.forward * dropForwardForce, ForceMode.Impulse);
-            currentItemRigidBody.AddForce(playerCamera.transform.up * dropUpwardForce, ForceMode.Impulse);
-
-            isHandsFree = true;
-        }
     }
 
     void OnDrawGizmos()

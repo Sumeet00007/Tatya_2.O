@@ -2,25 +2,34 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 
-public class ItemCombiner : MonoBehaviour, IInteractable
+public class RequiredItemsChecker : MonoBehaviour, IInteractable
 {
-    [SerializeField] Transform[] itemsPosition;
-    [SerializeField] Transform finalItemPosition;
-    [SerializeField] GameObject finalItemPrefab;
+    [SerializeField] Transform itemSpots;
     [SerializeField] LayerMask itemLayerMask;
-    [SerializeField] List<string> itemsNeeded;
-    [SerializeField] float checkSphereRadius = 0.2f;
+    [SerializeField] GameObject[] itemsNeededGameObjects;
 
+    Transform[] itemsPosition;
+    List<string> itemsNeeded;
     List<string> itemsDeposited;
     Player player;
-    Transform item;
-    Rigidbody itemRB;
-    Collider itemColl;
     Vector3 closestPosition;
     bool closestPositionIsOccupied;
+    float checkSphereRadius = 0.2f;
 
     void Start()
     {
+        itemsPosition = new Transform[itemSpots.childCount];
+        for (int i = 0; i < itemSpots.childCount; i++)
+        {
+            itemsPosition[i] = itemSpots.GetChild(i);
+        }
+
+        itemsNeeded = new List<string>();
+        foreach (var item in itemsNeededGameObjects)
+        {
+            itemsNeeded.Add(item.name);
+        }
+
         itemsNeeded.Sort();
         itemsDeposited = new List<string>();
         player = FindFirstObjectByType<Player>();
@@ -28,22 +37,20 @@ public class ItemCombiner : MonoBehaviour, IInteractable
 
     public void PlayerInteracted()
     {
-        //Debug.Log("Press E to deposite " + objectHit.transform.name);
-        //Add UI prompt "Press e to deposite _itemName." instead of debug.....
         if (!player.isHandsFree)
         {
             GetUnoccupiedPlace();
             if (!closestPositionIsOccupied)
             {
-                item = player.GetCurrentItem();
-                itemRB = item.GetComponent<Rigidbody>();
-                itemColl = item.GetComponent<Collider>();
+                Transform currentItem = player.GetCurrentItem();
+                Rigidbody currentItemRB = currentItem.GetComponent<Rigidbody>();
+                Collider currentItemColl = currentItem.GetComponent<Collider>();
 
-                itemRB.isKinematic = false;
-                itemColl.isTrigger = false;
-                item.transform.SetParent(null);
-                item.transform.position = closestPosition;
-                item.transform.localRotation = Quaternion.identity;
+                currentItemRB.isKinematic = false;
+                currentItemColl.isTrigger = false;
+                currentItem.transform.SetParent(null);
+                currentItem.transform.position = closestPosition;
+                currentItem.transform.localRotation = Quaternion.identity;
 
                 player.isHandsFree = true;
                 Invoke("CheckIfCanCombineItems", 0.1f);
@@ -76,12 +83,10 @@ public class ItemCombiner : MonoBehaviour, IInteractable
             Collider itemInSphere = Physics.OverlapSphere(itemsPosition[i].position, checkSphereRadius, itemLayerMask).FirstOrDefault();
             if (itemInSphere != null)
             {
-                Debug.Log("3");
                 itemsDeposited.Add(itemInSphere.gameObject.name);
             }
             else
             {
-                Debug.Log("4");
                 return;
             }
         }
@@ -92,26 +97,15 @@ public class ItemCombiner : MonoBehaviour, IInteractable
         {
             if (itemsDeposited[i] != itemsNeeded[i])
             {
-                Debug.Log("Failed. Not correct items");
+                //Debug.Log("Failed. Not correct items");
                 return;
             }
         }
 
-        CombineItems();
-    }
-
-    void CombineItems()
-    {
-        for (int i = 0; i < itemsNeeded.Count; i++)
+        if (TryGetComponent(out ICompletionHandler completionHandler))
         {
-            Collider itemInSphere = Physics.OverlapSphere(itemsPosition[i].position, checkSphereRadius, itemLayerMask).FirstOrDefault();
-            if (itemInSphere != null)
-            {
-                Destroy(itemInSphere.gameObject);
-            }
+            completionHandler.OnCompletion(itemsPosition, itemLayerMask, checkSphereRadius);
         }
-
-        Instantiate(finalItemPrefab, finalItemPosition.position, Quaternion.identity);
     }
 
     void OnDrawGizmos()
