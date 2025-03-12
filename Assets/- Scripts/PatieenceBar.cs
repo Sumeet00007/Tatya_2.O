@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,16 +9,19 @@ public class PatienceBar : MonoBehaviour
     public float maxPatienceTime = 10f; 
     //variable for currentpatience
     public float currentPatience = 0f;
+    public GameObject player;
 
 
     [Header("UI Settings")]
-    public Image patienceBar; 
+    public Image patienceBar;
+    public GameObject gameOverIMG;
 
     private bool isPlayerAlive = true;
 
     void Start()
     {
         ResetPatienceBar();
+        gameOverIMG.SetActive(false);
     }
 
     void Update()
@@ -77,6 +81,7 @@ public class PatienceBar : MonoBehaviour
             Debug.Log("Player has died due to enemy’s patience running out!");
             isPlayerAlive = false;
             // Add game over logic here (disable movement, show UI, restart level, etc.)
+            gameOverIMG.SetActive(true);
             Invoke(nameof(ZeroFill), 1.5f);
             
         }
