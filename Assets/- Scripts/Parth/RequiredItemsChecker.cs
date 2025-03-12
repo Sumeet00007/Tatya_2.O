@@ -83,7 +83,7 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
             Collider itemInSphere = Physics.OverlapSphere(itemsPosition[i].position, checkSphereRadius, itemLayerMask).FirstOrDefault();
             if (itemInSphere != null)
             {
-                itemsDeposited.Add(itemInSphere.gameObject.name);
+                itemsDeposited.Add(itemInSphere.gameObject.name.Replace("(Clone)", ""));
             }
             else
             {
