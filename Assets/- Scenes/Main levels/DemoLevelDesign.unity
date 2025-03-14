@@ -2335,6 +2335,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 402626803746385384, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: sphereCastRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 402626803746385384, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: mouseSensitivity
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.23
