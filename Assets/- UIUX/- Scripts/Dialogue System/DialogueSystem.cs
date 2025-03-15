@@ -122,6 +122,7 @@ public class DialogueSystem : MonoBehaviour
             {
                 Destroy(item.gameObject); // Remove item from player
                 awaitingItem = false; // Continue dialogue
+                player.GetComponent<Player>().isHandsFree = true;
                 //dialogueText.text = "Thank you!";
             }
             else
