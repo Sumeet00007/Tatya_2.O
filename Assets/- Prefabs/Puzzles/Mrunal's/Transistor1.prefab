@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 3055223412569591828}
   - component: {fileID: 1686489910501857226}
   - component: {fileID: 8713563683876735352}
-  m_Layer: 0
+  - component: {fileID: 3707460628484732626}
+  m_Layer: 7
   m_Name: Transistor1
   m_TagString: Item
   m_Icon: {fileID: 0}
@@ -1320,3 +1321,16 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3707460628484732626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015627917095221035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49d340c12a7992c419ffc738d39650a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canPickUp: 1

@@ -432,7 +432,7 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -586,6 +586,9 @@ MonoBehaviour:
   sphereCastDeviation: 1.075
   dropForwardForce: 75
   dropUpwardForce: 45
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 384
 --- !u!136 &7615829718820423399
 CapsuleCollider:
   m_ObjectHideFlags: 0
