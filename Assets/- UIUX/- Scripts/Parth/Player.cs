@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     [SerializeField] float groundedDownVelocity = -2f;
 
     Vector3 velocity;
+    bool isGrounded;
 
     [Header("Interactions Variables")]
 
@@ -43,7 +44,6 @@ public class Player : MonoBehaviour
     [SerializeField] float sphereCastDeviation;
     [SerializeField] float dropForwardForce;
     [SerializeField] float dropUpwardForce;
-    [SerializeField] LayerMask interactableLayer;
 
     RaycastHit objectHit;
     Transform currentItem;
@@ -121,9 +121,8 @@ public class Player : MonoBehaviour
     void Interactions()
     {
         Vector3 castOriginPlace = playerCamera.transform.position + playerCamera.transform.forward * sphereCastDeviation;
-        if (Physics.SphereCast(castOriginPlace, sphereCastRadius, playerCamera.transform.forward, out objectHit, sphereCastRange, interactableLayer))
+        if (Physics.SphereCast(castOriginPlace, sphereCastRadius, playerCamera.transform.forward, out objectHit, sphereCastRange))
         {
-            Debug.Log("Hit: " + objectHit.transform.name);
             if (objectHit.collider.gameObject.TryGetComponent(out IInteractable interactable))
             {
                 interactable.PlayerInteracted();

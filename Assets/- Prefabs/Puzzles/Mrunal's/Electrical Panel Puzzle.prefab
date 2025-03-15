@@ -12634,7 +12634,8 @@ GameObject:
   - component: {fileID: 6304675293000445923}
   - component: {fileID: 6367402544713419933}
   - component: {fileID: 2257840701892428684}
-  m_Layer: 8
+  - component: {fileID: 1450967184691634253}
+  m_Layer: 0
   m_Name: Panel
   m_TagString: Deposite Site
   m_Icon: {fileID: 0}
@@ -13043,6 +13044,18 @@ MonoBehaviour:
   - {fileID: 3297362978322295082}
   - {fileID: 1788714866351062987}
   - {fileID: 7109800780885307062}
+--- !u!114 &1450967184691634253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202689644961613208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69582ae7c55f3c34f89b4ee3ffaddc95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8991707520904475295
 GameObject:
   m_ObjectHideFlags: 0
@@ -13484,7 +13497,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d340c12a7992c419ffc738d39650a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canPickUp: 1
 --- !u!4 &7661256611979968390 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947023721766003079, guid: dc131d5518d167043ae0957d790780de, type: 3}
@@ -13579,7 +13591,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d340c12a7992c419ffc738d39650a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canPickUp: 1
 --- !u!4 &6864080483573148007 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947023721766003079, guid: dc131d5518d167043ae0957d790780de, type: 3}
@@ -13674,7 +13685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d340c12a7992c419ffc738d39650a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canPickUp: 1
 --- !u!4 &6571868930976273066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947023721766003079, guid: dc131d5518d167043ae0957d790780de, type: 3}
@@ -13774,4 +13784,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49d340c12a7992c419ffc738d39650a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canPickUp: 1

@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Items : MonoBehaviour, IInteractable
 {
-    public bool canPickUp = true;
-
     Rigidbody rb;
     Collider coll;
     Player player;
@@ -19,7 +17,7 @@ public class Items : MonoBehaviour, IInteractable
     {
         //Debug.Log("Press E to collect " + objectHit.transform.name);
         //Add UI prompt "Press e to collect _itemName." instead of debug.....
-        if (player.isHandsFree && canPickUp)
+        if (player.isHandsFree)
         {
             rb.isKinematic = true;
             coll.isTrigger = true;
