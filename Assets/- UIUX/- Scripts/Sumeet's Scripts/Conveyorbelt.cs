@@ -6,9 +6,8 @@ public class Conveyorbelt : MonoBehaviour
     public Transform endpoint;
     public float speed;
 
-    private void OnTriggerStay(Collider other)
+    void OnCollisionStay(Collision other)
     {
         other.transform.position = Vector3.MoveTowards(other.transform.position, endpoint.position, speed * Time.deltaTime);
     }
-
 }

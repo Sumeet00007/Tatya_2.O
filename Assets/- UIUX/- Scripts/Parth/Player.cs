@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     Vector2 lookInput;
     float cameraXRotation = 0f;
+    float playerYRotaion = 0f;
 
     [Header("Movement Variables")]
 
@@ -28,11 +29,9 @@ public class Player : MonoBehaviour
     [Header("Gravity Variables")]
 
     [SerializeField] float gravity = -9.81f;
-    [SerializeField] float checkSphereRadius = 0.4f;
     [SerializeField] float groundedDownVelocity = -2f;
 
     Vector3 velocity;
-    bool isGrounded;
 
     [Header("Interactions Variables")]
 
@@ -71,8 +70,9 @@ public class Player : MonoBehaviour
 
     void Look()
     {
-        float mouseX = lookInput.x * mouseSensitivity * Time.deltaTime;
-        float mouseY = lookInput.y * mouseSensitivity * Time.deltaTime;
+        float mouseX = lookInput.x * mouseSensitivity;
+        float mouseY = lookInput.y * mouseSensitivity;
+        playerYRotaion = mouseX;
         cameraXRotation -= mouseY;
         cameraXRotation = Mathf.Clamp(cameraXRotation, maxLookUp, maxLookDown);
 

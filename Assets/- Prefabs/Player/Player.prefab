@@ -570,19 +570,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 3966646310134275950}
-  mouseSensitivity: 75
+  mouseSensitivity: 0.1
   maxLookUp: -90
   maxLookDown: 90
   playerController: {fileID: 19597753604746308}
   moveSpeed: 14
   jumpHeight: 5
   gravity: -45
-  checkSphereRadius: 0.2
   groundedDownVelocity: -2
   itemContainer: {fileID: 711230675765026417}
   isHandsFree: 0
   sphereCastRadius: 0.1
-  sphereCastRange: 7.5
+  sphereCastRange: 8
   sphereCastDeviation: 1.075
   dropForwardForce: 75
   dropUpwardForce: 45
