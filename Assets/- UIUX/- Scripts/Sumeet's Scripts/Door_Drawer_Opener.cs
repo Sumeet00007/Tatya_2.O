@@ -2,45 +2,102 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class Door_Drawer_Opener : MonoBehaviour, IInteractable
+public class DoorOpener : MonoBehaviour, IInteractable
 {
+    public enum DoorType { Door, Drawer }
+    public DoorType doorType; // Determines whether it's a Door or Drawer
+
+    public Transform hinge; // The hinge point of the door
     public Transform closedPosition; // Transform for closed position
     public Transform openPosition;   // Transform for open position
-    public float moveSpeed = 2f;     // Speed of movement
+    public float openAngle = 90f; // The angle to open the door
+    public float moveSpeed = 2f; // Speed of movement
     private bool isOpen = false;
+    private Quaternion closedRotation;
+    private Quaternion openRotation;
 
     void Start()
     {
-        if (closedPosition == null)
+        if (doorType == DoorType.Door)
         {
-            closedPosition = transform; // Default to current position if not assigned
+            if (hinge == null)
+            {
+                hinge = transform; // Default to self if no hinge is assigned
+            }
+            closedRotation = hinge.rotation;
+            openRotation = hinge.rotation * Quaternion.Euler(0, openAngle, 0);
         }
     }
 
     public void PlayerInteracted()
     {
-        ToggleMovement();
-    }
-
-    void ToggleMovement()
-    {
-        Transform targetTransform;
-
-        if (isOpen)
+        if (isOpen==true)
         {
-            targetTransform = closedPosition;
+            CloseDoorOrDrawer();
         }
         else
         {
-            targetTransform = openPosition;
+            OpenDoorOrDrawer();
         }
-
-        StopAllCoroutines();
-        StartCoroutine(MoveObject(targetTransform));
-        isOpen = !isOpen;
     }
 
-    IEnumerator MoveObject(Transform target)
+    void OpenDoorOrDrawer()
+    {
+        StopAllCoroutines();
+
+        if (doorType == DoorType.Drawer)
+        {
+            StartCoroutine(SlideObject(openPosition));
+        }
+        else if (doorType == DoorType.Door)
+        {
+            if (closedPosition != null && openPosition != null)
+            {
+                StartCoroutine(SlideObject(openPosition));
+            }
+            else
+            {
+                StartCoroutine(RotateDoor(openRotation));
+            }
+        }
+
+        isOpen = true;
+    }
+
+    void CloseDoorOrDrawer()
+    {
+        StopAllCoroutines();
+
+        if (doorType == DoorType.Drawer)
+        {
+            StartCoroutine(SlideObject(closedPosition));
+        }
+        else if (doorType == DoorType.Door)
+        {
+            if (closedPosition != null && openPosition != null)
+            {
+                StartCoroutine(SlideObject(closedPosition));
+            }
+            else
+            {
+                StartCoroutine(RotateDoor(closedRotation));
+            }
+        }
+
+        isOpen = false;
+    }
+
+    IEnumerator RotateDoor(Quaternion targetRotation)
+    {
+        while (Quaternion.Angle(hinge.rotation, targetRotation) > 0.1f)
+        {
+            hinge.rotation = Quaternion.Lerp(hinge.rotation, targetRotation, Time.deltaTime * moveSpeed);
+            yield return null;
+        }
+        hinge.rotation = targetRotation; // Ensure exact rotation
+    }
+
+    IEnumerator SlideObject(Transform target)
     {
         while (Vector3.Distance(transform.position, target.position) > 0.01f)
         {

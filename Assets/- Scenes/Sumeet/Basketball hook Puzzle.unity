@@ -28919,8 +28919,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 529fc7347f55bf240bff632f07489c27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closedPosition: {fileID: 624817092}
-  openPosition: {fileID: 1274146707}
+  doorType: 0
+  hinge: {fileID: 1835910047}
+  closedPosition: {fileID: 0}
+  openPosition: {fileID: 0}
+  openAngle: 90
   moveSpeed: 2
 --- !u!64 &1835910049
 MeshCollider:
