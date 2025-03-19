@@ -126,6 +126,9 @@ public class Player : MonoBehaviour
             if (objectHit.collider.gameObject.TryGetComponent(out IInteractable interactable))
             {
                 interactable.PlayerInteracted();
+
+
+
             }
         }
     }

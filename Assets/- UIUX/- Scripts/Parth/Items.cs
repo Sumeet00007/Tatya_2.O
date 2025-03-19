@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Items : MonoBehaviour, IInteractable
 {
     public bool canPickUp = true;
+
 
     Rigidbody rb;
     Collider coll;
@@ -19,6 +21,13 @@ public class Items : MonoBehaviour, IInteractable
     {
         //Debug.Log("Press E to collect " + objectHit.transform.name);
         //Add UI prompt "Press e to collect _itemName." instead of debug.....
+
+        if (gameObject.CompareTag("WrongDoll")) // Replace "Collectible" with your actual tag
+        {
+            Debug.Log("This is wrong Doll");
+            GameManager.Instance.ShowGameOver();
+        }
+
         if (player.isHandsFree && canPickUp)
         {
             rb.isKinematic = true;

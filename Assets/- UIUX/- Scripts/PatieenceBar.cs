@@ -14,14 +14,14 @@ public class PatienceBar : MonoBehaviour
 
     [Header("UI Settings")]
     public Image patienceBar;
-    public GameObject gameOverIMG;
+   
 
     private bool isPlayerAlive = true;
 
     void Start()
     {
         ResetPatienceBar();
-        gameOverIMG.SetActive(false);
+      
     }
 
     void Update()
@@ -81,7 +81,7 @@ public class PatienceBar : MonoBehaviour
             Debug.Log("Player has died due to enemy’s patience running out!");
             isPlayerAlive = false;
             // Add game over logic here (disable movement, show UI, restart level, etc.)
-            gameOverIMG.SetActive(true);
+            GameManager.Instance.ShowGameOver();
             Invoke(nameof(ZeroFill), 1.5f);
             
         }
