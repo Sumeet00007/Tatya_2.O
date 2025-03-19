@@ -2193,6 +2193,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5682329927884242559, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682329927884242559, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682329927884242559, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8387362085954270735, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2200,11 +2212,25 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8387362085954270735, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 757044299}
+    - targetCorrespondingSourceObject: {fileID: 8387362085954270735, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 757044298}
+    - targetCorrespondingSourceObject: {fileID: 8336791723141945944, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 1153830840}
   m_SourcePrefab: {fileID: 100100000, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
 --- !u!82 &117940315 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5682329927884242559, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+  m_PrefabInstance: {fileID: 117940314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!143 &117940316 stripped
+CharacterController:
+  m_CorrespondingSourceObject: {fileID: 19597753604746308, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
   m_PrefabInstance: {fileID: 117940314}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &123246450
@@ -10347,7 +10373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Aaayeee Niggaaa Wassup??
+  - text: Finally... you're awake.
     voiceClip: {fileID: 8300000, guid: 6d73ba624636add42af7f85415130c54, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -10357,7 +10383,7 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 0
     requiredItemName: 
-  - text: Come here Niggaa, I am Tatya
+  - text: You must be wondering... how you ended up here.
     voiceClip: {fileID: 8300000, guid: f37eac51ff0be9047bfe3fa5f11ddc2b, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -10367,28 +10393,177 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 0
     requiredItemName: 
-  - text: I need Money Nigga
-    voiceClip: {fileID: 8300000, guid: 48c68e6143ac44643af1583944eb133b, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 1
-    questDescription: Tatya needs the Nigga Cube
-    isQuestCompletion: 0
-    requiresItem: 1
-    requiredItemName: Money
-  - text: 'Niggaaa Moneyyyy
-
-      Haaayyeeeee!!!'
-    voiceClip: {fileID: 8300000, guid: cd6e08f644904a0458cba2661fbe3fa7, type: 3}
+  - text: I was the one who brought you, Baba.
+    voiceClip: {fileID: 0}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
     triggersQuest: 0
-    questDescription: Tatya needs the Nigga Cube
+    questDescription: 
     isQuestCompletion: 0
     requiresItem: 0
-    requiredItemName: Money
+    requiredItemName: 
+  - text: 'Dragged you from your dreams... into my prison. '
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: This place... cursed... just like me.
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: I have no power left. A priest... he cursed me...
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: trapped me in this wretched form. Now I sit... watching... waiting.
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: But I cannot move... Neither we can escape... not without you.
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: You... you're the only one who knows about me...
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: The only one who can hear my voice... and the only one foolish enough to
+      come looking.
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: But don't think it's simple. No... If you want to survive this night...
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: you'll do exactly as I say.
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: I need certain objects... things that once belonged to me...
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: things that hold pieces of my soul.
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: I cannot fetch them... but you... you can.
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: Yet, I will not name them. Where's the fun in that?
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: You will solve my riddles... and through them... you'll find what I seek.
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: Now listen closely... your first trial begins.
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: '[Riddle]'
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
   dialogueInterval: 3
   typingSpeed: 0.05
   dialogueCanvas: {fileID: 5936064017982454491}
@@ -10396,7 +10571,7 @@ MonoBehaviour:
   audioSource: {fileID: 117940315}
   questUIText: {fileID: 783162912}
   itemContainer: {fileID: 1653784992}
-  interactionRange: 5
+  interactionRange: 10
 --- !u!4 &618553549
 Transform:
   m_ObjectHideFlags: 0
@@ -13428,6 +13603,124 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8387362085954270735, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
   m_PrefabInstance: {fileID: 117940314}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &757044298
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757044297}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 0
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &757044299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757044297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79390d8c499f80459eb1b6f3495e82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footstepClips:
+  - {fileID: 8300000, guid: 7ca5a9710db4327439c9f8cb8204615e, type: 3}
+  - {fileID: 8300000, guid: 14ae706fef2303e4cb71112dbd5d250b, type: 3}
+  - {fileID: 8300000, guid: b995bc1775ea83b4b8f861763e9a1424, type: 3}
+  - {fileID: 8300000, guid: d15f7338d693f0343843a6b9096d27f6, type: 3}
+  stepInterval: 0.7
+  footstepVolume: 1
+  volumeMultiplier: 1.4
+  movementThreshold: 0.1
 --- !u!1 &759822438
 GameObject:
   m_ObjectHideFlags: 0
@@ -22459,6 +22752,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142658215}
   m_Mesh: {fileID: 4300000, guid: 4fb7b6ad085a0174dae2078cd871bbd5, type: 3}
+--- !u!1 &1153830835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8336791723141945944, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+  m_PrefabInstance: {fileID: 117940314}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1153830840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153830835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af68abcf17462d04f9a19c8842d0d378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobSpeed: 6
+  verticalBobAmount: 0.2
+  horizontalBobAmount: 0.05
+  playerController: {fileID: 117940316}
 --- !u!1 &1156903900
 GameObject:
   m_ObjectHideFlags: 0
@@ -28132,71 +28446,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
---- !u!1001 &1553492249
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1565025216020714448, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_Name
-      value: Money
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.73768
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.56532
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 14.37
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 48.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 74.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7903241078388007883, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e9a98d12fb0179a46a6249872f6e5ef0, type: 3}
 --- !u!43 &1562216185
 Mesh:
   m_ObjectHideFlags: 0
@@ -37810,7 +38059,7 @@ RectTransform:
   m_GameObject: {fileID: 138074217488006078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.5499954}
-  m_LocalScale: {x: 0.029139249, y: 0.029139254, z: 0.029139249}
+  m_LocalScale: {x: 0.026872797, y: 0.026872803, z: 0.026872797}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1460079625394729032}
@@ -38464,7 +38713,6 @@ SceneRoots:
   - {fileID: 549130285}
   - {fileID: 783162911}
   - {fileID: 618553549}
-  - {fileID: 1553492249}
   - {fileID: 2078881353}
   - {fileID: 1938381025}
   - {fileID: 112723375}
