@@ -2999,6 +2999,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137863770}
   m_Mesh: {fileID: 4300000, guid: eb52226ee3d3ba343b0725a06ae4d9e1, type: 3}
+--- !u!4 &140083547 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 711230675765026417, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+  m_PrefabInstance: {fileID: 1455261763}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &147295814
 GameObject:
   m_ObjectHideFlags: 0
@@ -4431,6 +4436,11 @@ PrefabInstance:
 --- !u!1 &201279842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8387362085954270735, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+  m_PrefabInstance: {fileID: 1455261763}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &201279843 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3727249243436092745, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
   m_PrefabInstance: {fileID: 1455261763}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &201335077
@@ -13263,6 +13273,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 803f22b82fbca58418bc3f1bfc453396, type: 3}
       insertIndex: -1
       addedObject: {fileID: 929645498}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 803f22b82fbca58418bc3f1bfc453396, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2028051400}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 803f22b82fbca58418bc3f1bfc453396, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1594050641}
@@ -26320,6 +26333,10 @@ PrefabInstance:
       propertyPath: patienceBar
       value: 
       objectReference: {fileID: 1778934711}
+    - target: {fileID: 2282096384817754826, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: patiencebarmanager
+      value: 
+      objectReference: {fileID: 914404295}
     - target: {fileID: 5141515401942439089, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
       propertyPath: m_Name
       value: PatienceBarManager
@@ -26369,6 +26386,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+--- !u!1 &914404295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5141515401942439089, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+  m_PrefabInstance: {fileID: 914404294}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &915184561
 GameObject:
   m_ObjectHideFlags: 0
@@ -26621,7 +26643,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00004231878
+      value: -0.0035
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26629,7 +26651,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.006427165
+      value: -0.0064
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -36176,19 +36198,65 @@ MonoBehaviour:
     voiceClip: {fileID: 0}
     onDialogueEvent:
       m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1625547254}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1625547254}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1625547254}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: test
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: Lemon (1)
+  - text: Thank You
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
         m_Calls: []
     triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
+    questDescription: Over
+    isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
   dialogueInterval: 3
   typingSpeed: 0.05
   dialogueCanvas: {fileID: 1740243821}
   dialogueText: {fileID: 1870176102}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 201279843}
   questUIText: {fileID: 0}
-  itemContainer: {fileID: 0}
+  itemContainer: {fileID: 140083547}
   interactionRange: 10
 --- !u!1 &1408804991
 GameObject:
@@ -41607,6 +41675,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1621462299}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1625547254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2282096384817754826, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+  m_PrefabInstance: {fileID: 914404294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914404295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5079a259a3e3a4b4693b6aeb76fd1200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1627938261
 GameObject:
   m_ObjectHideFlags: 0
@@ -48888,15 +48967,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8937971913789205669, guid: a87b65a0bb476aa4dabaf92332368b1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.96
+      value: 12.09
       objectReference: {fileID: 0}
     - target: {fileID: 8937971913789205669, guid: a87b65a0bb476aa4dabaf92332368b1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 59.39
+      value: 53.48
       objectReference: {fileID: 0}
     - target: {fileID: 8937971913789205669, guid: a87b65a0bb476aa4dabaf92332368b1d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 62.14
+      value: 56.82
       objectReference: {fileID: 0}
     - target: {fileID: 8937971913789205669, guid: a87b65a0bb476aa4dabaf92332368b1d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50222,6 +50301,84 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020241234}
   m_Mesh: {fileID: 4300002, guid: 0f304a07c938e6c4babe95098ea5b71c, type: 3}
+--- !u!1001 &2028051399
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 535698920}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0035
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.043700878
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0064
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d0ab423c18257ac40ad8c841b7137907, type: 2}
+    - target: {fileID: 919132149155446097, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+      propertyPath: m_Name
+      value: Wall wooden (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+--- !u!4 &2028051400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ba0ae8ceb914d984ea93035b0f413fd8, type: 3}
+  m_PrefabInstance: {fileID: 2028051399}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2041971275
 GameObject:
   m_ObjectHideFlags: 0

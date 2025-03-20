@@ -17,11 +17,12 @@ public class PatienceBar : MonoBehaviour
    
 
     private bool isPlayerAlive = true;
+    public GameObject patiencebarmanager;
 
     void Start()
     {
         ResetPatienceBar();
-      
+        patiencebarmanager.SetActive(false);
     }
 
     void Update()
@@ -40,7 +41,7 @@ public class PatienceBar : MonoBehaviour
     }
 
     // Increases patience over time
-    void IncreasePatience(float amount)
+    public void IncreasePatience(float amount)
     {
         currentPatience += amount;
         currentPatience = Mathf.Clamp(currentPatience, 0, maxPatienceTime +5);
@@ -101,5 +102,15 @@ public class PatienceBar : MonoBehaviour
         maxPatienceTime = Mathf.Max(1f, newMaxTime); // Ensure it’s at least 1 to avoid division errors
         currentPatience = Mathf.Clamp(currentPatience, 0, maxPatienceTime + 5);
         ResetPatienceBar();
+    }
+
+    public void InsertdeltaTime()
+    {
+        IncreasePatience(Time.deltaTime);
+    }
+
+    public void EnablePatienceBar()
+    {
+       patiencebarmanager.SetActive(true);
     }
 }
