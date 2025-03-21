@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class DoorOpener : MonoBehaviour, IInteractable
 {
@@ -15,6 +16,10 @@ public class DoorOpener : MonoBehaviour, IInteractable
     private bool isOpen = false;
     private Quaternion closedRotation;
     private Quaternion openRotation;
+
+
+    public UnityEvent onActionTriggered;
+    public float jumpScareDelay=1.0f;
 
     void Start()
     {
@@ -62,6 +67,7 @@ public class DoorOpener : MonoBehaviour, IInteractable
         }
 
         isOpen = true;
+        Invoke(nameof(TriggerEvent),jumpScareDelay);
     }
 
     void CloseDoorOrDrawer()
@@ -105,5 +111,13 @@ public class DoorOpener : MonoBehaviour, IInteractable
             yield return null;
         }
         transform.position = target.position; // Ensure exact position
+    }
+
+    public void TriggerEvent()
+    {
+        if (onActionTriggered != null)
+        {
+            onActionTriggered.Invoke();
+        }
     }
 }
