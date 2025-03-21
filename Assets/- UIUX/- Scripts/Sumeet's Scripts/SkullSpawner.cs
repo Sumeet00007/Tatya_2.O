@@ -9,10 +9,7 @@ public class SkullSpawner : MonoBehaviour
     public float fallVelocity = -5f;
     private bool hasSpawned = false; 
 
-    void Update()
-    {
-      
-    }
+  
 
     public void SpawnZombieSkull()
     {
