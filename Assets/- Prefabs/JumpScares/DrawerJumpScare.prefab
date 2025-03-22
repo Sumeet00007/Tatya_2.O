@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2523566501842258172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7302492390257116432}
+  m_Layer: 0
+  m_Name: DrawerJumpScare
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7302492390257116432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2523566501842258172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5856481960486402858}
+  - {fileID: 7637726032753989916}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8399409058619425267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7637726032753989916}
+  - component: {fileID: 3710943754585624107}
+  m_Layer: 0
+  m_Name: ZombieSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7637726032753989916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399409058619425267}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.30475354, z: -0, w: 0.95243126}
+  m_LocalPosition: {x: -28.15, y: -1, z: -18.2}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7302492390257116432}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3710943754585624107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8399409058619425267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0561cec40d3030d4da1a8a31a2b9d248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombiePrefab: {fileID: 7017300994420044302, guid: bf7106198d2c2a04394372cd7b1de187, type: 3}
+  spawnPoint: {fileID: 7637726032753989916}
+--- !u!1001 &7917137931002405214
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7302492390257116432}
+    m_Modifications:
+    - target: {fileID: 4022529191095124174, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_Name
+      value: cupboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -25.62421
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.3849442
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.312828
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687146447652423822, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: jumpScareDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687146447652423822, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: onActionTriggered.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687146447652423822, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: onActionTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687146447652423822, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: onActionTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3710943754585624107}
+    - target: {fileID: 6687146447652423822, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: onActionTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687146447652423822, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: onActionTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnableZombieJumpScare
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687146447652423822, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: onActionTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: ZombieJumpScare, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687146447652423822, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+      propertyPath: onActionTriggered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+--- !u!4 &5856481960486402858 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4366578832844331636, guid: d28e6fd405d5366418a700eba5032159, type: 3}
+  m_PrefabInstance: {fileID: 7917137931002405214}
+  m_PrefabAsset: {fileID: 0}
