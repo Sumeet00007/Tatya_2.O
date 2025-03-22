@@ -9,7 +9,7 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
         pointLight.enabled = false;
     }
 
-    public void OnCompletion(Transform[] itemsPosition, LayerMask itemLayerMask, float checkSphereRadius)
+    public void OnCompletion()
     {
         Debug.Log("Correct Items");
         pointLight.enabled = true;

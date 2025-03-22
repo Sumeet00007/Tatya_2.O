@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DebugCorrectItems : MonoBehaviour, ICompletionHandler
 {
-    public void OnCompletion(Transform[] itemsPosition, LayerMask itemLayerMask, float checkSphereRadius)
+    public void OnCompletion()
     {
         Debug.Log("Correct Items");
     }

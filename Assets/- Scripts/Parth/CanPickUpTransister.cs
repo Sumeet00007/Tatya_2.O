@@ -4,7 +4,7 @@ public class CanPickUpTransister : MonoBehaviour, ICompletionHandler
 {
     [SerializeField] GameObject transister;
 
-    public void OnCompletion(Transform[] itemsPosition, LayerMask itemLayerMask, float checkSphereRadius)
+    public void OnCompletion()
     {
         transister.GetComponent<Items>().canPickUp = true;
     }
