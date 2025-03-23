@@ -16,7 +16,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &347851487311359538
 Transform:
@@ -129,6 +129,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 140131662216049936, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 262163068364559274, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 626970936562558029, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1063030496472356779, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286505217874930334, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629505914575159863, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5928627159563071169, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2499999
@@ -181,9 +205,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6100769409910289291, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216064083859910453, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6416897542449869947, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
       propertyPath: m_Name
       value: wall_lamp Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6416897542449869947, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365458827200894292, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8595105886526529653, guid: e24d01f0ed3de1542a3efff4a2a864d9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
