@@ -19,13 +19,9 @@ public class DoorOpener : MonoBehaviour, IInteractable
 
 
     public UnityEvent onActionTriggered;
-<<<<<<< Updated upstream
     public float jumpScareDelay=1.0f;
     public AudioSource doorOpenSound;
     public AudioSource doorCloseSound;
-=======
-    public float jumpScareDelay = 1.0f;
->>>>>>> Stashed changes
 
     void Start()
     {
@@ -42,7 +38,7 @@ public class DoorOpener : MonoBehaviour, IInteractable
 
     public void PlayerInteracted()
     {
-        if (isOpen == true)
+        if (isOpen==true)
         {
             doorCloseSound.Play();
             CloseDoorOrDrawer();
@@ -75,7 +71,7 @@ public class DoorOpener : MonoBehaviour, IInteractable
         }
 
         isOpen = true;
-        Invoke(nameof(TriggerEvent), jumpScareDelay);
+        Invoke(nameof(TriggerEvent),jumpScareDelay);
     }
 
     void CloseDoorOrDrawer()
