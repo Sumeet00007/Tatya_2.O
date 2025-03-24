@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Diagnostics;
 using UnityEngine.Scripting.APIUpdating;
-using UnityEngine.XR;
 
 public class Player : MonoBehaviour
 {
@@ -17,8 +16,6 @@ public class Player : MonoBehaviour
     float playerYRotaion = 0f;
 
     [Header("Movement Variables")]
-
-    public bool canControl = true;
 
     [SerializeField] CharacterController playerController;
     [SerializeField] float moveSpeed = 5f;
@@ -68,14 +65,7 @@ public class Player : MonoBehaviour
 
     void OnLook(InputValue value)
     {
-        if (canControl)
-        {
-            lookInput = value.Get<Vector2>();
-        }
-        else
-        {
-            lookInput = Vector2.zero;
-        }
+        lookInput = value.Get<Vector2>();
     }
 
     void Look()
@@ -92,14 +82,7 @@ public class Player : MonoBehaviour
 
     void OnMove(InputValue value)
     {
-        if (canControl)
-        {
-            moveInput = value.Get<Vector2>();
-        }
-        else
-        {
-            moveInput = Vector2.zero;
-        }
+        moveInput = value.Get<Vector2>();
     }
 
     void Move()
@@ -110,7 +93,7 @@ public class Player : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if (value.isPressed && playerController.isGrounded && canControl)
+        if (value.isPressed && playerController.isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         }
@@ -143,6 +126,9 @@ public class Player : MonoBehaviour
             if (objectHit.collider.gameObject.TryGetComponent(out IInteractable interactable))
             {
                 interactable.PlayerInteracted();
+
+
+
             }
         }
     }
