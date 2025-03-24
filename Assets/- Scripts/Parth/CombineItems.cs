@@ -4,9 +4,12 @@ using UnityEngine;
 public class CombineItems : MonoBehaviour, ICompletionHandler
 {
     [SerializeField] Transform finalItemPosition;
-    [SerializeField] GameObject finalItemPrefab;
 
     RequiredItemsChecker requiredItemsChecker;
+<<<<<<< Updated upstream
+=======
+    GameObject finalItemPrefab;
+>>>>>>> Stashed changes
     Transform[] itemsPosition;
     LayerMask itemLayerMask;
     float checkSphereRadius = 0.2f;
@@ -30,6 +33,8 @@ public class CombineItems : MonoBehaviour, ICompletionHandler
             }
         }
 
+        finalItemPrefab = requiredItemsChecker.GetFinalCombinedItem();
         Instantiate(finalItemPrefab, finalItemPosition.position, Quaternion.identity);
+        requiredItemsChecker.UpdateItemsNeeded();
     }
 }

@@ -2,19 +2,32 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 
+[System.Serializable]
+public class ItemList
+{
+    public GameObject finalCombinedItem;
+    public List<GameObject> requiredItems;
+}
+
 public class RequiredItemsChecker : MonoBehaviour, IInteractable
 {
     [SerializeField] Transform itemSpots;
     [SerializeField] LayerMask itemLayerMask;
+<<<<<<< Updated upstream
     [SerializeField] GameObject[] itemsNeededGameObjects;
     public AudioSource transistorDepSound;
+=======
+    [SerializeField] List<ItemList> itemsRecipies;
+
+>>>>>>> Stashed changes
     Transform[] itemsPosition;
-    List<string> itemsNeeded;
-    List<string> itemsDeposited;
+    List<string> itemsNeeded = new List<string>();
+    List<string> itemsDeposited = new List<string>();
     Player player;
     Vector3 closestPosition;
     bool closestPositionIsOccupied;
     float checkSphereRadius = 0.2f;
+    int currentRecipeIndex = -1;
 
     void Start()
     {
@@ -24,14 +37,7 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
             itemsPosition[i] = itemSpots.GetChild(i);
         }
 
-        itemsNeeded = new List<string>();
-        foreach (var item in itemsNeededGameObjects)
-        {
-            itemsNeeded.Add(item.name);
-        }
-
-        itemsNeeded.Sort();
-        itemsDeposited = new List<string>();
+        UpdateItemsNeeded();
         player = FindFirstObjectByType<Player>();
     }
 
@@ -59,6 +65,22 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
         }
     }
 
+    public void UpdateItemsNeeded()
+    {
+        if (currentRecipeIndex < itemsRecipies.Count - 1)
+        {
+            currentRecipeIndex++;
+        }
+
+        ItemList currentRecipe = itemsRecipies[currentRecipeIndex];
+        itemsNeeded.Clear();
+        foreach (var item in currentRecipe.requiredItems)
+        {
+            itemsNeeded.Add(item.name);
+        }
+        itemsNeeded.Sort();
+    }
+
     void GetUnoccupiedPlace()
     {
         float smallestDistance = Mathf.Infinity;
@@ -79,17 +101,19 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
     {
         itemsDeposited.Clear();
 
-        for (int i = 0; i < itemsNeeded.Count; i++)
+        for (int i = 0; i < itemsPosition.Length; i++)
         {
             Collider itemInSphere = Physics.OverlapSphere(itemsPosition[i].position, checkSphereRadius, itemLayerMask).FirstOrDefault();
             if (itemInSphere != null)
             {
                 itemsDeposited.Add(itemInSphere.gameObject.name.Replace("(Clone)", ""));
             }
-            else
-            {
-                return;
-            }
+        }
+
+        if (itemsDeposited.Count != itemsNeeded.Count)
+        {
+            //Debug.Log("Failed. Not enough items");
+            return;
         }
 
         itemsDeposited.Sort();
@@ -122,6 +146,11 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
     public LayerMask GetItemLayerMask()
     {
         return itemLayerMask;
+    }
+
+    public GameObject GetFinalCombinedItem()
+    {
+        return itemsRecipies[currentRecipeIndex].finalCombinedItem;
     }
 
     void OnDrawGizmos()
