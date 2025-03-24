@@ -3,6 +3,7 @@ using UnityEngine;
 public class TurnLightOn : MonoBehaviour, ICompletionHandler
 {
     [SerializeField] Light pointLight;
+    public AudioSource switchONSound;
 
     void Start()
     {
@@ -11,6 +12,7 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
 
     public void OnCompletion()
     {
+        switchONSound.Play();   
         Debug.Log("Correct Items");
         pointLight.enabled = true;
     }

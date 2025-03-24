@@ -7,7 +7,7 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
     [SerializeField] Transform itemSpots;
     [SerializeField] LayerMask itemLayerMask;
     [SerializeField] GameObject[] itemsNeededGameObjects;
-
+    public AudioSource transistorDepSound;
     Transform[] itemsPosition;
     List<string> itemsNeeded;
     List<string> itemsDeposited;
@@ -52,6 +52,7 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
                 currentItem.transform.position = closestPosition;
                 currentItem.transform.localRotation = Quaternion.identity;
 
+                transistorDepSound.Play();
                 player.isHandsFree = true;
                 Invoke("CheckIfCanCombineItems", 0.1f);
             }
