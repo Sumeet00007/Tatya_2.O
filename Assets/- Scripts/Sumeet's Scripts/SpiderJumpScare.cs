@@ -13,7 +13,7 @@ public class SpiderJumpScare : MonoBehaviour
 
     private Vector3 initialPosition;
 
-    //reference for audioSource
+    public AudioSource spiderScare;
 
     void Start()
     {
@@ -26,7 +26,7 @@ public class SpiderJumpScare : MonoBehaviour
     {
         if (!hasSpawned && spiderPrefab != null)
         {
-            //Play audioFX of Spider Crawling
+            spiderScare.Play();
 
             GameObject spider = Instantiate(spiderPrefab, spawnPoint.position, spawnPoint.rotation);
             StartCoroutine(MoveSpider(spider));

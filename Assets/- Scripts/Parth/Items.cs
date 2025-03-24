@@ -5,6 +5,8 @@ public class Items : MonoBehaviour, IInteractable
 {
     public bool canPickUp = true;
 
+    [SerializeField] AudioSource audioSource;
+
 
     Rigidbody rb;
     Collider coll;
@@ -36,6 +38,7 @@ public class Items : MonoBehaviour, IInteractable
             transform.localPosition = Vector3.zero;
             transform.localRotation = Quaternion.identity;
             player.isHandsFree = false;
+            audioSource.Play();
         }
     }
 }

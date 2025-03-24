@@ -10,6 +10,8 @@ public class KeypadController : MonoBehaviour
     public string password;
     public int passwordLimit;
     public TMP_Text passwordText;
+    public AudioSource passwordRight;
+    public AudioSource passwordWrong;
 
     //[Header("Audio")]
     //public AudioSource audioSource;
@@ -57,6 +59,7 @@ public class KeypadController : MonoBehaviour
             //    audioSource.PlayOneShot(correctSound);
 
             passwordText.color = Color.green;
+            passwordRight.Play();
             StartCoroutine(waitAndClear());
         }
         else
@@ -65,6 +68,7 @@ public class KeypadController : MonoBehaviour
             //    audioSource.PlayOneShot(wrongSound);
 
             passwordText.color = Color.red;
+            passwordWrong.Play();
             StartCoroutine(waitAndClear());
         }
     }

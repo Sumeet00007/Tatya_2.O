@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class SkullSpawner : MonoBehaviour
 {
     public GameObject zombieSkullPrefab;
-    //give reference to audioSource
+    public AudioSource zombieSkullSound;
 
     public Transform spawnPoint;
     public float fallVelocity = -5f;
@@ -17,7 +17,7 @@ public class SkullSpawner : MonoBehaviour
     {
         if (!hasSpawned && zombieSkullPrefab != null)
         {
-            //play audiofx for falling zombieSkull 
+            zombieSkullSound.Play();
 
             GameObject skull = Instantiate(zombieSkullPrefab, spawnPoint.position, spawnPoint.rotation);
 

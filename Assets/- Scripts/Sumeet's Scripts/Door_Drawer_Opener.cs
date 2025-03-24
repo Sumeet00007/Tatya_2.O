@@ -20,6 +20,8 @@ public class DoorOpener : MonoBehaviour, IInteractable
 
     public UnityEvent onActionTriggered;
     public float jumpScareDelay=1.0f;
+    public AudioSource doorOpenSound;
+    public AudioSource doorCloseSound;
 
     void Start()
     {
@@ -38,10 +40,12 @@ public class DoorOpener : MonoBehaviour, IInteractable
     {
         if (isOpen==true)
         {
+            doorCloseSound.Play();
             CloseDoorOrDrawer();
         }
         else
         {
+            doorOpenSound.Play();
             OpenDoorOrDrawer();
         }
     }

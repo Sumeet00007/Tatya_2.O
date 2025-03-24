@@ -7,9 +7,9 @@ public class CombineItems : MonoBehaviour, ICompletionHandler
     [SerializeField] GameObject finalItemPrefab;
 
     RequiredItemsChecker requiredItemsChecker;
-    [SerializeField] Transform[] itemsPosition;
-    [SerializeField] LayerMask itemLayerMask;
-    [SerializeField] float checkSphereRadius = 0.2f;
+    Transform[] itemsPosition;
+    LayerMask itemLayerMask;
+    float checkSphereRadius = 0.2f;
 
     void Start()
     {

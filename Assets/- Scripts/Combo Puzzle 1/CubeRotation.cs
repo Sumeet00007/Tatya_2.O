@@ -15,6 +15,7 @@ public class CubeRotation : MonoBehaviour, IInteractable
 
     [Header("Puzzle Settings")]
     [SerializeField] float correctRotationZ = 0f; // The correct rotation to solve the puzzle
+    public AudioSource cubeRotate;
 
     //private bool canRotate = false;
     //private bool isLookingAtCube = false;
@@ -34,6 +35,7 @@ public class CubeRotation : MonoBehaviour, IInteractable
     System.Collections.IEnumerator RotateCubeSmoothly()
     {
         isRotating = true;
+        cubeRotate.Play();
 
         float targetRotation = currentRotationZ + rotationAngle;
 

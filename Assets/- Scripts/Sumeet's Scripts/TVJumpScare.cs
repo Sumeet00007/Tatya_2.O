@@ -3,7 +3,7 @@ using UnityEngine;
 public class TVJumpScare : MonoBehaviour
 {
     public GameObject zombieArm;
-    //reference for audioSource
+    public AudioSource zombieScare;
     void Awake()
     {
         zombieArm.SetActive(false);
@@ -21,7 +21,7 @@ public class TVJumpScare : MonoBehaviour
         {
             //Debug.Log("Player Interacted");
 
-            //play audioFX for zombie arm coming from tv
+         zombieScare.Play();
 
 
             zombieArm.SetActive(true);
