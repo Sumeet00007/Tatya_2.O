@@ -49,12 +49,20 @@ PrefabInstance:
       value: 91
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: de60bf65a71447847bff27d2a8c8f1c0, type: 3}
+      propertyPath: m_ReceiveGI
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: de60bf65a71447847bff27d2a8c8f1c0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f9ff61e5e0a08b8459016c566850a93d, type: 2}
     - target: {fileID: 919132149155446097, guid: de60bf65a71447847bff27d2a8c8f1c0, type: 3}
       propertyPath: m_Name
       value: carpet 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: de60bf65a71447847bff27d2a8c8f1c0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

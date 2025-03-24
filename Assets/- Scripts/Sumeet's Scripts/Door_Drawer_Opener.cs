@@ -13,7 +13,7 @@ public class DoorOpener : MonoBehaviour, IInteractable
     public Transform openPosition;   // Transform for open position
     public float openAngle = 90f; // The angle to open the door
     public float moveSpeed = 2f; // Speed of movement
-    private bool isOpen = false;
+    public bool isOpen = false;
     private Quaternion closedRotation;
     private Quaternion openRotation;
 
@@ -27,7 +27,7 @@ public class DoorOpener : MonoBehaviour, IInteractable
         {
             if (hinge == null)
             {
-                hinge = transform; // Default to self if no hinge is assigned
+                hinge = transform; // Default to self if no hinge is assignedd
             }
             closedRotation = hinge.rotation;
             openRotation = hinge.rotation * Quaternion.Euler(0, openAngle, 0);

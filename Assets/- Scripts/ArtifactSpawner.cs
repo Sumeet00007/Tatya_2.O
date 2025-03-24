@@ -100,6 +100,7 @@ public class ArtifactSpawner : MonoBehaviour
         }
     }
 
+    //function responsible for changing artifacts
     public void CompleteTask()
     {
         currentTask++;
@@ -113,6 +114,8 @@ public class ArtifactSpawner : MonoBehaviour
         }
     }
 
+
+    //function Responsible for StopArtifactSpawning when task is completed
     private void StopArtifactSpawning()
     {
         isSpawning = false;
