@@ -4,11 +4,11 @@ using UnityEngine.UI;
 public class Items : MonoBehaviour, IInteractable
 {
     public bool canPickUp = true;
-
-    [SerializeField] AudioSource audioSource;
-
     public DoorOpening door;
 
+    [SerializeField] Vector3 itemRotationDeviation = new Vector3(0, 0, 0);
+
+    AudioSource audioSource;
     Rigidbody rb;
     Collider coll;
     Player player;
@@ -18,6 +18,7 @@ public class Items : MonoBehaviour, IInteractable
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         player = FindFirstObjectByType<Player>();
+        TryGetComponent<AudioSource>(out AudioSource audioSource);
     }
 
     public void PlayerInteracted()
@@ -31,9 +32,9 @@ public class Items : MonoBehaviour, IInteractable
             GameManager.Instance.ShowGameOver();
         }
 
-        if(gameObject.CompareTag("DoorKey"))
+        if (gameObject.CompareTag("DoorKey"))
         {
-            if(door != null)
+            if (door != null)
             {
                 door.hasKey = true;
             }
@@ -49,9 +50,12 @@ public class Items : MonoBehaviour, IInteractable
             coll.isTrigger = true;
             transform.SetParent(player.itemContainer);
             transform.localPosition = Vector3.zero;
-            transform.localRotation = Quaternion.identity;
+            transform.localRotation = Quaternion.Euler(0, 0, 0) * Quaternion.Euler(itemRotationDeviation);
             player.isHandsFree = false;
-            audioSource.Play();
+            if (audioSource != null)
+            {
+                audioSource.Play();
+            }
         }
     }
 }

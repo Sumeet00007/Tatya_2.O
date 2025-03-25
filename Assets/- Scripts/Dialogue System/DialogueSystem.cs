@@ -45,12 +45,12 @@ public class DialogueSystem : MonoBehaviour
     private int currentDialogueIndex = 0;
     //private bool isTyping = false;
     private bool awaitingItem = false;
-    private GameObject player; // Reference to Player
+    private Player player; // Reference to Player
 
     void Start()
     {
         dialogueCanvas.worldCamera = Camera.main;
-        player = GameObject.FindWithTag("Player"); // Find player by tag
+        player = FindFirstObjectByType<Player>(); // Find player by tag
         StartCoroutine(PlayDialogue());
     }
 
@@ -121,6 +121,7 @@ public class DialogueSystem : MonoBehaviour
             if (item.name == dialogueLines[currentDialogueIndex].requiredItemName)
             {
                 Destroy(item.gameObject); // Remove item from player
+                player.isHandsFree = true;
                 awaitingItem = false; // Continue dialogue
                 //dialogueText.text = "Thank you!";
             }

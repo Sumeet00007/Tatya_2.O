@@ -24,7 +24,7 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
     float checkSphereRadius = 0.2f;
     int currentRecipeIndex = -1;
 
-    void Start()
+    void Awake()
     {
         itemsPosition = new Transform[itemSpots.childCount];
         for (int i = 0; i < itemSpots.childCount; i++)

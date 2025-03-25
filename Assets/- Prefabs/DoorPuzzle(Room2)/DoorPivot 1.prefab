@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 8225777941449182670}
   - component: {fileID: 3145313496279762309}
   - component: {fileID: 1783326612989568063}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,8 +255,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorType: 0
   hinge: {fileID: 3899236283702775291}
-  closedPosition: {fileID: 0}
-  openPosition: {fileID: 0}
   openAngle: -90
   moveSpeed: 2
   isOpen: 0

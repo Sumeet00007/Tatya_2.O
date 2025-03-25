@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7293517093191146470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ClosedPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6988222437693742211}
   - component: {fileID: 245133760703341953}
   - component: {fileID: 4063264237484883836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SkullSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8281544540425483534}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorJumpScare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4933966430999404322}
   - component: {fileID: 7366957664457495885}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorCloseSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ GameObject:
   - component: {fileID: 8831697912366739126}
   - component: {fileID: 7692282082722684931}
   - component: {fileID: 383679227890256955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Door (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,11 +464,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 0
+  isLocked: 0
   hinge: {fileID: 4846112907388182263}
   closedPosition: {fileID: 0}
   openPosition: {fileID: 0}
   openAngle: 90
   moveSpeed: 2
+  isOpen: 0
   onActionTriggered:
     m_PersistentCalls:
       m_Calls:
@@ -496,7 +498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9202221634208025519}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +532,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7443149045079736302}
   - component: {fileID: 5973000145528784227}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorOpenSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -658,7 +660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4091668353424445604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: openPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -689,7 +691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5987656936604408206}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}

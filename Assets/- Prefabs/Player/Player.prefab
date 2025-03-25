@@ -601,9 +601,12 @@ MonoBehaviour:
   isHandsFree: 0
   sphereCastRadius: 0.1
   sphereCastRange: 8
-  sphereCastDeviation: 1.075
+  sphereCastDeviation: 1.1
   dropForwardForce: 75
   dropUpwardForce: 45
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 384
 --- !u!114 &2420815019151793550
 MonoBehaviour:
   m_ObjectHideFlags: 0

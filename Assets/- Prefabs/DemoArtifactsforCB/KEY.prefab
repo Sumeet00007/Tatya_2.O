@@ -10,43 +10,43 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalScale.x
-      value: 200.00002
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalScale.y
-      value: 200.00002
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalScale.z
-      value: 200.00002
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.93751
+      value: -0.78
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 65.796
+      value: 0.839
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.16
+      value: 6.598
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -54,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -270
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 669ae81f6bd26d44ba99ce6f8ae9d889, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -138,7 +138,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -156,4 +156,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canPickUp: 1
-  audioSource: {fileID: 0}
+  door: {fileID: 0}
+  itemRotationDeviation: {x: -90, y: 0, z: 360}

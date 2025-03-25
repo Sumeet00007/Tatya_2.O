@@ -14,12 +14,13 @@ public class DoorOpener : MonoBehaviour, IInteractable
     public float openAngle = 90f; // The angle to open the door
     public float moveSpeed = 2f; // Speed of movement
     public bool isOpen = false;
+    public bool isLocked = false;
     private Quaternion closedRotation;
     private Quaternion openRotation;
 
 
     public UnityEvent onActionTriggered;
-    public float jumpScareDelay=1.0f;
+    public float jumpScareDelay = 1.0f;
     public AudioSource doorOpenSound;
     public AudioSource doorCloseSound;
 
@@ -38,7 +39,11 @@ public class DoorOpener : MonoBehaviour, IInteractable
 
     public void PlayerInteracted()
     {
-        if (isOpen==true)
+        if (isLocked)
+        {
+            return;
+        }
+        if (isOpen == true)
         {
             doorCloseSound.Play();
             CloseDoorOrDrawer();
@@ -71,7 +76,7 @@ public class DoorOpener : MonoBehaviour, IInteractable
         }
 
         isOpen = true;
-        Invoke(nameof(TriggerEvent),jumpScareDelay);
+        Invoke(nameof(TriggerEvent), jumpScareDelay);
     }
 
     void CloseDoorOrDrawer()

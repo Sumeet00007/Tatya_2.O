@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6568371157524166574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pivot (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,8 +42,7 @@ GameObject:
   - component: {fileID: 4214128228591581268}
   - component: {fileID: 7987260119493488424}
   - component: {fileID: 4695764906136781348}
-  - component: {fileID: 2766476690167886063}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorD_V2_Window
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,28 +117,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2766476690167886063
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4388373354357142637}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: cc8dc8258c356a14b9bf02775a033c9a, type: 3}
 --- !u!1 &5546410089156927306
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,8 +128,7 @@ GameObject:
   - component: {fileID: 4034747292736177219}
   - component: {fileID: 3171864967923469735}
   - component: {fileID: 6144069848068548686}
-  - component: {fileID: 7497958657557678527}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorD_V2_Window2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,28 +203,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7497958657557678527
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5546410089156927306}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: cc8dc8258c356a14b9bf02775a033c9a, type: 3}
 --- !u!1 &5712969195041836114
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,7 +214,7 @@ GameObject:
   - component: {fileID: 1483199770998728639}
   - component: {fileID: 5966080490606417359}
   - component: {fileID: 631505258764958743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorD_V2_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8897399466083591293}
   - component: {fileID: 5986927756244055400}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DiningRoomEntrance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +433,7 @@ GameObject:
   - component: {fileID: 8726484155393997320}
   - component: {fileID: 4502793737487185336}
   - component: {fileID: 1146184494478966390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,6 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 0
+  isLocked: 0
   hinge: {fileID: 8726484155393997320}
   closedPosition: {fileID: 0}
   openPosition: {fileID: 0}
@@ -557,7 +512,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5545908260618492628}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +545,7 @@ GameObject:
   - component: {fileID: 708194133519019611}
   - component: {fileID: 2451948974400138444}
   - component: {fileID: 4858057065217015657}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,6 +581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 0
+  isLocked: 0
   hinge: {fileID: 708194133519019611}
   closedPosition: {fileID: 0}
   openPosition: {fileID: 0}
@@ -670,7 +626,7 @@ GameObject:
   - component: {fileID: 607755298669946154}
   - component: {fileID: 6384587851426065853}
   - component: {fileID: 1759087019195171392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DoorD_V2_lleft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
