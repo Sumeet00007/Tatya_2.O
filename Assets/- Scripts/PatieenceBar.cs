@@ -113,4 +113,9 @@ public class PatienceBar : MonoBehaviour
     {
        patiencebarmanager.SetActive(true);
     }
+
+    public void DisablePatienceBar()
+    {
+        patiencebarmanager.SetActive(false);
+    }
 }
