@@ -7,6 +7,6 @@ public class OpenDoor : MonoBehaviour, ICompletionHandler
 
     public void OnCompletion()
     {
-        doorOpener.isOpen = true;
+        doorOpener.isLocked = false;
     }
 }

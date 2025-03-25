@@ -45,12 +45,18 @@ public class DoorOpener : MonoBehaviour, IInteractable
         }
         if (isOpen == true)
         {
-            doorCloseSound.Play();
+            if (doorCloseSound != null)
+            {
+                doorCloseSound.Play();
+            }
             CloseDoorOrDrawer();
         }
         else
         {
-            doorOpenSound.Play();
+            if (doorOpenSound != null)
+            {
+                doorOpenSound.Play();
+            }
             OpenDoorOrDrawer();
         }
     }

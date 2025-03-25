@@ -65,6 +65,10 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
         {
             currentRecipeIndex++;
         }
+        else
+        {
+            return;
+        }
 
         ItemList currentRecipe = itemsRecipies[currentRecipeIndex];
         itemsNeeded.Clear();
@@ -106,7 +110,7 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
 
         if (itemsDeposited.Count != itemsNeeded.Count)
         {
-            //Debug.Log("Failed. Not enough items");
+            Debug.Log("Failed. Not enough items");
             return;
         }
 
@@ -116,7 +120,7 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
         {
             if (itemsDeposited[i] != itemsNeeded[i])
             {
-                //Debug.Log("Failed. Not correct items");
+                Debug.Log("Failed. Not correct items");
                 return;
             }
         }
