@@ -7,6 +7,7 @@ public class Items : MonoBehaviour, IInteractable
 
     [SerializeField] AudioSource audioSource;
 
+    public DoorOpening door;
 
     Rigidbody rb;
     Collider coll;
@@ -28,6 +29,18 @@ public class Items : MonoBehaviour, IInteractable
         {
             Debug.Log("This is wrong Doll");
             GameManager.Instance.ShowGameOver();
+        }
+
+        if(gameObject.CompareTag("DoorKey"))
+        {
+            if(door != null)
+            {
+                door.hasKey = true;
+            }
+            else
+            {
+                return;
+            }
         }
 
         if (player.isHandsFree && canPickUp)
