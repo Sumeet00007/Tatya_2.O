@@ -22,15 +22,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e181a258d2706c94ba41b3d1bf7b5e41, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.736681
+      value: 16.381332
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e181a258d2706c94ba41b3d1bf7b5e41, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.056
+      value: 3.1837912
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e181a258d2706c94ba41b3d1bf7b5e41, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -16.716
+      value: 10.4373865
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e181a258d2706c94ba41b3d1bf7b5e41, type: 3}
       propertyPath: m_LocalRotation.w
@@ -105,6 +105,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e181a258d2706c94ba41b3d1bf7b5e41, type: 3}
       insertIndex: -1
       addedObject: {fileID: 9158320933368512007}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e181a258d2706c94ba41b3d1bf7b5e41, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6466149533462303380}
   m_SourcePrefab: {fileID: 100100000, guid: e181a258d2706c94ba41b3d1bf7b5e41, type: 3}
 --- !u!1 &7474400627224596161 stripped
 GameObject:
@@ -151,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canPickUp: 1
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 6466149533462303380}
   door: {fileID: 0}
 --- !u!65 &9158320933368512007
 BoxCollider:
@@ -174,3 +177,100 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0027242983, y: 0.0035114887, z: 0.0011370615}
   m_Center: {x: 0, y: 0.0004518833, z: -0.0000065725776}
+--- !u!82 &6466149533462303380
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7474400627224596161}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
