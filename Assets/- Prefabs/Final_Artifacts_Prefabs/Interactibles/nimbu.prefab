@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 88d2a93f62429d043aad22d3b26ac063, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2000
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 88d2a93f62429d043aad22d3b26ac063, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2000
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 88d2a93f62429d043aad22d3b26ac063, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2000
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 88d2a93f62429d043aad22d3b26ac063, type: 3}
       propertyPath: m_LocalPosition.x
@@ -124,7 +124,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2101702405237555516}
   serializedVersion: 4
-  m_Mass: 7
+  m_Mass: 15
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -157,3 +157,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   audioSource: {fileID: 0}
+  door: {fileID: 0}

@@ -94,41 +94,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3601636abe92bb4cb8ed572d965b967, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8987346728488063525}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3601636abe92bb4cb8ed572d965b967, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 6654056263252222860}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3601636abe92bb4cb8ed572d965b967, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1082292800277096232}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e3601636abe92bb4cb8ed572d965b967, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8029828677201152747}
   m_SourcePrefab: {fileID: 100100000, guid: e3601636abe92bb4cb8ed572d965b967, type: 3}
 --- !u!1 &7206390674439753024 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e3601636abe92bb4cb8ed572d965b967, type: 3}
   m_PrefabInstance: {fileID: 7548974100562472977}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &-8987346728488063525
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7206390674439753024}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -1368104168110170625, guid: e3601636abe92bb4cb8ed572d965b967, type: 3}
 --- !u!54 &6654056263252222860
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -137,7 +115,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7206390674439753024}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 15
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -169,3 +147,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canPickUp: 1
+  audioSource: {fileID: 0}
+  door: {fileID: 0}
+--- !u!65 &8029828677201152747
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7206390674439753024}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.0011688214, y: 0.0011735823, z: 0.0010380475}
+  m_Center: {x: 0.00000003373623, y: 0.0000023913383, z: -0.00036601393}
