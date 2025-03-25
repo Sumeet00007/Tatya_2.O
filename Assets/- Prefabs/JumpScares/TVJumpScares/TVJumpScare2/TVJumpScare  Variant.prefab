@@ -98,18 +98,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2629680310882522596}
-  m_LocalRotation: {x: -0, y: 0.016896782, z: -0, w: 0.99985725}
-  m_LocalPosition: {x: 0, y: 0, z: 2.0850008}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.00028673932}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0021593245}
+  m_LocalScale: {x: 0.0049999976, y: 0.005, z: 0.0049999976}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4133344555280358078}
   - {fileID: 4684803161299832890}
-  m_Father: {fileID: 1420915649861644677}
+  m_Father: {fileID: 7892893361157431451}
   m_LocalEulerAnglesHint: {x: 0, y: 91.936, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 4.3556213, y: 4.3466034}
+  m_AnchoredPosition: {x: -0.00085020065, y: 0.0031619072}
   m_SizeDelta: {x: 1.0424, y: 0.7475}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2104550805169928569
@@ -332,7 +332,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 4261437995688960332, guid: 651de0d531e89bc449a8a5369bb7e6b0, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5829226282095056510, guid: 651de0d531e89bc449a8a5369bb7e6b0, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 3374526098455758688, guid: 651de0d531e89bc449a8a5369bb7e6b0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7727417409779814618}
     m_AddedComponents:
@@ -343,11 +343,6 @@ PrefabInstance:
 --- !u!1 &256057650208881197 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4670296832567860694, guid: 651de0d531e89bc449a8a5369bb7e6b0, type: 3}
-  m_PrefabInstance: {fileID: 4854186787233228795}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1420915649861644677 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5829226282095056510, guid: 651de0d531e89bc449a8a5369bb7e6b0, type: 3}
   m_PrefabInstance: {fileID: 4854186787233228795}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2457218945676750303 stripped
@@ -370,3 +365,8 @@ MonoBehaviour:
   colorVideo: {fileID: 2629680310882522596}
   noiseEffect: {fileID: 256057650208881197}
   videoDuration: 9
+--- !u!4 &7892893361157431451 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3374526098455758688, guid: 651de0d531e89bc449a8a5369bb7e6b0, type: 3}
+  m_PrefabInstance: {fileID: 4854186787233228795}
+  m_PrefabAsset: {fileID: 0}

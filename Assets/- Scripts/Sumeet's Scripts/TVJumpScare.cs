@@ -4,6 +4,7 @@ public class TVJumpScare : MonoBehaviour
 {
     public GameObject zombieArm;
     public AudioSource zombieScare;
+    private bool hasPlayed = false;
     void Awake()
     {
         zombieArm.SetActive(false);
@@ -17,13 +18,11 @@ public class TVJumpScare : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && !hasPlayed)
         {
             //Debug.Log("Player Interacted");
-
-         zombieScare.Play();
-
-
+            hasPlayed = true;
+            zombieScare.Play();
             zombieArm.SetActive(true);
             Invoke(nameof(DestroyGameObject), 1.5f);
         }
