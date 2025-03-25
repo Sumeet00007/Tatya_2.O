@@ -34692,7 +34692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   serializedBakingSet: {fileID: 11400000, guid: 393d44b9bac72f9498ab388f12dfb314, type: 2}
-  sceneGUID: 00000000000000000000000000000000
+  sceneGUID: 7641b8f15880aee4799df42eb944f174
   obsoleteAsset: {fileID: 0}
   obsoleteCellSharedDataAsset: {fileID: 0}
   obsoleteCellSupportDataAsset: {fileID: 0}
@@ -55401,13 +55401,13 @@ Transform:
   m_GameObject: {fileID: 1408247764}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.820997, y: -3.0499992, z: 76.82}
+  m_LocalPosition: {x: 19.719997, y: 52.09, z: 76.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1740243818}
   - {fileID: 165492517}
-  m_Father: {fileID: 1444187185}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1408247766
 MonoBehaviour:
@@ -55422,177 +55422,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Finally... you're awake.
-    voiceClip: {fileID: 8300000, guid: 6d73ba624636add42af7f85415130c54, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: You must be wondering... how you ended up here.
-    voiceClip: {fileID: 8300000, guid: f37eac51ff0be9047bfe3fa5f11ddc2b, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: I was the one who brought you, Baba.
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: 'Dragged you from your dreams... into my prison. '
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: This place... cursed... just like me.
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: I have no power left. A priest... he cursed me...
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: trapped me in this wretched form. Now I sit... watching... waiting.
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: But I cannot move... Neither we can escape... not without you.
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: You... you're the only one who knows about me...
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: The only one who can hear my voice... and the only one foolish enough to
-      come looking.
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: But don't think it's simple. No... If you want to survive this night...
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: you'll do exactly as I say.
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: I need certain objects... things that once belonged to me...
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: things that hold pieces of my soul.
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: I cannot fetch them... but you... you can.
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: Yet, I will not name them. Where's the fun in that?
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: You will solve my riddles... and through them... you'll find what I seek.
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
   - text: Now listen closely... your first trial begins.
     voiceClip: {fileID: 0}
     onDialogueEvent:
@@ -55603,7 +55432,8 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 0
     requiredItemName: 
-  - text: '[Riddle]'
+  - text: Used by two in a bowl, One makes it sweet today, One makes it sour, Sprinkled
+      on top, It binds together!
     voiceClip: {fileID: 0}
     onDialogueEvent:
       m_PersistentCalls:
@@ -55645,26 +55475,16 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
     triggersQuest: 1
-    questDescription: test
+    questDescription: Find the Item
     isQuestCompletion: 0
     requiresItem: 1
-    requiredItemName: Lemon (1)
-  - text: Thank You
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: Over
-    isQuestCompletion: 1
-    requiresItem: 0
-    requiredItemName: 
+    requiredItemName: Nimbu-Mirchi
   dialogueInterval: 3
   typingSpeed: 0.05
   dialogueCanvas: {fileID: 1740243821}
   dialogueText: {fileID: 1870176102}
   audioSource: {fileID: 201279843}
-  questUIText: {fileID: 0}
+  questUIText: {fileID: 2055673824}
   itemContainer: {fileID: 140083547}
   interactionRange: 10
 --- !u!1 &1408804991
@@ -57611,7 +57431,6 @@ Transform:
   m_Children:
   - {fileID: 791056152}
   - {fileID: 829300778}
-  - {fileID: 1408247765}
   - {fileID: 1057771560}
   - {fileID: 123246454}
   - {fileID: 1413466045}
@@ -57891,15 +57710,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 104
+      value: 15.49
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 69.3
+      value: 56.34
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.4
+      value: 61.9
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -77162,7 +76981,10 @@ PrefabInstance:
     - {fileID: 0}
     - {fileID: 2257840701892428684, guid: eeae0aca1d8dace46923ec448a414b62, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 800071765630818596, guid: eeae0aca1d8dace46923ec448a414b62, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2123021277}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8202689644961613208, guid: eeae0aca1d8dace46923ec448a414b62, type: 3}
       insertIndex: 5
@@ -78624,6 +78446,166 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1001 &2055673823
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3587829960771643534, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 386
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587829960771643534, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.922098
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587829960771643534, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.922098
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587829960771643534, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.922098
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587829960771643534, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -530
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587829960771643534, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 435
+      objectReference: {fileID: 0}
+    - target: {fileID: 5500891361999912145, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_Name
+      value: Quest Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108992160818822018, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6108992160818822018, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7286089029503163209, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380016451447708103, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_fontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380016451447708103, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b8e3daa693d6a94fb6128f96a283ba7, type: 2}
+    - target: {fileID: 7380016451447708103, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 7380016451447708103, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2601847830024654742, guid: 9b8e3daa693d6a94fb6128f96a283ba7, type: 2}
+    - target: {fileID: 7380016451447708103, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+--- !u!114 &2055673824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7380016451447708103, guid: 2c6c315c4e1f722478b04373de22b15c, type: 3}
+  m_PrefabInstance: {fileID: 2055673823}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2056808642
 GameObject:
   m_ObjectHideFlags: 0
@@ -79686,7 +79668,7 @@ RectTransform:
   m_GameObject: {fileID: 2078063103}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 103.57}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.85151, y: 0.85151, z: 0.85151}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 407728579}
@@ -79695,7 +79677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -64.47831, y: -11.15}
+  m_AnchoredPosition: {x: -77.51, y: -11.15}
   m_SizeDelta: {x: 9.1196, y: 4.0514}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078063105
@@ -81861,6 +81843,127 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2122733110}
   m_Mesh: {fileID: 4300020, guid: 525e42c8aa5e52e4ea137bc78720fcfc, type: 3}
+--- !u!1 &2123021276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2123021277}
+  - component: {fileID: 2123021279}
+  - component: {fileID: 2123021278}
+  m_Layer: 0
+  m_Name: Point Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2123021277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123021276}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -8.46, y: 0.36447525, z: -9.1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2013813637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2123021278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123021276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &2123021279
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123021276}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 8.1
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &2123916174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82740,7 +82843,9 @@ SceneRoots:
   - {fileID: 842278389}
   - {fileID: 858879796}
   - {fileID: 278338236}
-  - {fileID: 1455261763}
   - {fileID: 469483392}
   - {fileID: 217076825}
   - {fileID: 1423760674}
+  - {fileID: 1455261763}
+  - {fileID: 2055673823}
+  - {fileID: 1408247765}
