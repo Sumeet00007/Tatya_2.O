@@ -16,7 +16,8 @@ public class ArtifactSpawner : MonoBehaviour
 
     private void Start()
     {
-        //StartArtifactSpawning();
+        StartArtifactSpawning();
+        currentTask = 0;
     }
 
     public void StartArtifactSpawning()

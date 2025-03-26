@@ -45186,11 +45186,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1065021098896937934, guid: c345c54a3cfc711478933e84d53a7f98, type: 3}
   m_PrefabInstance: {fileID: 1082925894}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1082925896 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5855899434192145641, guid: c345c54a3cfc711478933e84d53a7f98, type: 3}
-  m_PrefabInstance: {fileID: 1082925894}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1083075973
 GameObject:
   m_ObjectHideFlags: 0
@@ -47921,11 +47916,6 @@ PrefabInstance:
 --- !u!4 &1148083055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7850257284601844859, guid: cf0f965c1a3c6c2449d7321c48869a5f, type: 3}
-  m_PrefabInstance: {fileID: 1148083054}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1148083056 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7474400627224596161, guid: cf0f965c1a3c6c2449d7321c48869a5f, type: 3}
   m_PrefabInstance: {fileID: 1148083054}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1154202928
@@ -73300,15 +73290,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   itemsRecipies:
-  - finalCombinedItem: {fileID: 5467438477556018174, guid: 96c3189be36fe5d47bdc709e149f8c63, type: 3}
+  - finalCombinedItem: {fileID: 1993828713961139063, guid: d59897bfaa0a6e14c95a31750422cc69, type: 3}
     requiredItems:
-    - {fileID: 1733670596}
-    - {fileID: 915444183}
-    - {fileID: 1879707950}
-  - finalCombinedItem: {fileID: 1148083056}
+    - {fileID: 2101702405237555516, guid: b033cc2259d928e4f9af38c6bbd26c0a, type: 3}
+    - {fileID: 1429642957527506761, guid: 67212d831e90a7c4cadc2f7e0f926a28, type: 3}
+    - {fileID: 8541924394048657190, guid: c4231e8c28c879749932dc9e617ee2ed, type: 3}
+  - finalCombinedItem: {fileID: 7474400627224596161, guid: cf0f965c1a3c6c2449d7321c48869a5f, type: 3}
     requiredItems:
-    - {fileID: 0}
-    - {fileID: 1082925896}
+    - {fileID: 1293967574686565702, guid: 804025ab49906b4429df564fe7d3fedc, type: 3}
+    - {fileID: 3907190159666123112, guid: bfb6fb23566e7e145a4fe20262ce379e, type: 3}
+  - finalCombinedItem: {fileID: 7814267207518346780, guid: 0064d83e63cf2654aaf66f95cd0083a7, type: 3}
+    requiredItems:
+    - {fileID: 8975758969295696034, guid: a403c886d4bdfae4a9be60109e6806fe, type: 3}
+    - {fileID: 1175678060658609754, guid: 6fac10426759b6f42b9daf2d76055a8d, type: 3}
 --- !u!64 &1964787927
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -74351,11 +74345,11 @@ PrefabInstance:
     - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
       propertyPath: 'task1Artifacts.Array.data[0]'
       value: 
-      objectReference: {fileID: 2101702405237555516, guid: b033cc2259d928e4f9af38c6bbd26c0a, type: 3}
+      objectReference: {fileID: 1429642957527506761, guid: 67212d831e90a7c4cadc2f7e0f926a28, type: 3}
     - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
       propertyPath: 'task1Artifacts.Array.data[1]'
       value: 
-      objectReference: {fileID: 1429642957527506761, guid: 67212d831e90a7c4cadc2f7e0f926a28, type: 3}
+      objectReference: {fileID: 2101702405237555516, guid: b033cc2259d928e4f9af38c6bbd26c0a, type: 3}
     - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
       propertyPath: 'task1Artifacts.Array.data[2]'
       value: 
@@ -74363,15 +74357,19 @@ PrefabInstance:
     - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
       propertyPath: 'task2Artifacts.Array.data[0]'
       value: 
-      objectReference: {fileID: 7474400627224596161, guid: cf0f965c1a3c6c2449d7321c48869a5f, type: 3}
+      objectReference: {fileID: 1293967574686565702, guid: 804025ab49906b4429df564fe7d3fedc, type: 3}
+    - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
+      propertyPath: 'task2Artifacts.Array.data[1]'
+      value: 
+      objectReference: {fileID: 3907190159666123112, guid: bfb6fb23566e7e145a4fe20262ce379e, type: 3}
     - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
       propertyPath: 'task3Artifacts.Array.data[0]'
       value: 
-      objectReference: {fileID: 7814267207518346780, guid: 0064d83e63cf2654aaf66f95cd0083a7, type: 3}
+      objectReference: {fileID: 8975758969295696034, guid: a403c886d4bdfae4a9be60109e6806fe, type: 3}
     - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
       propertyPath: 'task3Artifacts.Array.data[1]'
       value: 
-      objectReference: {fileID: 8541924394048657190, guid: c4231e8c28c879749932dc9e617ee2ed, type: 3}
+      objectReference: {fileID: 1175678060658609754, guid: 6fac10426759b6f42b9daf2d76055a8d, type: 3}
     - target: {fileID: 2710718207831395094, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
       propertyPath: m_Name
       value: ArtifactSpawner
