@@ -8,7 +8,7 @@ public class Main_Menu : MonoBehaviour
     public void PlayGame()
     {
 
-        SceneManager.LoadScene("DemoLevelDesign");
+        SceneManager.LoadScene("Post Processing test 1");
     }
 
     public void Credits()

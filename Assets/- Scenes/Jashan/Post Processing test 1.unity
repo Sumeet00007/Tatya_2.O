@@ -57167,8 +57167,8 @@ ReflectionProbe:
   m_TimeSlicingMode: 0
   m_Resolution: 128
   m_UpdateFrequency: 0
-  m_BoxSize: {x: 41.470856, y: 14.456009, z: 30.188774}
-  m_BoxOffset: {x: -9.351652, y: -1.8690147, z: 2.5014877}
+  m_BoxSize: {x: 41.470856, y: 19.08165, z: 30.188774}
+  m_BoxOffset: {x: -9.351652, y: -1.6695251, z: 2.5014877}
   m_NearClip: 0.3
   m_FarClip: 1000
   m_ShadowDistance: 102.89
@@ -63360,6 +63360,10 @@ PrefabInstance:
     - target: {fileID: 559601219434825981, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 617978089859590493, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 746167121018147702, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_Mesh
@@ -75631,7 +75635,7 @@ Transform:
   m_GameObject: {fileID: 1735036233}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4236, y: -24.03938, z: 110.7882}
+  m_LocalPosition: {x: -1.4236, y: -24.03938, z: 110.22}
   m_LocalScale: {x: 2.5636005, y: 5, z: 3.11831}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -75682,7 +75686,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e970c62774bfc8d489be9c4835b90eba, type: 2}
+  - {fileID: 2100000, guid: 2aaeaf6673b180142a03c0081bd90338, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84215,7 +84219,7 @@ ReflectionProbe:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IntensityMultiplier: 1.4
+  m_IntensityMultiplier: 1
   m_BlendDistance: 0
   m_HDR: 1
   m_BoxProjection: 1
@@ -89733,7 +89737,7 @@ ReflectionProbe:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IntensityMultiplier: 5
+  m_IntensityMultiplier: 1.5
   m_BlendDistance: 1.45
   m_HDR: 1
   m_BoxProjection: 1
