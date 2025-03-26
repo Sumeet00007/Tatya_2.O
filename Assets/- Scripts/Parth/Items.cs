@@ -5,6 +5,7 @@ public class Items : MonoBehaviour, IInteractable
 {
     public bool canPickUp = true;
     public DoorOpening door;
+    public AudioSource itemSound;
 
     [SerializeField] Vector3 itemRotationDeviation = new Vector3(0, 0, 0);
 
@@ -18,7 +19,7 @@ public class Items : MonoBehaviour, IInteractable
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         player = FindFirstObjectByType<Player>();
-        TryGetComponent<AudioSource>(out AudioSource audioSource);
+       
     }
 
     public void PlayerInteracted()
@@ -52,10 +53,7 @@ public class Items : MonoBehaviour, IInteractable
             transform.localPosition = Vector3.zero;
             transform.localRotation = Quaternion.Euler(0, 0, 0) * Quaternion.Euler(itemRotationDeviation);
             player.isHandsFree = false;
-            if (audioSource != null)
-            {
-                audioSource.Play();
-            }
+           itemSound.Play();
         }
     }
 }
