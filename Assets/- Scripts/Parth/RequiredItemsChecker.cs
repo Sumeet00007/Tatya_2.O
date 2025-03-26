@@ -127,6 +127,7 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
 
         if (TryGetComponent(out ICompletionHandler completionHandler))
         {
+            Debug.Log("Success. Items combined");
             completionHandler.OnCompletion();
         }
     }

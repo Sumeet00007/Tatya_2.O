@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 30ef0bc5250854b46bc23a957f66084f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1500
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30ef0bc5250854b46bc23a957f66084f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1500
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30ef0bc5250854b46bc23a957f66084f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1500
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 30ef0bc5250854b46bc23a957f66084f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -159,8 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canPickUp: 1
-  audioSource: {fileID: 4843979419237849089}
   door: {fileID: 0}
+  itemRotationDeviation: {x: 0, y: 0, z: 0}
 --- !u!82 &4843979419237849089
 AudioSource:
   m_ObjectHideFlags: 0
