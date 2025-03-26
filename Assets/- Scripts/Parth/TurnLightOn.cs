@@ -4,6 +4,8 @@ using UnityEngine;
 public class TurnLightOn : MonoBehaviour, ICompletionHandler
 {
     [SerializeField] Light pointLight;
+    [SerializeField] Light pointLight1;
+    [SerializeField] Light pointLight2;
     public AudioSource switchONSound;
     [SerializeField] ElectricPanelChecker itemChecker;
 
@@ -31,6 +33,8 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
             if (!lightIsOn)
             {
                 pointLight.enabled = true;
+                pointLight1.enabled = true;
+                pointLight2.enabled = true;
                 lightIsOn = true;
             }
         }
@@ -84,5 +88,13 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
         }
 
         return true; // All correct
+    }
+
+    public void LightOff()
+    {
+        pointLight.enabled = false;
+        pointLight1.enabled = false;
+        pointLight2.enabled = false;
+        lightIsOn = false;
     }
 }

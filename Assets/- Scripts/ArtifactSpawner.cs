@@ -54,11 +54,11 @@ public class ArtifactSpawner : MonoBehaviour
         }
         else if (currentTask == 1)
         {
-            AddArtifactsToQueue(task2Artifacts, 2, 5);
+            AddArtifactsToQueue(task2Artifacts, 2, 3);
         }
         else if (currentTask == 2)
         {
-            AddArtifactsToQueue(task3Artifacts, 2, 6);
+            AddArtifactsToQueue(task3Artifacts, 2, 5);
         }
         else
         {
