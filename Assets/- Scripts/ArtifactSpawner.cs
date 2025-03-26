@@ -16,8 +16,8 @@ public class ArtifactSpawner : MonoBehaviour
 
     private void Start()
     {
-        StartArtifactSpawning();
-        currentTask = 0;
+        //StartArtifactSpawning();
+        //currentTask = 0;
     }
 
     public void StartArtifactSpawning()
@@ -117,10 +117,15 @@ public class ArtifactSpawner : MonoBehaviour
 
 
     //function Responsible for StopArtifactSpawning when task is completed
-    private void StopArtifactSpawning()
+    public void StopArtifactSpawning()
     {
         isSpawning = false;
         StopAllCoroutines();
         gameObject.SetActive(false); // Disabling script after completion
+    }
+
+    public void DestroyConveyorBelt()
+    {
+        Debug.Log("Conveyor belt is destroyed");
     }
 }
