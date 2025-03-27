@@ -7,15 +7,13 @@ using UnityEngine.Events;
 public class BasementDoor : MonoBehaviour
 {
     public enum DoorType { Door, Drawer }
-    public DoorType doorType;
+    public DoorType doorType; // Determines whether it's a Door or Drawer
 
-    public Transform hinge;
-    public Transform closedPosition;
-    public Transform openPosition;
-    public float openAngle = 90f;
-    public float moveSpeed = 2f;
+    public Transform hinge; // The hinge point of the door
+    public float openAngle = 90f; // The angle to open the door
+    public float moveSpeed = 2f; // Speed of movement
     public bool isOpen = false;
-    public bool isLocked = false;
+
     private Quaternion closedRotation;
     private Quaternion openRotation;
 
@@ -23,16 +21,6 @@ public class BasementDoor : MonoBehaviour
     public float jumpScareDelay = 1.0f;
     public AudioSource doorOpenSound;
     public AudioSource doorCloseSound;
-    private BasementDoor basementdoor;
-
-    private bool canInteract = false;
-
-    //UI component to display UI when door is locked
-    //public TMP_Text doorLockedMessage; // TextMeshPro text reference
-    //public float messageDuration = 1.5f;
-
-    //To control sound
-    private bool isScriptEnabled;
 
     void Start()
     {
@@ -40,55 +28,24 @@ public class BasementDoor : MonoBehaviour
         {
             if (hinge == null)
             {
-                hinge = transform;
+                hinge = transform; // Default to self if no hinge is assigned
             }
             closedRotation = hinge.rotation;
             openRotation = hinge.rotation * Quaternion.Euler(0, openAngle, 0);
         }
 
-        basementdoor = GetComponent<BasementDoor>();
-        //DisableScript();
-        //EnableScript();
-
-        //if (doorLockedMessage != null)
-        //{
-        //    doorLockedMessage.gameObject.SetActive(false); // Hide initially
-        //}
-    }
-
-    void Update()
-    {
-        if (canInteract && Input.GetKeyDown(KeyCode.E)) // Example for "E" key interaction
-        {
-            PlayerInteracted();
-        }
+        //EnableScript(); // Automatically enable and open the door at start if needed
+        DisableScript();
     }
 
     public void PlayerInteracted()
     {
-        if (!canInteract || isLocked)
-        {
-            //if (doorLockedMessage != null)
-            //{
-            //    StartCoroutine(ShowLockedMessage());
-            //}
-            return;
-        }
-
         if (isOpen)
         {
-            if (doorCloseSound != null && isScriptEnabled==true)
-            {
-                doorCloseSound.Play();
-            }
             CloseDoorOrDrawer();
         }
         else
         {
-            if (doorOpenSound != null && isScriptEnabled==true)
-            {
-                doorOpenSound.Play();
-            }
             OpenDoorOrDrawer();
         }
     }
@@ -96,21 +53,10 @@ public class BasementDoor : MonoBehaviour
     void OpenDoorOrDrawer()
     {
         StopAllCoroutines();
-
-        if (doorType == DoorType.Drawer)
+        if (doorType == DoorType.Door)
         {
-            StartCoroutine(SlideObject(openPosition));
-        }
-        else if (doorType == DoorType.Door)
-        {
-            if (closedPosition != null && openPosition != null)
-            {
-                StartCoroutine(SlideObject(openPosition));
-            }
-            else
-            {
-                StartCoroutine(RotateDoor(openRotation));
-            }
+            StartCoroutine(RotateDoor(openRotation));
+            doorOpenSound.Play();
         }
 
         isOpen = true;
@@ -121,20 +67,10 @@ public class BasementDoor : MonoBehaviour
     {
         StopAllCoroutines();
 
-        if (doorType == DoorType.Drawer)
+        if (doorType == DoorType.Door)
         {
-            StartCoroutine(SlideObject(closedPosition));
-        }
-        else if (doorType == DoorType.Door)
-        {
-            if (closedPosition != null && openPosition != null)
-            {
-                StartCoroutine(SlideObject(closedPosition));
-            }
-            else
-            {
-                StartCoroutine(RotateDoor(closedRotation));
-            }
+            StartCoroutine(RotateDoor(closedRotation));
+            doorCloseSound.Play();
         }
 
         isOpen = false;
@@ -147,56 +83,22 @@ public class BasementDoor : MonoBehaviour
             hinge.rotation = Quaternion.Lerp(hinge.rotation, targetRotation, Time.deltaTime * moveSpeed);
             yield return null;
         }
-        hinge.rotation = targetRotation;
-    }
-
-    IEnumerator SlideObject(Transform target)
-    {
-        while (Vector3.Distance(transform.position, target.position) > 0.01f)
-        {
-            transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * moveSpeed);
-            yield return null;
-        }
-        transform.position = target.position;
-    }
-
-    public void TriggerEvent()
-    {
-        if (onActionTriggered != null)
-        {
-            onActionTriggered.Invoke();
-        }
+        hinge.rotation = targetRotation; // Ensure exact rotation
     }
 
     public void EnableScript()
     {
-        if (basementdoor != null)
-        {
-            Debug.Log("Doors are opened");
-            basementdoor.enabled = true;
-            canInteract = true;
-            isScriptEnabled = true;
-        }
+        this.enabled = true;
+        OpenDoorOrDrawer(); // Automatically open the door when enabling the script
     }
 
     public void DisableScript()
     {
-        if (basementdoor != null)
-        {
-            basementdoor.enabled = false;
-            canInteract = false;
-            isScriptEnabled = false;
-        }
+        this.enabled = false;
     }
 
-    //IEnumerator ShowLockedMessage()
-    //{
-    //    if (doorLockedMessage != null)
-    //    {
-    //        doorLockedMessage.text = "Door is Locked";
-    //        doorLockedMessage.gameObject.SetActive(true);
-    //        yield return new WaitForSeconds(messageDuration);
-    //        doorLockedMessage.gameObject.SetActive(false);
-    //    }
-    //}
+    public void TriggerEvent()
+    {
+        onActionTriggered?.Invoke();
+    }
 }

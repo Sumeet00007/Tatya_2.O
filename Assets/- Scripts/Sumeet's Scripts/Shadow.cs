@@ -20,6 +20,11 @@ public class Shadow : MonoBehaviour
     private int currentDialogueIndex = 0;
     private bool hasPlayed = false; // To ensure it only plays once
 
+    private void Start()
+    {
+        dialogueText.text = " ";
+    }
+
     public void StartDialogue()
     {
         if (!hasPlayed)
