@@ -84,7 +84,6 @@ public class PatienceBar : MonoBehaviour
             // Add game over logic here (disable movement, show UI, restart level, etc.)
             GameManager.Instance.ShowGameOver();
             Invoke(nameof(ZeroFill), 1.5f);
-            
         }
     }
 

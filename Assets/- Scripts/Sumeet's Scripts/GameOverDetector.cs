@@ -10,10 +10,14 @@ public class GameOverDetector : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            GameManager.Instance.ShowGameOver();
-
+            Invoke(nameof(TriggerGameOver), 0.5f);
         }
     }
 
-  
+    private void TriggerGameOver()
+    {
+        GameManager.Instance.ShowGameOverImage();
+    }
+
+
 }

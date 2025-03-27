@@ -29,8 +29,8 @@ public class Items : MonoBehaviour, IInteractable
 
         if (gameObject.CompareTag("WrongDoll")) // Replace "Collectible" with your actual tag
         {
-            Debug.Log("This is wrong Doll");
-            GameManager.Instance.ShowGameOver();
+            //Debug.Log("This is wrong Doll");
+            Invoke(nameof(TriggerGameOver), 0.5f);
         }
 
         if (gameObject.CompareTag("DoorKey"))
@@ -55,5 +55,10 @@ public class Items : MonoBehaviour, IInteractable
             player.isHandsFree = false;
            itemSound.Play();
         }
+    }
+
+    private void TriggerGameOver()
+    {
+        GameManager.Instance.ShowGameOverImage();
     }
 }
