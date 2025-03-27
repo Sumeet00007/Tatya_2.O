@@ -6353,6 +6353,7 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 0}
   itemSound: {fileID: 312446064}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
 --- !u!4 &163182303
 Transform:
@@ -13646,6 +13647,7 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 0}
   itemSound: {fileID: 385669132}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
 --- !u!43 &304030060
 Mesh:
@@ -60431,6 +60433,7 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 0}
   itemSound: {fileID: 385669132}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
 --- !u!4 &1359841469
 Transform:
@@ -64880,6 +64883,7 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 0}
   itemSound: {fileID: 385669132}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
 --- !u!4 &1457945173
 Transform:
@@ -65257,7 +65261,7 @@ PrefabInstance:
       objectReference: {fileID: 12967797}
     - target: {fileID: 1977455523496112088, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_VersionIndex
-      value: 3864
+      value: 3867
       objectReference: {fileID: 0}
     - target: {fileID: 2063219697472749948, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_Mesh
@@ -65313,7 +65317,7 @@ PrefabInstance:
       objectReference: {fileID: 2123548356}
     - target: {fileID: 2188212105252337291, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_VersionIndex
-      value: 3864
+      value: 3867
       objectReference: {fileID: 0}
     - target: {fileID: 2347924832135679952, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_TagString
@@ -65577,7 +65581,7 @@ PrefabInstance:
       objectReference: {fileID: 1604514744}
     - target: {fileID: 5763731071063005209, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_VersionIndex
-      value: 3675
+      value: 3678
       objectReference: {fileID: 0}
     - target: {fileID: 5763731071063005209, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_SelectedEdges.Array.size
@@ -67185,7 +67189,7 @@ PrefabInstance:
       objectReference: {fileID: 1745453142}
     - target: {fileID: 7538111872505371939, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_VersionIndex
-      value: 3864
+      value: 3867
       objectReference: {fileID: 0}
     - target: {fileID: 7563361721051621680, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_Mesh
@@ -67217,7 +67221,7 @@ PrefabInstance:
       objectReference: {fileID: 2096822291}
     - target: {fileID: 8170770497458049070, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_VersionIndex
-      value: 3864
+      value: 3867
       objectReference: {fileID: 0}
     - target: {fileID: 8460301488192471132, guid: a138dcfe7ed7a4542aef4d704648b04a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -79573,6 +79577,7 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 0}
   itemSound: {fileID: 312446064}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
 --- !u!4 &1739321197
 Transform:
@@ -87228,6 +87233,7 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 0}
   itemSound: {fileID: 385669132}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
 --- !u!4 &1948519032
 Transform:
@@ -91705,6 +91711,7 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 0}
   itemSound: {fileID: 312446064}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
 --- !u!4 &2052616802
 Transform:
@@ -96456,6 +96463,7 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 1783326613776186485}
   itemSound: {fileID: 8396155049051369796}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: -90, y: 0, z: 360}
 --- !u!114 &1783326613776186485
 MonoBehaviour:

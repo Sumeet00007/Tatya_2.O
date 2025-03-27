@@ -7,6 +7,7 @@ public class Items : MonoBehaviour, IInteractable
     public DoorOpening door;
     public AudioSource itemSound;
 
+    [SerializeField] Vector3 itemPositionDeviation = new Vector3(0, 0, 0);
     [SerializeField] Vector3 itemRotationDeviation = new Vector3(0, 0, 0);
 
     AudioSource audioSource;
@@ -50,7 +51,7 @@ public class Items : MonoBehaviour, IInteractable
             rb.isKinematic = true;
             coll.isTrigger = true;
             transform.SetParent(player.itemContainer);
-            transform.localPosition = Vector3.zero;
+            transform.localPosition = itemPositionDeviation;
             transform.localRotation = Quaternion.Euler(0, 0, 0) * Quaternion.Euler(itemRotationDeviation);
             player.isHandsFree = false;
            itemSound.Play();

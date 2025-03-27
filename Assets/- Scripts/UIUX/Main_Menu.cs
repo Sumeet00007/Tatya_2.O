@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Main_Menu : MonoBehaviour
 {
+    void Update()
+    {
+        LockCursor(false);
+    }
     public void PlayGame()
     {
 
@@ -24,5 +28,11 @@ public class Main_Menu : MonoBehaviour
     public void Back()
     {
         SceneManager.LoadScene("Main Menu");
+    }
+
+    private void LockCursor(bool locked)
+    {
+        Cursor.lockState = locked ? CursorLockMode.Locked : CursorLockMode.None;
+        Cursor.visible = !locked;
     }
 }
