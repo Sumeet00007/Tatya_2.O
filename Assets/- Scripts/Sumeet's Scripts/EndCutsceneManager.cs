@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class EndCutsceneManager : MonoBehaviour
 {
@@ -17,5 +18,7 @@ public class EndCutsceneManager : MonoBehaviour
    {
         yield return new WaitForSeconds(45.0f);
         gameOverScreenIMG.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("Main Menu");
    }
 }
