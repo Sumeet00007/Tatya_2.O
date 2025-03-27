@@ -1,28 +1,38 @@
-using UnityEngine.Events;
+using TMPro;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
-public class DoorOpener : MonoBehaviour, IInteractable
+public class BasementDoor : MonoBehaviour
 {
     public enum DoorType { Door, Drawer }
-    public DoorType doorType; // Determines whether it's a Door or Drawer
+    public DoorType doorType;
 
-    public Transform hinge; // The hinge point of the door
-    public Transform closedPosition; // Transform for closed position
-    public Transform openPosition;   // Transform for open position
-    public float openAngle = 90f; // The angle to open the door
-    public float moveSpeed = 2f; // Speed of movement
+    public Transform hinge;
+    public Transform closedPosition;
+    public Transform openPosition;
+    public float openAngle = 90f;
+    public float moveSpeed = 2f;
     public bool isOpen = false;
     public bool isLocked = false;
     private Quaternion closedRotation;
     private Quaternion openRotation;
 
-
     public UnityEvent onActionTriggered;
     public float jumpScareDelay = 1.0f;
     public AudioSource doorOpenSound;
     public AudioSource doorCloseSound;
+    private BasementDoor basementdoor;
+
+    private bool canInteract = false;
+
+    //UI component to display UI when door is locked
+    //public TMP_Text doorLockedMessage; // TextMeshPro text reference
+    //public float messageDuration = 1.5f;
+
+    //To control sound
+    private bool isScriptEnabled;
 
     void Start()
     {
@@ -30,22 +40,44 @@ public class DoorOpener : MonoBehaviour, IInteractable
         {
             if (hinge == null)
             {
-                hinge = transform; // Default to self if no hinge is assignedd
+                hinge = transform;
             }
             closedRotation = hinge.rotation;
             openRotation = hinge.rotation * Quaternion.Euler(0, openAngle, 0);
+        }
+
+        basementdoor = GetComponent<BasementDoor>();
+        //DisableScript();
+        //EnableScript();
+
+        //if (doorLockedMessage != null)
+        //{
+        //    doorLockedMessage.gameObject.SetActive(false); // Hide initially
+        //}
+    }
+
+    void Update()
+    {
+        if (canInteract && Input.GetKeyDown(KeyCode.E)) // Example for "E" key interaction
+        {
+            PlayerInteracted();
         }
     }
 
     public void PlayerInteracted()
     {
-        if (isLocked)
+        if (!canInteract || isLocked)
         {
+            //if (doorLockedMessage != null)
+            //{
+            //    StartCoroutine(ShowLockedMessage());
+            //}
             return;
         }
-        if (isOpen == true)
+
+        if (isOpen)
         {
-            if (doorCloseSound != null)
+            if (doorCloseSound != null && isScriptEnabled==true)
             {
                 doorCloseSound.Play();
             }
@@ -53,7 +85,7 @@ public class DoorOpener : MonoBehaviour, IInteractable
         }
         else
         {
-            if (doorOpenSound != null)
+            if (doorOpenSound != null && isScriptEnabled==true)
             {
                 doorOpenSound.Play();
             }
@@ -115,7 +147,7 @@ public class DoorOpener : MonoBehaviour, IInteractable
             hinge.rotation = Quaternion.Lerp(hinge.rotation, targetRotation, Time.deltaTime * moveSpeed);
             yield return null;
         }
-        hinge.rotation = targetRotation; // Ensure exact rotation
+        hinge.rotation = targetRotation;
     }
 
     IEnumerator SlideObject(Transform target)
@@ -125,7 +157,7 @@ public class DoorOpener : MonoBehaviour, IInteractable
             transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * moveSpeed);
             yield return null;
         }
-        transform.position = target.position; // Ensure exact position
+        transform.position = target.position;
     }
 
     public void TriggerEvent()
@@ -135,4 +167,36 @@ public class DoorOpener : MonoBehaviour, IInteractable
             onActionTriggered.Invoke();
         }
     }
+
+    public void EnableScript()
+    {
+        if (basementdoor != null)
+        {
+            Debug.Log("Doors are opened");
+            basementdoor.enabled = true;
+            canInteract = true;
+            isScriptEnabled = true;
+        }
+    }
+
+    public void DisableScript()
+    {
+        if (basementdoor != null)
+        {
+            basementdoor.enabled = false;
+            canInteract = false;
+            isScriptEnabled = false;
+        }
+    }
+
+    //IEnumerator ShowLockedMessage()
+    //{
+    //    if (doorLockedMessage != null)
+    //    {
+    //        doorLockedMessage.text = "Door is Locked";
+    //        doorLockedMessage.gameObject.SetActive(true);
+    //        yield return new WaitForSeconds(messageDuration);
+    //        doorLockedMessage.gameObject.SetActive(false);
+    //    }
+    //}
 }
