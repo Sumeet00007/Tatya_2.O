@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Events;
 
-public class BasementDoor : MonoBehaviour
+public class TatyaDoor : MonoBehaviour
 {
     public enum DoorType { Door, Drawer }
     public DoorType doorType; // Determines whether it's a Door or Drawer
@@ -34,7 +34,7 @@ public class BasementDoor : MonoBehaviour
             openRotation = hinge.rotation * Quaternion.Euler(0, openAngle, 0);
         }
 
-        //EnableScript(); // Automatically enable and open the door at start if needed
+        /* EnableScript();*/ // Automatically enable and open the door at start if needed
         DisableScript();
     }
 
