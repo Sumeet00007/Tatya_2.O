@@ -4,8 +4,6 @@ using UnityEngine;
 public class TurnLightOn : MonoBehaviour, ICompletionHandler
 {
     [SerializeField] Light pointLight;
-    [SerializeField] Light pointLight1;
-    [SerializeField] Light pointLight2;
     public AudioSource switchONSound;
     [SerializeField] ElectricPanelChecker itemChecker;
 
@@ -33,19 +31,17 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
             if (!lightIsOn)
             {
                 pointLight.enabled = true;
-                pointLight1.enabled = true;
-                pointLight2.enabled = true;
                 lightIsOn = true;
             }
         }
-        else
-        {
-            if (lightIsOn)
-            {
-                pointLight.enabled = false;
-                lightIsOn = false;
-            }
-        }
+        //else
+        //{
+        //    if (lightIsOn)
+        //    {
+        //        pointLight.enabled = false;
+        //        lightIsOn = false;
+        //    }
+        //}
     }
 
     // Reuse the same check logic similar to RequiredItemsChecker
@@ -93,8 +89,12 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
     public void LightOff()
     {
         pointLight.enabled = false;
-        pointLight1.enabled = false;
-        pointLight2.enabled = false;
         lightIsOn = false;
+    }
+
+    public void LightOn()
+    {
+        pointLight.enabled = true;
+        lightIsOn = true;
     }
 }
