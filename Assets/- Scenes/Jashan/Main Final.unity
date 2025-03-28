@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 2deb45e2971d3d644b5116be58877b53, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 527dcd36b97262a4cad82aa3f9f26a0c, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 8a75bc1e9a93a8a47833a4467ef7c3ec, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -20722,63 +20722,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1819133544}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &449962817
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2500978018033531398, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 25.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 2500978018033531398, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 48.633068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2500978018033531398, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 64.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 2500978018033531398, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2500978018033531398, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2500978018033531398, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2500978018033531398, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2500978018033531398, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2500978018033531398, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -180
-      objectReference: {fileID: 0}
-    - target: {fileID: 2500978018033531398, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3026017546936688828, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
-      propertyPath: m_Name
-      value: mantra_plate
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c912af29eafdd0a4d95925447a32cc43, type: 3}
 --- !u!1 &450258643
 GameObject:
   m_ObjectHideFlags: 0
@@ -48653,7 +48596,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -77367,7 +77310,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -90843,6 +90786,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 405804746}
+    - target: {fileID: 8813892050280466854, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8889893512419193913, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -97273,4 +97220,3 @@ SceneRoots:
   - {fileID: 2021468585}
   - {fileID: 1646051891}
   - {fileID: 1940139150}
-  - {fileID: 449962817}
