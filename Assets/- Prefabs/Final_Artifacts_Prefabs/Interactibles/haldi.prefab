@@ -151,7 +151,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
-  itemRotationDeviation: {x: 0, y: 0, z: 0}
+  itemSound: {fileID: 0}
+  itemPositionDeviation: {x: 0.119, y: 0.182, z: 0.209}
+  itemRotationDeviation: {x: 281.79562, y: 271.5132, z: 129.34024}
 --- !u!65 &3102800086288635799
 BoxCollider:
   m_ObjectHideFlags: 0
