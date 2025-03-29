@@ -14,19 +14,21 @@ public class WrongPlatformDestroyer : MonoBehaviour
     //For folly sound effect
 
     public AudioSource crumblesoundFx;
+    private Vector3 initialPosition;
+    public float platformResetTime = 3.0f;
 
     private void Start()
     {
         cameraTransform = Camera.main.transform; // Get main camera
         originalCameraLocalPosition = cameraTransform.localPosition; // Store local position
-
+        initialPosition= transform.localPosition;
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Item"))
         {
-            if (CompareTag("wrongPlatform"))
+            if (CompareTag("wrongPlatform") ) 
             {
                 if (!isPlayerOnPlatform)
                 {
@@ -41,7 +43,8 @@ public class WrongPlatformDestroyer : MonoBehaviour
 
                 if (timer >= destroyDelay)
                 {
-                    Destroy(gameObject); // Destroy wrong platform
+                    gameObject.SetActive(false);
+                    Invoke(nameof(Reset), platformResetTime);
                 }
             }
 
@@ -90,5 +93,11 @@ public class WrongPlatformDestroyer : MonoBehaviour
             shakeCoroutine = null;
         }
         cameraTransform.localPosition = originalCameraLocalPosition; // Reset position
+    }
+
+    private void Reset()
+    {
+        transform.position= initialPosition;
+        gameObject.SetActive(true);
     }
 }
