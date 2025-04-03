@@ -13,5 +13,6 @@ public class Painting : MonoBehaviour, IInteractable
     public void PlayerInteracted()
     {
         rb.isKinematic = false;
+        Debug.Log("Player Interacted");
     }
 }

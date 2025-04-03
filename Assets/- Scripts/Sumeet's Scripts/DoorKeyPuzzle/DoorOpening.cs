@@ -79,7 +79,11 @@ public class DoorOpening : MonoBehaviour, IInteractable
 
     IEnumerator RotateDoor(Quaternion targetRotation)
     {
-        doorCloseSound.Play();
+        if(hasKey == true)
+        {
+            doorCloseSound.Play();
+        }
+      
         while (Quaternion.Angle(hinge.rotation, targetRotation) > 0.1f)
         {
             hinge.rotation = Quaternion.Lerp(hinge.rotation, targetRotation, Time.deltaTime * moveSpeed);
