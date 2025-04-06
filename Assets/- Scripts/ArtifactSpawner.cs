@@ -14,6 +14,8 @@ public class ArtifactSpawner : MonoBehaviour
     private bool isSpawning = false;
     private List<GameObject> spawnQueue = new List<GameObject>();
 
+    private GameObject lastSpawnedArtifact = null;
+
     private void Start()
     {
         //StartArtifactSpawning();
@@ -94,11 +96,27 @@ public class ArtifactSpawner : MonoBehaviour
 
     private void SpawnArtifact()
     {
-        if (spawnQueue.Count > 0)
+        if (spawnQueue.Count == 0) return;
+
+        int spawnIndex = -1;
+
+        // Try to find a different artifact from the last spawned one
+        for (int i = 0; i < spawnQueue.Count; i++)
         {
-            Instantiate(spawnQueue[0], transform.position, Quaternion.identity);
-            spawnQueue.RemoveAt(0);
+            if (spawnQueue[i] != lastSpawnedArtifact)
+            {
+                spawnIndex = i;
+                break;
+            }
         }
+
+        // If all are the same as last spawned, just use the first one
+        if (spawnIndex == -1) spawnIndex = 0;
+
+        GameObject selectedArtifact = spawnQueue[spawnIndex];
+        Instantiate(selectedArtifact, transform.position, Quaternion.identity);
+        lastSpawnedArtifact = selectedArtifact;
+        spawnQueue.RemoveAt(spawnIndex);
     }
 
     //function responsible for changing artifacts
