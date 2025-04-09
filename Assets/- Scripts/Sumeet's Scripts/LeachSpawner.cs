@@ -20,6 +20,11 @@ public class LeachSpawner : MonoBehaviour
         {
             return;
         }
+
+        if(player ==null)
+        {
+            return;
+        }
     }
 
     // Update is called once per frame
@@ -28,16 +33,16 @@ public class LeachSpawner : MonoBehaviour
         if (isSpawned && spawnedLeach != null)
         {
             spawnedLeach.transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+            float distance = Vector3.Distance(spawnedLeach.transform.position, player.transform.position);
+            //  Debug.Log(distance);    
+            if (distance > 300.0f)
+            {
+                Destroy(spawnedLeach);
+                //Debug.Log("Destroyed");
+            }
         }
 
-        float distance=Vector3.Distance(spawnedLeach.transform.position, player.transform.position);
-      //  Debug.Log(distance);    
-        if(distance> 300.0f)
-        {
-            Destroy(spawnedLeach);
-            //Debug.Log("Destroyed");
-        }
-        
+
     }
     public void SpawnLeach()
     {
@@ -46,8 +51,10 @@ public class LeachSpawner : MonoBehaviour
             jumpscarefx.Play();
             //Debug.Log("Spawned leach");
             spawnedLeach = Instantiate(leachprefab, leachSpawnPoint.position, leachSpawnPoint.rotation);
-
             isSpawned = true;
+           
         }
     }
+
+ 
 }
