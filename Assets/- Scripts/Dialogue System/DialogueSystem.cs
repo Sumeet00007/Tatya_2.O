@@ -36,6 +36,8 @@ namespace MyGame.Dialogue
 
         [Header("Audio Settings")]
         [SerializeField] private AudioSource audioSource;
+        public AudioSource itemGive;
+        public AudioSource itemReject;
         public float dialogueVolume = 1f;
         public float volumeMultiplier = 2f;
 
@@ -130,15 +132,18 @@ namespace MyGame.Dialogue
                     Destroy(item.gameObject);
                     player.isHandsFree = true;
                     awaitingItem = false;
+                    itemGive.Play();
                 }
                 else
                 {
                     dialogueText.text = "This is not what I asked for!";
+                    itemReject.Play();
                 }
             }
             else
             {
                 dialogueText.text = "You don't have anything to give!";
+                itemReject.Play();
             }
         }
 

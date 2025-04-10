@@ -17,7 +17,7 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
     public void OnCompletion()
     {
         // This will still play when the correct combination is first completed
-        switchONSound.Play();
+       
         Debug.Log("Correct Items");
         pointLight.enabled = true;
         lightIsOn = true;
@@ -32,6 +32,7 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
             {
                 pointLight.enabled = true;
                 lightIsOn = true;
+                switchONSound.Play();
             }
         }
         //else
@@ -90,6 +91,7 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
     {
         pointLight.enabled = false;
         lightIsOn = false;
+        switchONSound.Play();
     }
 
     public void LightOn()
