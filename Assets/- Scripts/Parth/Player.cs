@@ -50,11 +50,14 @@ public class Player : MonoBehaviour
     Rigidbody currentItemRigidBody;
     Collider currentItemCollider;
 
+    private int originalLayer;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         isHandsFree = itemContainer.transform.childCount == 0;
+        originalLayer = LayerMask.NameToLayer("Items");
     }
 
     void Update()
@@ -146,6 +149,7 @@ public class Player : MonoBehaviour
         currentItemRigidBody = currentItem.GetComponent<Rigidbody>();
         currentItemCollider = currentItem.GetComponent<Collider>();
 
+        SetLayerRecursively(currentItem.gameObject, originalLayer);
         currentItemRigidBody.isKinematic = false;
         currentItemCollider.isTrigger = false;
         currentItem.SetParent(null);
@@ -176,5 +180,14 @@ public class Player : MonoBehaviour
 
         Gizmos.DrawWireSphere(castOriginPlace, sphereCastRadius);
         Gizmos.DrawWireSphere(castOriginPlace + playerCamera.transform.forward * sphereCastRange, sphereCastRadius);
+    }
+
+    private void SetLayerRecursively(GameObject obj, int newLayer)
+    {
+        obj.layer = newLayer;
+        foreach (Transform child in obj.transform)
+        {
+            SetLayerRecursively(child.gameObject, newLayer);
+        }
     }
 }

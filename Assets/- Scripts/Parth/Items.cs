@@ -10,27 +10,29 @@ public class Items : MonoBehaviour, IInteractable
     [SerializeField] Vector3 itemPositionDeviation = new Vector3(0, 0, 0);
     [SerializeField] Vector3 itemRotationDeviation = new Vector3(0, 0, 0);
 
-    AudioSource audioSource;
-    Rigidbody rb;
-    Collider coll;
-    Player player;
+    private AudioSource audioSource;
+    private Rigidbody rb;
+    private Collider coll;
+    private Player player;
+
+    private int originalLayer;
+    private int tLayer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         player = FindFirstObjectByType<Player>();
-       
+
+        // Cache layer indices
+        originalLayer = LayerMask.NameToLayer("Items");
+        tLayer = LayerMask.NameToLayer("Tlayer");
     }
 
     public void PlayerInteracted()
     {
-        //Debug.Log("Press E to collect " + objectHit.transform.name);
-        //Add UI prompt "Press e to collect _itemName." instead of debug.....
-
-        if (gameObject.CompareTag("WrongDoll")) // Replace "Collectible" with your actual tag
+        if (gameObject.CompareTag("WrongDoll"))
         {
-            //Debug.Log("This is wrong Doll");
             Invoke(nameof(TriggerGameOver), 0.5f);
         }
 
@@ -53,8 +55,33 @@ public class Items : MonoBehaviour, IInteractable
             transform.SetParent(player.itemContainer);
             transform.localPosition = itemPositionDeviation;
             transform.localRotation = Quaternion.Euler(0, 0, 0) * Quaternion.Euler(itemRotationDeviation);
+
+            SetLayerRecursively(gameObject, tLayer); // Change layer for item and all children
+            Debug.Log("Changed Layer to Tlayer");
+
             player.isHandsFree = false;
-           itemSound.Play();
+            itemSound.Play();
+        }
+    }
+
+    public void DropItem()
+    {
+        transform.SetParent(null);
+        rb.isKinematic = false;
+        coll.isTrigger = false;
+
+        SetLayerRecursively(gameObject, originalLayer); // Revert layer for item and all children
+        //Debug.Log("Changed Layer back to Items");
+
+        player.isHandsFree = true;
+    }
+
+    private void SetLayerRecursively(GameObject obj, int newLayer)
+    {
+        obj.layer = newLayer;
+        foreach (Transform child in obj.transform)
+        {
+            SetLayerRecursively(child.gameObject, newLayer);
         }
     }
 
