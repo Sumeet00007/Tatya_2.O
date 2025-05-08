@@ -15,8 +15,8 @@ public class Items : MonoBehaviour, IInteractable
     private Collider coll;
     private Player player;
 
-    private int originalLayer;
-    private int tLayer;
+    //private int originalLayer;
+    //private int tLayer;
 
     void Start()
     {
@@ -25,8 +25,8 @@ public class Items : MonoBehaviour, IInteractable
         player = FindFirstObjectByType<Player>();
 
         // Cache layer indices
-        originalLayer = LayerMask.NameToLayer("Items");
-        tLayer = LayerMask.NameToLayer("Tlayer");
+        //originalLayer = LayerMask.NameToLayer("Items");
+        //tLayer = LayerMask.NameToLayer("Tlayer");
     }
 
     public void PlayerInteracted()
@@ -56,7 +56,7 @@ public class Items : MonoBehaviour, IInteractable
             transform.localPosition = itemPositionDeviation;
             transform.localRotation = Quaternion.Euler(0, 0, 0) * Quaternion.Euler(itemRotationDeviation);
 
-            SetLayerRecursively(gameObject, tLayer); // Change layer for item and all children
+            //SetLayerRecursively(gameObject, tLayer); // Change layer for item and all children
             Debug.Log("Changed Layer to Tlayer");
 
             player.isHandsFree = false;
@@ -70,20 +70,20 @@ public class Items : MonoBehaviour, IInteractable
         rb.isKinematic = false;
         coll.isTrigger = false;
 
-        SetLayerRecursively(gameObject, originalLayer); // Revert layer for item and all children
+       // SetLayerRecursively(gameObject, originalLayer); // Revert layer for item and all children
         //Debug.Log("Changed Layer back to Items");
 
         player.isHandsFree = true;
     }
 
-    private void SetLayerRecursively(GameObject obj, int newLayer)
-    {
-        obj.layer = newLayer;
-        foreach (Transform child in obj.transform)
-        {
-            SetLayerRecursively(child.gameObject, newLayer);
-        }
-    }
+    //private void SetLayerRecursively(GameObject obj, int newLayer)
+    //{
+    //    obj.layer = newLayer;
+    //    foreach (Transform child in obj.transform)
+    //    {
+    //        SetLayerRecursively(child.gameObject, newLayer);
+    //    }
+    //}
 
     private void TriggerGameOver()
     {
