@@ -15,6 +15,11 @@ public class Platform_Ground_Teleporter : MonoBehaviour
     private void Start()
     {
         blackScreen.color = new Color(0, 0, 0, 0);
+
+        if(platformPuzzlePos == null && groundFloorPos==null)
+        {
+            Debug.LogError(" transform are null");
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,12 +28,19 @@ public class Platform_Ground_Teleporter : MonoBehaviour
         {
             CharacterController controller = other.GetComponent<CharacterController>();
 
+            //for final lighting scene
+            //if (firstTime)
+            //{
+            //    StartCoroutine(FadeIn(other.transform, controller, platformPuzzlePos));
+            //    firstTime = false;
+            //}
+
+            //for originalScene
             if (firstTime)
             {
-                StartCoroutine(FadeIn(other.transform, controller, platformPuzzlePos));
+                //StartCoroutine(FadeIn(other.transform, controller, platformPuzzlePos));
                 firstTime = false;
             }
-
 
             else
             {

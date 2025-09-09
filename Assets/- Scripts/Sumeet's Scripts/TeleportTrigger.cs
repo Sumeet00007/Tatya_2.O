@@ -8,11 +8,16 @@ public class TeleportTrigger : MonoBehaviour
     public Transform targetPos;
     public Image blackScreen;
     public float fadeDuration = 3f;
+    private bool firstTime;
 
 
     private void Start()
     {
         blackScreen.color = new Color(0, 0, 0, 0);
+
+        //for orignalScene
+        this.enabled = false;
+        firstTime = true;
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -21,15 +26,24 @@ public class TeleportTrigger : MonoBehaviour
 
             CharacterController controller = other.GetComponent<CharacterController>();
 
-            if (controller != null && targetPos != null)
+            if (firstTime==true)
             {
-                StartCoroutine(FadeIn(other.transform, controller, targetPos));
-
+                Invoke("EnableThisGameObject", 1.5f);
             }
+
             else
             {
-                // Debug.LogWarning("Level2 StartPos is not assigned or CharacterController is missing!");
+                if (controller != null && targetPos != null)
+                {
+                    StartCoroutine(FadeIn(other.transform, controller, targetPos));
+
+                }
+                else
+                {
+                    // Debug.LogWarning("Level2 StartPos is not assigned or CharacterController is missing!");
+                }
             }
+            
         }
 
     }
@@ -48,6 +62,13 @@ public class TeleportTrigger : MonoBehaviour
             yield return null;
         }
         blackScreen.color = new Color(0, 0, 0, 0); // Fully transparent
+    }
+
+
+    private void EnableThisGameObject()
+    {
+        this.enabled = true;
+        firstTime = false;
     }
 
 
