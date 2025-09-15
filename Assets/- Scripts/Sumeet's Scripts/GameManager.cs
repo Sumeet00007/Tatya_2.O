@@ -18,6 +18,11 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+
+        if(gameOverCutScene==null)
+        {
+            Debug.LogError("gameOverCutscene is null");
+        }
     }
 
     void Start()

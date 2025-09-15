@@ -88,8 +88,6 @@ namespace MyGame.Dialogue
 
                 yield return StartCoroutine(TypeDialogue(currentLine.text));
 
-
-
                 currentLine.onDialogueEvent.Invoke();
 
                 if (currentLine.triggersQuest)
