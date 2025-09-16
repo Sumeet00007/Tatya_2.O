@@ -60,7 +60,11 @@ public class Items : MonoBehaviour, IInteractable
             Debug.Log("Changed Layer to Tlayer");
 
             player.isHandsFree = false;
-            itemSound.Play();
+
+            if (itemSound != null)
+            {
+                itemSound.Play();
+            }
         }
     }
 
@@ -70,7 +74,7 @@ public class Items : MonoBehaviour, IInteractable
         rb.isKinematic = false;
         coll.isTrigger = false;
 
-       // SetLayerRecursively(gameObject, originalLayer); // Revert layer for item and all children
+        // SetLayerRecursively(gameObject, originalLayer); // Revert layer for item and all children
         //Debug.Log("Changed Layer back to Items");
 
         player.isHandsFree = true;
