@@ -2390,6 +2390,142 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2975383274554041446, guid: 90485191f106aa94f9b21ea3ff535e15, type: 3}
   m_PrefabInstance: {fileID: 73783904}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &76016091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76016094}
+  - component: {fileID: 76016093}
+  - component: {fileID: 76016092}
+  m_Layer: 0
+  m_Name: Dialogue Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &76016092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76016091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 9b8e3daa693d6a94fb6128f96a283ba7, type: 2}
+  m_sharedMaterial: {fileID: -2601847830024654742, guid: 9b8e3daa693d6a94fb6128f96a283ba7, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -146.96877, y: 0, z: -142.55777, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &76016093
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76016091}
+  m_CullTransparentMesh: 1
+--- !u!224 &76016094
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76016091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.2350067, y: 1.2350067, z: 1.2350067}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 311675637}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -11}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &77051491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11207,6 +11343,108 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44d3aae3e73d6eb4d9676f1f298cf469, type: 3}
+--- !u!1 &311675636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 311675637}
+  - component: {fileID: 311675640}
+  - component: {fileID: 311675639}
+  - component: {fileID: 311675638}
+  m_Layer: 0
+  m_Name: Tatya Dialogue Canvas (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &311675637
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311675636}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.16999817}
+  m_LocalScale: {x: 0.026872797, y: 0.026872803, z: 0.026872797}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 76016094}
+  m_Father: {fileID: 1954319356}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1.8799983, y: 5.5399995}
+  m_SizeDelta: {x: 608, y: 342.25}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &311675638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311675636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &311675639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311675636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &311675640
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311675636}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: -669196011
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!1001 &317387302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22798,6 +23036,127 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 749487459309096974, guid: 1ca4d4043eab49047a57583048465de5, type: 3}
   m_PrefabInstance: {fileID: 688262980}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &693738628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 693738629}
+  - component: {fileID: 693738631}
+  - component: {fileID: 693738630}
+  m_Layer: 8
+  m_Name: Spot Light (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &693738629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693738628}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6021202, y: 0.6021202, z: -0.37074414, w: 0.37074414}
+  m_LocalPosition: {x: -1.48, y: 7.78, z: 3.8399963}
+  m_LocalScale: {x: 4.1449, y: 4.1449013, z: 4.144901}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1954319356}
+  m_LocalEulerAnglesHint: {x: 116.756, y: 0, z: -90}
+--- !u!114 &693738630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693738628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &693738631
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693738628}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 0
+  m_Color: {r: 0.972549, g: 0.972549, b: 0.85490197, a: 1}
+  m_Intensity: 28.35
+  m_Range: 15.52
+  m_SpotAngle: 60.0456
+  m_InnerSpotAngle: 32.61734
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &697918484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23883,7 +24242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 1
-  size: {x: 163.59206, y: 53.156204, z: 130.80911}
+  size: {x: 163.59204, y: 53.156204, z: 130.80911}
   overrideRendererFilters: 0
   minRendererVolumeSize: 0.1
   objectLayerMask:
@@ -23923,7 +24282,7 @@ Transform:
   m_GameObject: {fileID: 735862421}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.049583, y: -12.0076065, z: -1.7820892}
+  m_LocalPosition: {x: -38.04959, y: -12.0076065, z: -1.7820892}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28760,7 +29119,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &798692707
 Transform:
   m_ObjectHideFlags: 0
@@ -33677,6 +34036,127 @@ Transform:
   - {fileID: 891275058}
   m_Father: {fileID: 699117882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &963306248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 963306249}
+  - component: {fileID: 963306251}
+  - component: {fileID: 963306250}
+  m_Layer: 8
+  m_Name: Spot Light (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &963306249
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963306248}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.23730887, y: 0.23730887, z: -0.66609645, w: 0.66609645}
+  m_LocalPosition: {x: -16.689999, y: 6.970001, z: -2.4}
+  m_LocalScale: {x: 4.1449, y: 4.1449013, z: 4.144901}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1954319356}
+  m_LocalEulerAnglesHint: {x: 39.219, y: 0, z: -90}
+--- !u!114 &963306250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963306248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_RenderingLayers: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+--- !u!108 &963306251
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963306248}
+  m_Enabled: 1
+  serializedVersion: 11
+  m_Type: 0
+  m_Color: {r: 0.9725491, g: 0.9725491, b: 0.854902, a: 1}
+  m_Intensity: 100.6
+  m_Range: 15.52
+  m_SpotAngle: 67.94492
+  m_InnerSpotAngle: 32.933266
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.05
+    m_NormalBias: 0.4
+    m_NearPlane: 0.2
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 0
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
+  m_ForceVisible: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_LightUnit: 1
+  m_LuxAtDistance: 1
+  m_EnableSpotReflector: 1
 --- !u!1001 &970938577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37272,6 +37752,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2111316080028150562, guid: d1c4277c7f7a8ab44b0b72316485f3d8, type: 3}
   m_PrefabInstance: {fileID: 1150041941}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1124569447 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5141515401942439089, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+  m_PrefabInstance: {fileID: 1372114316}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1127626313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39481,6 +39966,81 @@ MonoBehaviour:
   itemSound: {fileID: 0}
   itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 0, y: 0, z: 0}
+--- !u!1 &1182026774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182026775}
+  - component: {fileID: 1182026777}
+  - component: {fileID: 1182026776}
+  m_Layer: 5
+  m_Name: ImageFill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1182026775
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182026774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.71, y: 0.71, z: 0.71}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1492670322}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 459, y: 443}
+  m_SizeDelta: {x: 957.3019, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1182026776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182026774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: dba3846de34fed045bc9b5414e0adac7, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1182026777
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182026774}
+  m_CullTransparentMesh: 1
 --- !u!1 &1184007379
 GameObject:
   m_ObjectHideFlags: 0
@@ -41256,6 +41816,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 882605564}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1218248482
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218248483}
+  - component: {fileID: 1218248485}
+  - component: {fileID: 1218248484}
+  m_Layer: 5
+  m_Name: CoverImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1218248483
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218248482}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1492670322}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 459, y: 443}
+  m_SizeDelta: {x: 957.3019, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1218248484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218248482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 57c95a1ecbb24364684bfa86c790a729, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1218248485
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218248482}
+  m_CullTransparentMesh: 1
 --- !u!1 &1218688181
 GameObject:
   m_ObjectHideFlags: 0
@@ -46202,6 +46837,79 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1ca4d4043eab49047a57583048465de5, type: 3}
+--- !u!1001 &1372114316
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2282096384817754826, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 514136160}
+    - target: {fileID: 2282096384817754826, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: patienceBar
+      value: 
+      objectReference: {fileID: 1182026776}
+    - target: {fileID: 2282096384817754826, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: maxPatienceTime
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282096384817754826, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: patiencebarmanager
+      value: 
+      objectReference: {fileID: 1124569447}
+    - target: {fileID: 5141515401942439089, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_Name
+      value: PatienceBarManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979539701217371322, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979539701217371322, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979539701217371322, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979539701217371322, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979539701217371322, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979539701217371322, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979539701217371322, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979539701217371322, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979539701217371322, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979539701217371322, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
 --- !u!1001 &1377915363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49252,6 +49960,43 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98fa1f5a8a0077146b135146dfcb47a3, type: 3}
   m_PrefabInstance: {fileID: 1488915521}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1492670321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1492670322}
+  m_Layer: 5
+  m_Name: PatienceBarHUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1492670322
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492670321}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1182026775}
+  - {fileID: 1218248483}
+  m_Father: {fileID: 2038145860}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1495195211
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61599,6 +62344,1515 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2975383274554041446, guid: 90485191f106aa94f9b21ea3ff535e15, type: 3}
   m_PrefabInstance: {fileID: 1947160966}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1954319354
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1234737038335409160, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.5961418
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234737038335409160, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234737038335409160, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9713317
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234737038335409160, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.23772834
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234737038335409160, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -27.505
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -112.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 44.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739600306076058453, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_Name
+      value: TatyaOnChair
+      objectReference: {fileID: 0}
+    - target: {fileID: 2739600306076058453, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      propertyPath: m_TagString
+      value: Tatya
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 311675637}
+    - targetCorrespondingSourceObject: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 693738629}
+    - targetCorrespondingSourceObject: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 963306249}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2739600306076058453, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1954319361}
+    - targetCorrespondingSourceObject: {fileID: 2739600306076058453, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1954319360}
+    - targetCorrespondingSourceObject: {fileID: 2739600306076058453, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1954319359}
+    - targetCorrespondingSourceObject: {fileID: 2739600306076058453, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1954319358}
+    - targetCorrespondingSourceObject: {fileID: 6352060732312892595, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1954319363}
+    - targetCorrespondingSourceObject: {fileID: 6352060732312892595, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1954319362}
+  m_SourcePrefab: {fileID: 100100000, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+--- !u!1 &1954319355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2739600306076058453, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+  m_PrefabInstance: {fileID: 1954319354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1954319356 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1541166695014874839, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+  m_PrefabInstance: {fileID: 1954319354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1954319357 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6352060732312892595, guid: bf53a355b723a6645b741b6bcd769547, type: 3}
+  m_PrefabInstance: {fileID: 1954319354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1954319358
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954319355}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a3cc02a0492dd9748b7fd4d61663b890, type: 3}
+  m_Resource: {fileID: 8300000, guid: a3cc02a0492dd9748b7fd4d61663b890, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &1954319359
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954319355}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 17844999bbefb184ea270c5dff8d2d93, type: 3}
+  m_Resource: {fileID: 8300000, guid: 17844999bbefb184ea270c5dff8d2d93, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &1954319360
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954319355}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.995636, y: 3.4360542, z: 1.6254578}
+  m_Center: {x: -1.1285572, y: 0.71453667, z: 0.1694336}
+--- !u!114 &1954319361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954319355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a70611fdc2df484c8a3d6879e06fd75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueLines:
+  - text: Now listen closely... your trial begins.
+    voiceClip: {fileID: 8300000, guid: 312447bbd64bc414e8e41022c1a992ff, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: TurnLightOn, Assembly-CSharp
+          m_MethodName: LightOn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: Once you find the objects, Assemble them on the table and hand them to
+      me.
+    voiceClip: {fileID: 8300000, guid: 253d9f6475fd58b4aa32b362d032888e, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: Do not make me wait!!! I will Kill you
+    voiceClip: {fileID: 8300000, guid: f46df212972248248ae30bc04dbab4cf, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: Here is the First Riddle
+    voiceClip: {fileID: 8300000, guid: eb2ef2a700d10c940990a1141522e1f0, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: 'Bound by thread, sour and spice,
+
+      A charm to ward off evil''s vice.'
+    voiceClip: {fileID: 8300000, guid: 817953a6820fb604b8523e2045b1bff5, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 120
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: StartArtifactSpawning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: Assemble the Item
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: nimbu_mirchi_together(Clone)
+  - text: Om Bhatt Swaha.
+    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: ResetPatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: DisablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: CompleteTask
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 1
+    requiresItem: 0
+    requiredItemName: 
+  - text: Here is the Second Riddle
+    voiceClip: {fileID: 8300000, guid: 9dd9b597c9cd3f64ab2813d078bba0b6, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: 'Stitched with pins, a curse in play,
+
+      What happens to it, happens
+      your way.'
+    voiceClip: {fileID: 8300000, guid: 8ef7c45cb63f510429e770c7380860c6, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 120
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: StartArtifactSpawning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: Assemble the Item
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: CombinedDoll(Clone)
+  - text: Om Bhatt Swaha.
+    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: ResetPatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: DisablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: CompleteTask
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 1
+    requiresItem: 0
+    requiredItemName: 
+  - text: I really need this new Artifact!! Hurrryyyy
+    voiceClip: {fileID: 8300000, guid: 1e31d78a546d8d8468da279a22641e42, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: Here is the Third Riddle
+    voiceClip: {fileID: 8300000, guid: 1b37c97de8199eb4b988139ab4b5ca33, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: 'A tiny trinket, full of power,
+
+      Wards off misfortune every hour.'
+    voiceClip: {fileID: 8300000, guid: b640736042d62a9428d22b788034b0b8, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 80
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: StartArtifactSpawning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: Find & Assemble the Item
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: CombinedTalisman(Clone)
+  - text: Om Bhatt Swaha.
+    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: ResetPatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: DisablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: TurnLightOn, Assembly-CSharp
+          m_MethodName: LightOff
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: StopArtifactSpawning
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: DestroyConveyorBelt
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 1
+    requiresItem: 0
+    requiredItemName: 
+  - text: What was that? Check the room and turn the Electrical fuse back on!
+    voiceClip: {fileID: 8300000, guid: 61edb2e9c5501c745aefc8994c44e881, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 80
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 40
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: Turn on the FuseBox
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: There are 5 Fuses in this Room, Give me the Broken Fuse
+    voiceClip: {fileID: 8300000, guid: bb5c3cc97480d0842a15635466cb6003, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: BrokenFuse1
+  - text: The priest has turned this hotel into my prison. You must retrieve the
+      next object from another room.
+    voiceClip: {fileID: 8300000, guid: b408a76ed389b674e969ae6079541f8e, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: ResetPatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: DisablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: TatyaDoor, Assembly-CSharp
+          m_MethodName: EnableScript
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 1
+    requiresItem: 0
+    requiredItemName: 
+  - text: I will guide you with riddles, but you must solve them to survive.
+    voiceClip: {fileID: 8300000, guid: 4e7b488c8f85bc845aa358849ad0f100, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: "Now, listen carefully. Here\u2019s your next riddle"
+    voiceClip: {fileID: 0}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: "To wash away your Evil sins, Seek against the water\u2019s flow."
+    voiceClip: {fileID: 8300000, guid: 9902b947c739a534b881ec505014604d, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 300
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: Find the Item
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: Salt Bag
+  - text: Om Bhatt Swaha.
+    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: ResetPatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: DisablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 1
+    requiresItem: 0
+    requiredItemName: 
+  - text: Shadows dance as curtains rise, Fear waits where the theatre lies.
+    voiceClip: {fileID: 8300000, guid: 631c3e34e3c9bd94f969b2ae3e74457e, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 200
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: Find the Item at the Location
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: Kumkum
+  - text: Om Bhatt Swaha.
+    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: ResetPatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: DisablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 1
+    requiresItem: 0
+    requiredItemName: 
+  - text: I am Feeling stronger and Angrierrrr!!
+    voiceClip: {fileID: 8300000, guid: 1665255a94a2c3d4383ee9fbda39672a, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: 'Where drinks pour and stories are shared,
+
+      Seek your clue near the
+      Dining prepared.'
+    voiceClip: {fileID: 8300000, guid: 706bac86735cafc4ab57a3019f6d1d4d, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 120
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: Find the Item at the Location
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: Candle
+  - text: Om Bhatt Swaha.
+    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: ResetPatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: DisablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 1
+    requiresItem: 0
+    requiredItemName: 
+  - text: 'Static screen, a melon grins,
+
+      A child''s show hides Evil sins.'
+    voiceClip: {fileID: 8300000, guid: 50177eef504e5ed4eb83d7bfef4cda0c, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 200
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 120
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: Find the Item at the Location
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: Mantra Plate
+  - text: Om Bhatt Swaha.
+    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: ResetPatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: DisablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 1
+    requiresItem: 0
+    requiredItemName: 
+  - text: Yessss!!! Moree Powerrr!!! Mwahahaha!!
+    voiceClip: {fileID: 8300000, guid: cd3b865a215e13d4d87c62b8a9de1784, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: Do not Worry just Do as I say! (Menacing laughter)
+    voiceClip: {fileID: 8300000, guid: ec23f1df5fde5c34f96c1304163ebc31, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: 'Through the window, still and wide,
+
+      Eight legged Spider wait on
+      the other side.'
+    voiceClip: {fileID: 8300000, guid: 1a87395cc4ed55542894716fcf5f73ae, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 200
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 120
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: Find the Item at the Location
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: Oil Can
+  - text: Om Bhatt Swaha.
+    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: ResetPatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: DisablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 1
+    requiresItem: 0
+    requiredItemName: 
+  - text: Mwahahaha!! No one can Stop me Now!!!
+    voiceClip: {fileID: 8300000, guid: 5611eddbf46aadc4e9ad08a5c0e10bc0, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls: []
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 0
+    requiresItem: 0
+    requiredItemName: 
+  - text: 'Hidden away where Supplies reside,
+
+      Barrels & packets in Storage
+      they Bide.'
+    voiceClip: {fileID: 8300000, guid: 3761379e9ce903f46bdde63dccd8ba4f, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 160
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 40
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 40
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: BasementDoor, Assembly-CSharp
+          m_MethodName: EnableScript
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 40
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
+    questDescription: Find the Item at the Location
+    isQuestCompletion: 0
+    requiresItem: 1
+    requiredItemName: Shadow Photo
+  - text: Babaaaa?
+    voiceClip: {fileID: 8300000, guid: d6dd4e2c644ece84582b62a79443b216, type: 3}
+    onDialogueEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 0}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: GameOverCutscene
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 0
+    questDescription: 
+    isQuestCompletion: 1
+    requiresItem: 0
+    requiredItemName: 
+  dialogueInterval: 4
+  typingSpeed: 0.05
+  dialogueCanvas: {fileID: 311675640}
+  dialogueText: {fileID: 76016092}
+  audioSource: {fileID: 0}
+  itemGive: {fileID: 1954319359}
+  itemReject: {fileID: 1954319358}
+  dialogueVolume: 1
+  volumeMultiplier: 2
+  questUIText: {fileID: 0}
+  itemContainer: {fileID: 0}
+  interactionRange: 10
+--- !u!65 &1954319362
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954319357}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.015586429, y: 0.00495126, z: 0.013908729}
+  m_Center: {x: 0, y: -0.011194254, z: -0.004793644}
+--- !u!65 &1954319363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954319357}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.015586429, y: 0.018485907, z: 0.002870748}
+  m_Center: {x: 0, y: -0.004426937, z: 0.0007253468}
 --- !u!4 &1960334480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 749487459309096974, guid: 1ca4d4043eab49047a57583048465de5, type: 3}
@@ -62552,7 +64806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -94.88
+      value: -86.58
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -62560,7 +64814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44.46
+      value: 43.85
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -63036,6 +65290,7 @@ RectTransform:
   - {fileID: 429815582}
   - {fileID: 63157499}
   - {fileID: 1921624841}
+  - {fileID: 1492670322}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -66049,3 +68304,5 @@ SceneRoots:
   - {fileID: 377842273}
   - {fileID: 666930130}
   - {fileID: 798692707}
+  - {fileID: 1372114316}
+  - {fileID: 1954319354}

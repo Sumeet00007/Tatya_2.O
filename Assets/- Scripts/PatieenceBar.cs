@@ -22,7 +22,7 @@ public class PatienceBar : MonoBehaviour
     void Start()
     {
         ResetPatienceBar();
-        patiencebarmanager.SetActive(false);
+        //EnablePatienceBar();
     }
 
     void Update()
