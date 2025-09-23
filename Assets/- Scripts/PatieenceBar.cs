@@ -22,6 +22,7 @@ public class PatienceBar : MonoBehaviour
     void Start()
     {
         ResetPatienceBar();
+        DisablePatienceBar();
         //EnablePatienceBar();
     }
 

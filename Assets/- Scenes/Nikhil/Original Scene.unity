@@ -37545,6 +37545,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5141515401942439089, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
   m_PrefabInstance: {fileID: 1372114316}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1124569448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2282096384817754826, guid: 803b6c3120ef1b144bf426bb19fccc93, type: 3}
+  m_PrefabInstance: {fileID: 1372114316}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124569447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5079a259a3e3a4b4693b6aeb76fd1200, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1127626313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -62320,7 +62331,7 @@ MonoBehaviour:
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: EnablePatienceBar
           m_Mode: 1
@@ -62332,7 +62343,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: SetMaxPatienceTime
           m_Mode: 4
@@ -62344,7 +62355,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: InsertdeltaTime
           m_Mode: 1
@@ -62356,7 +62367,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
           m_MethodName: StartArtifactSpawning
           m_Mode: 1
@@ -62378,7 +62389,7 @@ MonoBehaviour:
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: ResetPatienceBar
           m_Mode: 1
@@ -62390,7 +62401,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: DisablePatienceBar
           m_Mode: 1
@@ -62402,9 +62413,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
-          m_MethodName: CompleteTask
+          m_MethodName: StopArtifactSpawning
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -62437,7 +62448,7 @@ MonoBehaviour:
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: EnablePatienceBar
           m_Mode: 1
@@ -62449,7 +62460,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: SetMaxPatienceTime
           m_Mode: 4
@@ -62461,7 +62472,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: InsertdeltaTime
           m_Mode: 1
@@ -62473,7 +62484,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
           m_MethodName: StartArtifactSpawning
           m_Mode: 1
@@ -62495,7 +62506,7 @@ MonoBehaviour:
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: ResetPatienceBar
           m_Mode: 1
@@ -62507,7 +62518,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: DisablePatienceBar
           m_Mode: 1
@@ -62519,9 +62530,9 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
-          m_MethodName: CompleteTask
+          m_MethodName: StopArtifactSpawning
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -62563,7 +62574,7 @@ MonoBehaviour:
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: EnablePatienceBar
           m_Mode: 1
@@ -62575,7 +62586,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: SetMaxPatienceTime
           m_Mode: 4
@@ -62587,7 +62598,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: InsertdeltaTime
           m_Mode: 1
@@ -62599,7 +62610,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
           m_MethodName: StartArtifactSpawning
           m_Mode: 1
@@ -64359,15 +64370,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -63.96
+      value: -98.82
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2
+      value: -25.7
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.77
+      value: 46.4
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -65829,6 +65840,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2975383274554041446, guid: 90485191f106aa94f9b21ea3ff535e15, type: 3}
   m_PrefabInstance: {fileID: 2091278502}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2107912719 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
+  m_PrefabInstance: {fileID: 14404550}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81fe306d28a8b5744a9abdb6b77daf01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2131086316
 GameObject:
   m_ObjectHideFlags: 0
