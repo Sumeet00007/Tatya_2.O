@@ -33876,15 +33876,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7482fed44f11b0148a0ac7605e192079, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.154999
+      value: -4.43
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7482fed44f11b0148a0ac7605e192079, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.092251
+      value: 18.75
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7482fed44f11b0148a0ac7605e192079, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 72.915
+      value: 76.268
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7482fed44f11b0148a0ac7605e192079, type: 3}
       propertyPath: m_LocalRotation.w
@@ -53192,14 +53192,14 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351773363}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 0.97100514, b: 0.84339625, a: 1}
-  m_Intensity: 50
-  m_Range: 4532.569
-  m_SpotAngle: 81.735855
-  m_InnerSpotAngle: 43.28712
+  m_Intensity: 40
+  m_Range: 100
+  m_SpotAngle: 80.737015
+  m_InnerSpotAngle: 41.39665
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -73571,9 +73571,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 402626803746385384, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: flashOn
+      value: 
+      objectReference: {fileID: 8300000, guid: 1659b978b562f5040a5948ef54112bf5, type: 3}
+    - target: {fileID: 402626803746385384, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: moveSpeed
       value: 14
       objectReference: {fileID: 0}
+    - target: {fileID: 402626803746385384, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: flashLight
+      value: 
+      objectReference: {fileID: 1351773366}
     - target: {fileID: 402626803746385384, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: jumpHeight
       value: 0
@@ -73632,19 +73640,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.42
+      value: -16.134256
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.63
+      value: 0.01999998
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.15
+      value: -10.36
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6691536
+      value: 0.07849108
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -73652,7 +73660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7431241
+      value: 0.9969148
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -73664,7 +73672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 95.996
+      value: 170.996
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

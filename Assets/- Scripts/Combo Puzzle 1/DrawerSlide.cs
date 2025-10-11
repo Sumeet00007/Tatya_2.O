@@ -46,7 +46,7 @@ public class DrawerSlide : MonoBehaviour
             isLookingAtDrawer = false;
         }
 
-        if (!isLocked && canSlide && isLookingAtDrawer && /*Input.GetKeyDown(KeyCode.E)*/ Input.GetKeyDown(KeyCode.Mouse0)  && !isSliding)
+        if (!isLocked && canSlide && isLookingAtDrawer && Input.GetKeyDown(KeyCode.Mouse0)  && !isSliding)
         {
             StartCoroutine(SlideDrawerSmoothly());
         }

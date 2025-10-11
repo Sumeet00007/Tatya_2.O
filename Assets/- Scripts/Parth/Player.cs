@@ -45,6 +45,13 @@ public class Player : MonoBehaviour
     [SerializeField] float dropUpwardForce;
     [SerializeField] LayerMask layerMask;
 
+    [Header("Flashlight Settings:")]
+
+    [SerializeField] bool isFlashOn;
+    [SerializeField] Light flashLight;
+    public AudioClip flashOn;
+    private AudioSource flashAudioSource;
+
     RaycastHit objectHit;
     Transform currentItem;
     Rigidbody currentItemRigidBody;
@@ -57,7 +64,8 @@ public class Player : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         isHandsFree = itemContainer.transform.childCount == 0;
-       // originalLayer = LayerMask.NameToLayer("Items");
+        flashAudioSource = GetComponent<AudioSource>();
+        // originalLayer = LayerMask.NameToLayer("Items");
     }
 
     void Update()
@@ -65,6 +73,7 @@ public class Player : MonoBehaviour
         Look();
         Move();
         Gravity();
+        Flashlight();
     }
 
     void OnLook(InputValue value)
@@ -190,4 +199,20 @@ public class Player : MonoBehaviour
     //        SetLayerRecursively(child.gameObject, newLayer);
     //    }
     //}
+
+  void Flashlight()
+    {
+        if (!isFlashOn && Input.GetKeyDown(KeyCode.F))
+        {
+            flashAudioSource.PlayOneShot(flashOn);
+            flashLight.enabled = true;
+            isFlashOn = true;
+        }
+        else if (isFlashOn && Input.GetKeyDown(KeyCode.F))
+        {
+            flashAudioSource.PlayOneShot(flashOn);
+            flashLight.enabled = false;
+            isFlashOn = false;
+        }
+    }
 }
