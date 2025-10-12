@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 30ef0bc5250854b46bc23a957f66084f, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 30ef0bc5250854b46bc23a957f66084f, type: 3}
       propertyPath: m_Name
       value: Thread
@@ -91,7 +95,7 @@ PrefabInstance:
       addedObject: {fileID: 4426486750029794305}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 30ef0bc5250854b46bc23a957f66084f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4843979419237849089}
+      addedObject: {fileID: -6587016821177103363}
   m_SourcePrefab: {fileID: 100100000, guid: 30ef0bc5250854b46bc23a957f66084f, type: 3}
 --- !u!1 &8541924394048657190 stripped
 GameObject:
@@ -160,9 +164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
-  itemSound: {fileID: 4843979419237849089}
+  itemSound: {fileID: -6587016821177103363}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 0, y: 0, z: 0}
---- !u!82 &4843979419237849089
+--- !u!82 &-6587016821177103363
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

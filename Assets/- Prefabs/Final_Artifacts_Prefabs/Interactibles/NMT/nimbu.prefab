@@ -65,6 +65,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 88d2a93f62429d043aad22d3b26ac063, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 88d2a93f62429d043aad22d3b26ac063, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 3c4f5ee8558081d44b89f6396b66b58b, type: 2}
@@ -95,7 +99,7 @@ PrefabInstance:
       addedObject: {fileID: 8693856051320065620}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 88d2a93f62429d043aad22d3b26ac063, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5878659522162941199}
+      addedObject: {fileID: -6110606321529677790}
   m_SourcePrefab: {fileID: 100100000, guid: 88d2a93f62429d043aad22d3b26ac063, type: 3}
 --- !u!1 &2101702405237555516 stripped
 GameObject:
@@ -164,9 +168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
-  itemSound: {fileID: 5878659522162941199}
+  itemSound: {fileID: -6110606321529677790}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 0, y: 0, z: 0}
---- !u!82 &5878659522162941199
+--- !u!82 &-6110606321529677790
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

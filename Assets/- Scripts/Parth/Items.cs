@@ -10,7 +10,6 @@ public class Items : MonoBehaviour, IInteractable
     [SerializeField] Vector3 itemPositionDeviation = new Vector3(0, 0, 0);
     [SerializeField] Vector3 itemRotationDeviation = new Vector3(0, 0, 0);
 
-    private AudioSource audioSource;
     private Rigidbody rb;
     private Collider coll;
     private Player player;

@@ -65,6 +65,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 3492279f038e18c4a9246511de659ab5, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3492279f038e18c4a9246511de659ab5, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 7d13c4de982f4e64eb18ab043aff7c0c, type: 2}
@@ -165,6 +169,7 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 0}
   itemSound: {fileID: 2308850617145814566}
+  itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 0, y: 0, z: 0}
 --- !u!82 &2308850617145814566
 AudioSource:
