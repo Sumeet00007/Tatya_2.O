@@ -28,18 +28,11 @@ public class Platform_Ground_Teleporter : MonoBehaviour
         {
             CharacterController controller = other.GetComponent<CharacterController>();
 
-            //for final lighting scene
-            //if (firstTime)
-            //{
-            //    StartCoroutine(FadeIn(other.transform, controller, platformPuzzlePos));
-            //    firstTime = false;
-            //}
-
-            //for originalScene
+           // for final lighting scene
             if (firstTime)
             {
-                //StartCoroutine(FadeIn(other.transform, controller, platformPuzzlePos));
-                firstTime = false;
+                    StartCoroutine(FadeIn(other.transform, controller, platformPuzzlePos));
+                    firstTime = false;
             }
 
             else
