@@ -15,6 +15,7 @@ public class DoorKnockingJS : MonoBehaviour
     bool startKnocking = false;
     bool jumpScare = false;
     bool destroyAfterAnimation = false;
+    bool checkIfOutOfRange = false;
     float timer;
 
     void Start()
@@ -26,7 +27,6 @@ public class DoorKnockingJS : MonoBehaviour
 
     void Update()
     {
-
         if (haldi.transform.position != haldiOriginalPosition && !startKnocking)
         {
             startKnocking = true;
@@ -51,6 +51,7 @@ public class DoorKnockingJS : MonoBehaviour
                     maleModel.SetActive(true);
                     player.GetComponent<Player>().TurnOffFlashlight();
                     destroyAfterAnimation = true;
+                    checkIfOutOfRange = true;
                 }
             }
         }
@@ -64,7 +65,7 @@ public class DoorKnockingJS : MonoBehaviour
             }
         }
 
-        if (Vector3.Distance(transform.position, player.position) > playerOutOfRangeDistance)
+        if (Vector3.Distance(transform.position, player.position) > playerOutOfRangeDistance && checkIfOutOfRange)
         {
             Destroy(gameObject);
         }
