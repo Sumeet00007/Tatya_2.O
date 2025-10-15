@@ -200,7 +200,7 @@ public class Player : MonoBehaviour
     //    }
     //}
 
-  void Flashlight()
+    void Flashlight()
     {
         if (!isFlashOn && Input.GetKeyDown(KeyCode.F))
         {
@@ -211,8 +211,13 @@ public class Player : MonoBehaviour
         else if (isFlashOn && Input.GetKeyDown(KeyCode.F))
         {
             flashAudioSource.PlayOneShot(flashOn);
-            flashLight.enabled = false;
-            isFlashOn = false;
+            TurnOffFlashlight();
         }
+    }
+
+    public void TurnOffFlashlight()
+    {
+        flashLight.enabled = false;
+        isFlashOn = false;
     }
 }

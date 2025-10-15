@@ -5,28 +5,31 @@ public class DoorKnockingJS : MonoBehaviour
     [SerializeField] GameObject haldi;
     [SerializeField] float knockSoundDelay = 0.5f;
     [SerializeField] Transform player;
+    [SerializeField] GameObject maleModel;
+    [SerializeField] DoorOpener knockingDoor;
+    [SerializeField] float playerOutOfRangeDistance = 50f;
+    [SerializeField] float animationTime;
 
     Vector3 haldiOriginalPosition;
     AudioSource audioSource;
-    MeshRenderer meshRenderer;
     bool startKnocking = false;
     bool jumpScare = false;
+    bool destroyAfterAnimation = false;
     float timer;
 
     void Start()
     {
         haldiOriginalPosition = haldi.transform.position;
         audioSource = GetComponent<AudioSource>();
-        meshRenderer = GetComponentInChildren<MeshRenderer>();
-        meshRenderer.enabled = false;
+        maleModel.SetActive(false);
     }
 
     void Update()
     {
+
         if (haldi.transform.position != haldiOriginalPosition && !startKnocking)
         {
             startKnocking = true;
-            meshRenderer.enabled = true;
         }
 
         if (startKnocking)
@@ -39,16 +42,29 @@ public class DoorKnockingJS : MonoBehaviour
             }
 
             Vector3 direction = player.position - transform.position;
-            if (Physics.Raycast(transform.position, direction.normalized, out RaycastHit hit))
+            if (Physics.Raycast(transform.position, direction.normalized, out RaycastHit hit, playerOutOfRangeDistance))
             {
                 if (hit.transform == player && !jumpScare)
                 {
                     Debug.Log("jumpscare Player");
+                    jumpScare = true;
+                    maleModel.SetActive(true);
+                    player.GetComponent<Player>().TurnOffFlashlight();
+                    destroyAfterAnimation = true;
                 }
             }
         }
 
-        if (Vector3.Distance(transform.position, player.position) > 50f)
+        if (destroyAfterAnimation)
+        {
+            animationTime -= Time.deltaTime;
+            if (animationTime <= 0f)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        if (Vector3.Distance(transform.position, player.position) > playerOutOfRangeDistance)
         {
             Destroy(gameObject);
         }
