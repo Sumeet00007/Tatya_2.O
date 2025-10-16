@@ -15,7 +15,7 @@ public class WrongPlatformDestroyer : MonoBehaviour
 
     public AudioSource crumblesoundFx;
     private Vector3 initialPosition;
-    public float platformResetTime = 3.0f;
+    //public float platformResetTime = 3.0f;
 
     private void Start()
     {
@@ -44,7 +44,7 @@ public class WrongPlatformDestroyer : MonoBehaviour
                 if (timer >= destroyDelay)
                 {
                     gameObject.SetActive(false);
-                    Invoke(nameof(Reset), platformResetTime);
+                    //Invoke(nameof(Reset), platformResetTime);
                 }
             }
 
@@ -95,9 +95,10 @@ public class WrongPlatformDestroyer : MonoBehaviour
         cameraTransform.localPosition = originalCameraLocalPosition; // Reset position
     }
 
-    private void Reset()
-    {
-        transform.position= initialPosition;
-        gameObject.SetActive(true);
-    }
+    //Function to appear platform again.
+    //private void Reset()
+    //{
+    //    transform.position= initialPosition;
+    //    gameObject.SetActive(true);
+    //}
 }
