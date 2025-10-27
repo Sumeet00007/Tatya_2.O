@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,6 +19,7 @@ public class ArtifactSpawner : MonoBehaviour
     private void Start()
     {
        //StartArtifactSpawning();
+       StopArtifactSpawning(false);
        currentTask = 0;
     }
 
@@ -64,7 +65,7 @@ public class ArtifactSpawner : MonoBehaviour
         }
         else
         {
-            StopArtifactSpawning(); // Disable after third task
+            StopArtifactSpawning(true); // Disable after third task
         }
     }
 
@@ -125,7 +126,7 @@ public class ArtifactSpawner : MonoBehaviour
         currentTask++;
         if (currentTask > 2)
         {
-            StopArtifactSpawning();
+            StopArtifactSpawning(true);
         }
         else
         {
@@ -135,11 +136,21 @@ public class ArtifactSpawner : MonoBehaviour
 
 
     //function Responsible for StopArtifactSpawning when task is completed
-    public void StopArtifactSpawning()
+    public void StopArtifactSpawning(bool finalStop)
     {
         isSpawning = false;
         StopAllCoroutines();
-        gameObject.SetActive(false); // Disabling script after completion
+
+        if (finalStop)
+        {
+            Debug.Log("All tasks completed. Artifact spawner stopped permanently.");
+            // Remove or comment out this line:
+            gameObject.SetActive(false); 
+        }
+        else
+        {
+            Debug.Log("Task completed. Artifact spawner stopped temporarily.");
+        }
     }
 
     public void DestroyConveyorBelt()

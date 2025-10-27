@@ -59,10 +59,11 @@ namespace MyGame.Dialogue
 
             if (player == null)
             {
-                Debug.LogError("Player not found! Make sure there is a Player script in the scene.");
+                Debug.LogError("Player not found!");
                 return;
             }
 
+            currentDialogueIndex = GameManager.Instance.GetCheckpointIndex();
             StartCoroutine(PlayDialogue());
         }
 
@@ -112,7 +113,6 @@ namespace MyGame.Dialogue
         IEnumerator TypeDialogue(string dialogue)
         {
             dialogueText.text = "";
-
             foreach (char letter in dialogue.ToCharArray())
             {
                 dialogueText.text += letter;
@@ -151,6 +151,14 @@ namespace MyGame.Dialogue
                 questUIText.text = $"<b>Quest Updated:</b> {questDescription}";
         }
 
+        public void ResetToCheckpoint(int checkpointIndex)
+        {
+            currentDialogueIndex = checkpointIndex;
+            StopAllCoroutines();
+            StartCoroutine(PlayDialogue());
+            Debug.Log("Dialogue resumed from checkpoint: " + checkpointIndex);
+        }
+
         void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
@@ -158,5 +166,3 @@ namespace MyGame.Dialogue
         }
     }
 }
-
-
