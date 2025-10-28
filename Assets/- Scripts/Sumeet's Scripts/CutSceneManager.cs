@@ -16,7 +16,7 @@ public class CutSceneManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene("FinalLighting");
+            SceneManager.LoadScene(3);
         }
     }
 
@@ -25,7 +25,7 @@ public class CutSceneManager : MonoBehaviour
     {
         yield return new WaitForSeconds(63.0f);
         //Load Main Scene
-        SceneManager.LoadScene("FinalLighting");
+        SceneManager.LoadScene(3);
     }
 
 }
