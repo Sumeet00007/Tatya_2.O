@@ -23,14 +23,17 @@ public class TheaterRun : MonoBehaviour
     [SerializeField] float runningGhostTriggerDistance;
 
     Vector3 saltBagOriginalPosition;
+    Animator runningGhostAnimator;
     bool doorsOpened = false;
     bool endDoor1JS = false;
     bool endDoor2JS = false;
     bool endDoor3JS = false;
+    bool checkToDestroy = false;
 
     void Start()
     {
         saltBagOriginalPosition = saltBag.transform.position;
+        runningGhostAnimator = runningGhost.GetComponent<Animator>();
     }
 
     void Update()
@@ -62,6 +65,12 @@ public class TheaterRun : MonoBehaviour
         if (Vector3.Distance(spawnRunningGhostCheckPoint.position, player.transform.position) < runningGhostTriggerDistance && endDoor3JS)
         {
             runningGhost.SetActive(true);
+            checkToDestroy = true;
+        }
+
+        if (checkToDestroy)
+        {
+            CheckIfCanDestroy();
         }
     }
 
@@ -97,6 +106,17 @@ public class TheaterRun : MonoBehaviour
         ghostModel3.SetActive(false);
         AudioSource.PlayClipAtPoint(doorSlamSound, door3.position);
         endDoor3JS = true;
+    }
+
+    void CheckIfCanDestroy()
+    {
+        AnimatorStateInfo info = runningGhostAnimator.GetCurrentAnimatorStateInfo(0);
+
+        if (info.normalizedTime >= 1f)
+        {
+            Debug.Log("Animation finished!");
+            Destroy(gameObject);
+        }
     }
 
     void OnDrawGizmos()

@@ -160,6 +160,7 @@ public class Player : MonoBehaviour
 
         //SetLayerRecursively(currentItem.gameObject, originalLayer);
         currentItemRigidBody.isKinematic = false;
+        currentItemRigidBody.useGravity = true;
         currentItemCollider.isTrigger = false;
         currentItem.SetParent(null);
         currentItemRigidBody.linearVelocity = playerController.velocity;
