@@ -63,7 +63,7 @@ namespace MyGame.Dialogue
                 return;
             }
 
-            currentDialogueIndex = GameManager.Instance.GetCheckpointIndex();
+           
             StartCoroutine(PlayDialogue());
         }
 

@@ -1,123 +1,75 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
-
-
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-
-    [Header("Game Over UI")]
-    public GameObject gameOverImage;
-    public GameObject gameOverCutScene;
+    public static GameManager Instance; // Singleton pattern for easy access
+    public GameObject gameOverImage; // Reference to the Game Over UI Image
     public float gameOverDelayforCutscene = 0.5f;
-    public float gameOverDelayforImg = 1f;
-
-    [Header("Dialogue Checkpoint System")]
-    [Tooltip("How many times checkpoint can be reused before resetting dialogue to beginning.")]
-    public int maxCheckpointUses = 3;
-    private int dialogueCheckpointIndex = 0;  // Last dialogue index
-    private int checkpointUses = 0;           // Count of checkpoint uses
-
-    private void Awake()
+    //variable to play GameOverCutscene
+    public GameObject gameOverCutScene;
+    public float gameOverDelayforImg;
+    void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
-        else
+
+        if (gameOverCutScene == null)
         {
-            Destroy(gameObject);
+            Debug.LogError("gameOverCutscene is null");
         }
     }
 
-    private void Start()
+    void Start()
     {
-        if (gameOverImage != null) gameOverImage.SetActive(false);
-        if (gameOverCutScene != null) gameOverCutScene.SetActive(false);
-    }
-
-    // Update checkpoint
-    public void UpdateDialogueCheckpoint(int index)
-    {
-        dialogueCheckpointIndex = index;
-        Debug.Log($"✅ Checkpoint Updated at Dialogue Index: {dialogueCheckpointIndex}");
-    }
-
-    // Return checkpoint index for DialogueSystem
-    public int GetCheckpointIndex()
-    {
-        if (checkpointUses >= maxCheckpointUses)
+        if (gameOverImage != null)
         {
-            Debug.Log("⚠ Checkpoint limit reached! Restarting dialogue from beginning.");
-            ResetCheckpoint();
-            return 0;
+            gameOverImage.SetActive(false);
         }
 
-        checkpointUses++;
-        Debug.Log($"➡ Using Checkpoint #{checkpointUses} | Start From Index: {dialogueCheckpointIndex}");
-        return dialogueCheckpointIndex;
+       gameOverCutScene.SetActive(false);
     }
 
-    public void ResetCheckpoint()
-    {
-        dialogueCheckpointIndex = 0;
-        checkpointUses = 0;
-        Debug.Log("🔁 Dialogue Checkpoint System Reset!");
-    }
-
-    // Called on player death
     public void ShowGameOver()
     {
-        Invoke(nameof(DisplayGameOver), gameOverDelayforCutscene);
+        if (gameOverImage != null)
+        {
+            Invoke(nameof(DisplayGameOver), gameOverDelayforCutscene);
+        }
     }
 
-    private void DisplayGameOver()
+    public void DisplayGameOver()
     {
-        if (gameOverCutScene != null)
-            gameOverCutScene.SetActive(true);
-
         Invoke(nameof(RestartLevel), 4.5f);
+        //Play GameOver Cutscene
+        gameOverCutScene.SetActive(true);
+        //update CheckPoint
     }
 
     private void RestartLevel()
     {
-        bool retriesExceeded = checkpointUses >= maxCheckpointUses;
-
-        if (retriesExceeded)
-        {
-            // Reload full scene
-            Debug.Log("Checkpoint limit exceeded. Reloading full scene.");
-            dialogueCheckpointIndex = 0;
-            checkpointUses = 0;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-        else
-        {
-            // Restart dialogue from last checkpoint
-            Debug.Log($"Restarting dialogue from checkpoint {dialogueCheckpointIndex}");
-            MyGame.Dialogue.DialogueSystem dialogueSystem = GameObject.FindGameObjectWithTag("Tatya").GetComponent<MyGame.Dialogue.DialogueSystem>();
-            if (dialogueSystem != null)
-            {
-                dialogueSystem.ResetToCheckpoint(dialogueCheckpointIndex);
-            }
-
-            if (gameOverCutScene != null) gameOverCutScene.SetActive(false);
-            if (gameOverImage != null) gameOverImage.SetActive(false);
-        }
-    }
-
-    public void ShowGameOverImage()
-    {
-        if (gameOverImage == null) return;
-
-        gameOverImage.SetActive(true);
-        Invoke(nameof(RestartLevel), gameOverDelayforImg);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void GameOverCutscene()
     {
         SceneManager.LoadScene("Ending CutScene");
+    }
+
+    IEnumerator EndGameOverScreen()
+    {
+        yield return new WaitForSeconds(4.1f);
+        gameOverCutScene.SetActive(false);
+    }
+
+    public void ShowGameOverImage()
+    {
+        gameOverImage.SetActive(true);
+        Invoke(nameof(RestartLevel), gameOverDelayforImg);
     }
 }
