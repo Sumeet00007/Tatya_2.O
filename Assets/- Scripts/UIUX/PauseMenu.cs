@@ -63,9 +63,4 @@ public class PauseMenu : MonoBehaviour
         isPaused = false;
     }
 
-    public void QuitGame()
-    {
-        Debug.Log("Game Quit hogya BAALE BAALE PAAJI!");
-        Application.Quit();
-    }
 }
