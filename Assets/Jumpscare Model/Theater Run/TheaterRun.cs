@@ -76,9 +76,9 @@ public class TheaterRun : MonoBehaviour
 
     void OpenDoorsAndPlaceGhost()
     {
-        door1.localRotation = Quaternion.Euler(0, doorPartialOpenAngel, -90);
-        door2.localRotation = Quaternion.Euler(0, doorPartialOpenAngel, -90);
-        door3.localRotation = Quaternion.Euler(0, doorPartialOpenAngel, -90);
+        door1.localRotation = Quaternion.Euler(0, 160, 0);
+        door2.localRotation = Quaternion.Euler(0, -20, 0);
+        door3.localRotation = Quaternion.Euler(0, -20, 0);
         ghostModel1.SetActive(true);
         ghostModel2.SetActive(true);
         ghostModel3.SetActive(true);
@@ -86,25 +86,28 @@ public class TheaterRun : MonoBehaviour
 
     void CloseDoor1()
     {
-        door1.localRotation = Quaternion.Euler(0, -90, -90);
+        door1.localRotation = Quaternion.Euler(0, 180, 0);
         ghostModel1.SetActive(false);
         AudioSource.PlayClipAtPoint(doorSlamSound, door1.position);
+        door1.GetComponentInChildren<DoorOpener>().isOpen = false;
         endDoor1JS = true;
     }
 
     void CloseDoor2()
     {
-        door2.localRotation = Quaternion.Euler(0, -90, -90);
+        door2.localRotation = Quaternion.Euler(0, 0, 0);
         ghostModel2.SetActive(false);
         AudioSource.PlayClipAtPoint(doorSlamSound, door2.position);
+        door2.GetComponentInChildren<DoorOpener>().isOpen = false;
         endDoor2JS = true;
     }
 
     void CloseDoor3()
     {
-        door3.localRotation = Quaternion.Euler(0, -90, -90);
+        door3.localRotation = Quaternion.Euler(0, 0, 0);
         ghostModel3.SetActive(false);
         AudioSource.PlayClipAtPoint(doorSlamSound, door3.position);
+        door3.GetComponentInChildren<DoorOpener>().isOpen = false;
         endDoor3JS = true;
     }
 
