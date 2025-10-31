@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
@@ -43,6 +43,10 @@ namespace MyGame.Dialogue
 
         [Header("Quest UI")]
         [SerializeField] private TextMeshProUGUI questUIText;
+        [SerializeField] private float questFadeDuration = 1f;    // fade in/out speed
+        [SerializeField] private float questDisplayTime = 3f;     // how long text stays visible
+        [SerializeField] private AudioClip questAppearSFX;
+        private Coroutine questFadeCoroutine;                     // track current fade
 
         [Header("Player Interaction")]
         [SerializeField] private Transform itemContainer;
@@ -50,7 +54,11 @@ namespace MyGame.Dialogue
 
         private int currentDialogueIndex = 0;
         private bool awaitingItem = false;
+        private bool isPaused = false;          // ✅ new
+        private bool isDialogueActive = true;
         private Player player;
+
+        private Coroutine dialogueCoroutine;    // ✅ track main coroutine
 
         void Start()
         {
@@ -63,13 +71,12 @@ namespace MyGame.Dialogue
                 return;
             }
 
-           
-            StartCoroutine(PlayDialogue());
+            dialogueCoroutine = StartCoroutine(PlayDialogue());
         }
 
         void Update()
         {
-            if (player == null) return;
+            if (player == null || isPaused) return;
 
             float distance = Vector3.Distance(transform.position, player.transform.position);
             if (awaitingItem && distance <= interactionRange && Input.GetKeyDown(KeyCode.E))
@@ -78,10 +85,25 @@ namespace MyGame.Dialogue
             }
         }
 
+        // ✅ PUBLIC API for Pause/Resume called by PauseMenu
+        public void PauseDialogue()
+        {
+            if (isPaused) return;
+            isPaused = true;
+        }
+
+        public void ResumeDialogue()
+        {
+            if (!isPaused) return;
+            isPaused = false;
+        }
+
         IEnumerator PlayDialogue()
         {
             while (currentDialogueIndex < dialogueLines.Length)
             {
+                yield return WaitIfPaused(); // ⬅ pauses when game is paused
+
                 DialogueLine currentLine = dialogueLines[currentDialogueIndex];
 
                 if (currentLine.voiceClip != null)
@@ -115,10 +137,12 @@ namespace MyGame.Dialogue
             dialogueText.text = "";
             foreach (char letter in dialogue.ToCharArray())
             {
+                yield return WaitIfPaused(); // ⬅ pauses typing when game is paused
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(typingSpeed);
             }
         }
+
 
         private void TryToReceiveItem()
         {
@@ -147,17 +171,77 @@ namespace MyGame.Dialogue
 
         private void UpdateQuestUI(string questDescription)
         {
-            if (questUIText != null)
-                questUIText.text = $"<b>Quest Updated:</b> {questDescription}";
+            if (questUIText == null) return;
+
+            // If another fade is running, stop it first
+            if (questFadeCoroutine != null)
+                StopCoroutine(questFadeCoroutine);
+
+            questFadeCoroutine = StartCoroutine(FadeQuestTextRoutine($"<b>Quest Updated:</b> {questDescription}"));
         }
+
+        private IEnumerator FadeQuestTextRoutine(string text)
+        {
+            questUIText.text = text;
+            questUIText.gameObject.SetActive(true);
+
+            // Start from transparent
+            Color c = questUIText.color;
+            c.a = 0;
+            questUIText.color = c;
+
+            // Fade In
+            float t = 0f;
+
+            audioSource.PlayOneShot(questAppearSFX);
+
+            while (t < questFadeDuration)
+            {
+                t += Time.deltaTime;
+                c.a = Mathf.Lerp(0f, 1f, t / questFadeDuration);
+                questUIText.color = c;
+                yield return null;
+            }
+
+            // Wait visible
+            yield return new WaitForSeconds(questDisplayTime);
+
+            // Fade Out
+            t = 0f;
+
+            audioSource.PlayOneShot(questAppearSFX);
+
+            while (t < questFadeDuration)
+            {
+                t += Time.deltaTime;
+                c.a = Mathf.Lerp(1f, 0f, t / questFadeDuration);
+                questUIText.color = c;
+                yield return null;
+            }
+
+            questUIText.gameObject.SetActive(false);
+        }
+
 
         public void ResetToCheckpoint(int checkpointIndex)
         {
             currentDialogueIndex = checkpointIndex;
             StopAllCoroutines();
-            StartCoroutine(PlayDialogue());
+            dialogueCoroutine = StartCoroutine(PlayDialogue());
             Debug.Log("Dialogue resumed from checkpoint: " + checkpointIndex);
         }
+
+        public void SetDialogueActive(bool active)
+        {
+            isDialogueActive = active;
+        }
+
+        private IEnumerator WaitIfPaused()
+        {
+            // Used inside dialogue coroutines to pause typing/dialogue when game is paused
+            yield return new WaitWhile(() => !isDialogueActive);
+        }
+
 
         void OnDrawGizmos()
         {

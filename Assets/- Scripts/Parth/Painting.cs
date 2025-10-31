@@ -3,6 +3,8 @@ using UnityEngine;
 public class Painting : MonoBehaviour, IInteractable
 {
     Rigidbody rb;
+    public AudioSource playerSource;
+    public AudioClip paintingSound; 
 
     void Start()
     {
@@ -13,6 +15,7 @@ public class Painting : MonoBehaviour, IInteractable
     public void PlayerInteracted()
     {
         rb.isKinematic = false;
+        playerSource.PlayOneShot(paintingSound);
         Debug.Log("Player Interacted");
     }
 }
