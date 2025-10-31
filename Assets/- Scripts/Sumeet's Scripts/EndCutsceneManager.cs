@@ -16,6 +16,7 @@ public class EndCutsceneManager : MonoBehaviour
 
    IEnumerator OnGameOverScreen()
    {
+        //wait for cutscene duration
         yield return new WaitForSeconds(45.0f);
         gameOverScreenIMG.SetActive(true);
         yield return new WaitForSeconds(3f);

@@ -28,5 +28,6 @@ public class TVJumpScare2 : MonoBehaviour
         yield return new WaitForSeconds(videoDuration);
         Destroy(colorVideo.gameObject);
         noiseEffect.SetActive(true);
+        Destroy(this.gameObject);
     }
 }
