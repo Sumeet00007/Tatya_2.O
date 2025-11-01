@@ -14,6 +14,7 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
     [SerializeField] Transform itemSpots;
     [SerializeField] LayerMask itemLayerMask;
     [SerializeField] List<ItemList> itemsRecipies;
+    [SerializeField] AudioSource audioSource;
 
     Transform[] itemsPosition;
     List<string> itemsNeeded = new List<string>();
@@ -40,6 +41,7 @@ public class RequiredItemsChecker : MonoBehaviour, IInteractable
     {
         if (!player.isHandsFree)
         {
+            audioSource.Play();
             GetUnoccupiedPlace();
             if (!closestPositionIsOccupied)
             {

@@ -10415,6 +10415,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2380562648939520519, guid: 07d3d76955da8b04b8b9909836e6ba8d, type: 3}
       insertIndex: 2
+      addedObject: {fileID: 221410588}
+    - targetCorrespondingSourceObject: {fileID: 2380562648939520519, guid: 07d3d76955da8b04b8b9909836e6ba8d, type: 3}
+      insertIndex: 3
       addedObject: {fileID: 221410587}
   m_SourcePrefab: {fileID: 100100000, guid: 07d3d76955da8b04b8b9909836e6ba8d, type: 3}
 --- !u!1 &221410585 stripped
@@ -10457,6 +10460,104 @@ MonoBehaviour:
     requiredItems:
     - {fileID: 4498969590735015569, guid: 972a754e313d2ee438f7ddbf902c3b9d, type: 3}
     - {fileID: 6780216746876680076, guid: 67ddbdb067df3d44cb1fbfda470eae79, type: 3}
+  audioSource: {fileID: 221410588}
+--- !u!82 &221410588
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221410585}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0fb00e1b00681684db19cd0289ef01af, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0fb00e1b00681684db19cd0289ef01af, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &222742503
 GameObject:
   m_ObjectHideFlags: 0
@@ -14215,10 +14316,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -32083,7 +32184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 1
-  size: {x: 163.59204, y: 53.156204, z: 173.86261}
+  size: {x: 163.59204, y: 53.156204, z: 173.8626}
   overrideRendererFilters: 0
   minRendererVolumeSize: 0.1
   objectLayerMask:
@@ -32123,7 +32224,7 @@ Transform:
   m_GameObject: {fileID: 735862421}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -38.04959, y: -12.0076065, z: 19.74466}
+  m_LocalPosition: {x: -38.04959, y: -12.0076065, z: 19.744652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81769,7 +81870,7 @@ MonoBehaviour:
     requiresItem: 1
     requiredItemName: nimbu_mirchi_together(Clone)
   - text: Sanrakshan
-    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    voiceClip: {fileID: 8300000, guid: 599ab49c48e68ed4486c6ce847879452, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -81921,7 +82022,7 @@ MonoBehaviour:
     requiresItem: 1
     requiredItemName: CombinedDoll(Clone)
   - text: Sanrakshan
-    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    voiceClip: {fileID: 8300000, guid: 599ab49c48e68ed4486c6ce847879452, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82073,7 +82174,7 @@ MonoBehaviour:
     requiresItem: 1
     requiredItemName: talisman_combined(Clone)
   - text: Sanrakshan
-    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    voiceClip: {fileID: 8300000, guid: 599ab49c48e68ed4486c6ce847879452, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82215,7 +82316,7 @@ MonoBehaviour:
     requiresItem: 1
     requiredItemName: BrokenFuse1
   - text: Sanrakshan
-    voiceClip: {fileID: 0}
+    voiceClip: {fileID: 8300000, guid: 599ab49c48e68ed4486c6ce847879452, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82331,7 +82432,7 @@ MonoBehaviour:
     requiresItem: 1
     requiredItemName: salt_bag
   - text: Sanrakshan
-    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    voiceClip: {fileID: 8300000, guid: 599ab49c48e68ed4486c6ce847879452, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82424,7 +82525,7 @@ MonoBehaviour:
     requiresItem: 1
     requiredItemName: Candle
   - text: Sanrakshan
-    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    voiceClip: {fileID: 8300000, guid: 599ab49c48e68ed4486c6ce847879452, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82516,7 +82617,7 @@ MonoBehaviour:
     requiresItem: 1
     requiredItemName: haldi
   - text: Sanrakshan
-    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    voiceClip: {fileID: 8300000, guid: 599ab49c48e68ed4486c6ce847879452, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82609,7 +82710,7 @@ MonoBehaviour:
     requiresItem: 1
     requiredItemName: oil_can
   - text: Sanrakshan
-    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    voiceClip: {fileID: 8300000, guid: 599ab49c48e68ed4486c6ce847879452, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82701,7 +82802,7 @@ MonoBehaviour:
     requiresItem: 1
     requiredItemName: kumkum
   - text: Sanrakshan
-    voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
+    voiceClip: {fileID: 8300000, guid: 599ab49c48e68ed4486c6ce847879452, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82796,7 +82897,7 @@ MonoBehaviour:
   - text: 'Sanrakshan
 
 '
-    voiceClip: {fileID: 8300000, guid: d6dd4e2c644ece84582b62a79443b216, type: 3}
+    voiceClip: {fileID: 8300000, guid: 599ab49c48e68ed4486c6ce847879452, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
