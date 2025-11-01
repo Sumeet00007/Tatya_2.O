@@ -9,7 +9,8 @@ public class DrawerSlide : MonoBehaviour
     [SerializeField] float slideDistance = 2f;
     [SerializeField] float slideSpeed = 2f;
     [SerializeField] bool isSlidingIn = true;
-    public AudioSource drawerSlide;
+    public AudioSource playerSource;
+    public AudioClip drawerSound;
 
     [Header("Player Settings")]
     [SerializeField] Transform player;
@@ -61,7 +62,7 @@ public class DrawerSlide : MonoBehaviour
     IEnumerator SlideDrawerSmoothly()
     {
         isSliding = true;
-        drawerSlide.Play();
+        playerSource.PlayOneShot(drawerSound);
 
         Vector3 targetPos = isSlidingIn ? targetPosition : initialPosition;
 

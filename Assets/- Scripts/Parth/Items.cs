@@ -5,7 +5,8 @@ public class Items : MonoBehaviour, IInteractable
 {
     public bool canPickUp = true;
     public DoorOpening door;
-    public AudioSource itemSound;
+    public AudioSource playerSource;
+    public AudioClip itemSound;
 
     [SerializeField] Vector3 itemPositionDeviation = new Vector3(0, 0, 0);
     [SerializeField] Vector3 itemRotationDeviation = new Vector3(0, 0, 0);
@@ -62,7 +63,7 @@ public class Items : MonoBehaviour, IInteractable
 
             if (itemSound != null)
             {
-                itemSound.Play();
+                playerSource.PlayOneShot(itemSound);
             }
         }
     }

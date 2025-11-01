@@ -7,7 +7,8 @@ public class ElectricPanelChecker : MonoBehaviour, IInteractable
     [SerializeField] Transform itemSpots;
     [SerializeField] LayerMask itemLayerMask;
     [SerializeField] public GameObject[] itemsNeededGameObjects;
-    public AudioSource transistorDepSound;
+    public AudioSource fuseSource;
+    public AudioClip itemDepositSound;
     Transform[] itemsPosition;
     List<string> itemsNeeded;
     List<string> itemsDeposited;
@@ -52,7 +53,7 @@ public class ElectricPanelChecker : MonoBehaviour, IInteractable
                 currentItem.transform.position = closestPosition;
                 currentItem.transform.localRotation = Quaternion.identity;
 
-                transistorDepSound.Play();
+                fuseSource.PlayOneShot(itemDepositSound);
                 player.isHandsFree = true;
                 Invoke("CheckIfCanCombineItems", 0.1f);
             }

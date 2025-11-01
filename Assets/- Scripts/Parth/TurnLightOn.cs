@@ -1,51 +1,49 @@
-using System.Linq;
+﻿using System.Linq;
 using UnityEngine;
 
 public class TurnLightOn : MonoBehaviour, ICompletionHandler
 {
     [SerializeField] Light pointLight;
-    public AudioSource switchONSound;
+    public AudioSource fuseSource;
+    public AudioClip electricONSound;
     [SerializeField] ElectricPanelChecker itemChecker;
+    [SerializeField] MeshRenderer bulbRenderer; // ✅ added
 
     bool lightIsOn = false;
 
     void Start()
     {
         pointLight.enabled = false;
+
+        if (bulbRenderer != null)
+            bulbRenderer.enabled = false; // ✅ ensure bulb starts off
     }
 
     public void OnCompletion()
     {
-        // This will still play when the correct combination is first completed
-       
         Debug.Log("Correct Items");
         pointLight.enabled = true;
+        if (bulbRenderer != null)
+            bulbRenderer.enabled = true; // ✅ turn bulb on
         lightIsOn = true;
     }
 
     void Update()
     {
-        // Continuously check if the correct combination is still present
         if (IsCombinationCorrect())
         {
             if (!lightIsOn)
             {
                 pointLight.enabled = true;
+                if (bulbRenderer != null)
+                    bulbRenderer.enabled = true; // ✅ turn bulb on
                 lightIsOn = true;
-                switchONSound.Play();
+                fuseSource.PlayOneShot(electricONSound);
             }
         }
-        //else
-        //{
-        //    if (lightIsOn)
-        //    {
-        //        pointLight.enabled = false;
-        //        lightIsOn = false;
-        //    }
-        //}
+        //else block intentionally commented out
     }
 
-    // Reuse the same check logic similar to RequiredItemsChecker
     bool IsCombinationCorrect()
     {
         var itemsPositions = itemChecker.GetItemsPosition();
@@ -84,19 +82,23 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
             }
         }
 
-        return true; // All correct
+        return true;
     }
 
     public void LightOff()
     {
         pointLight.enabled = false;
+        if (bulbRenderer != null)
+            bulbRenderer.enabled = false; // ✅ turn bulb off
         lightIsOn = false;
-        switchONSound.Play();
+        fuseSource.PlayOneShot(electricONSound);
     }
 
     public void LightOn()
     {
         pointLight.enabled = true;
+        if (bulbRenderer != null)
+            bulbRenderer.enabled = true; // ✅ turn bulb on
         lightIsOn = true;
     }
 }

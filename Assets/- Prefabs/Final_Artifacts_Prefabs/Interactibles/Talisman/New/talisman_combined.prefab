@@ -145,7 +145,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
-  itemSound: {fileID: -4778504559279132770}
+  playerSource: {fileID: -4778504559279132770}
+  itemSound: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
   itemPositionDeviation: {x: -0.2976894, y: 0.0061764717, z: -0.008854985}
   itemRotationDeviation: {x: 52.80785, y: 266.0428, z: 149.1237}
 --- !u!54 &8782378343407412721
@@ -185,8 +186,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
-  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
