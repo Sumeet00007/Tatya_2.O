@@ -15,12 +15,15 @@ public class ArtifactSpawner : MonoBehaviour
     private List<GameObject> spawnQueue = new List<GameObject>();
 
     private GameObject lastSpawnedArtifact = null;
-
+    public AudioSource conveyorfx;
+    public AudioClip conveyorbeltdestroysfx;
     private void Start()
     {
        //StartArtifactSpawning();
        StopArtifactSpawning(false);
        currentTask = 0;
+       conveyorfx = GetComponent<AudioSource>();    
+      
     }
 
     public void StartArtifactSpawning()
@@ -156,5 +159,18 @@ public class ArtifactSpawner : MonoBehaviour
     public void DestroyConveyorBelt()
     {
         Debug.Log("Conveyor belt is destroyed");
+        conveyorfx.PlayOneShot(conveyorbeltdestroysfx);
     }
+
+    public void StartConveyorbeltSound()
+    {
+        conveyorfx.Play();
+    }
+
+    public void StopConveyorbeltSound()
+    {
+        conveyorfx.Stop();
+    }
+
+
 }

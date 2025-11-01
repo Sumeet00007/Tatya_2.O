@@ -445,9 +445,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 1582037030}
     m_Modifications:
     - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
+      propertyPath: conveyorfx
+      value: 
+      objectReference: {fileID: 2107912720}
+    - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
       propertyPath: spawnTimer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
+      propertyPath: conveyorbeltdestroysfx
+      value: 
+      objectReference: {fileID: 8300000, guid: 707b4ffb56032da41a60083c5135a81c, type: 3}
     - target: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
       propertyPath: 'artifacts.Array.data[2]'
       value: 
@@ -559,11 +567,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2710718207831395094, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2107912720}
   m_SourcePrefab: {fileID: 100100000, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
 --- !u!4 &14404551 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8334305076162106485, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
+  m_PrefabInstance: {fileID: 14404550}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &14404552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2710718207831395094, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
   m_PrefabInstance: {fileID: 14404550}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &16393962
@@ -1450,8 +1466,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
-  m_Resource: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
+  m_Resource: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1827,7 +1843,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1913,8 +1929,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.89, y: -433}
-  m_SizeDelta: {x: 307.01, y: 50}
+  m_AnchoredPosition: {x: 10.7142, y: -380}
+  m_SizeDelta: {x: 897.0223, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &76532165
 PrefabInstance:
@@ -2509,8 +2525,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7ef64d579f8da0d44b18b5af2cbcae02, type: 3}
+  m_Resource: {fileID: 8300000, guid: 7ef64d579f8da0d44b18b5af2cbcae02, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5134,7 +5150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSource: {fileID: 2003238912}
-  paintingSound: {fileID: 8300000, guid: f67c6783de7d050498199d615238a7f6, type: 3}
+  paintingSound: {fileID: 8300000, guid: 17de3d3226e1b1c4eb3dfbdfefb84b3f, type: 3}
 --- !u!54 &175076292
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5209,8 +5225,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5311,8 +5327,8 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 2058821131}
   itemSound: {fileID: 175656462}
-  itemPositionDeviation: {x: 0, y: 0, z: 0}
-  itemRotationDeviation: {x: -90, y: 0, z: 360}
+  itemPositionDeviation: {x: -0.4125309, y: -0.058968723, z: 0.58086944}
+  itemRotationDeviation: {x: 359.0734, y: 43.7692, z: 253.85527}
 --- !u!54 &175656464
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12413,8 +12429,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
-  m_Resource: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
+  m_Resource: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -13699,8 +13715,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ed93af3b096122648bea8d97897e6ebe, type: 3}
-  m_Resource: {fileID: 8300000, guid: ed93af3b096122648bea8d97897e6ebe, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d3d44f35dba724945a402613e9148357, type: 3}
+  m_Resource: {fileID: 8300000, guid: d3d44f35dba724945a402613e9148357, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14708,8 +14724,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -14849,8 +14865,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -15629,8 +15645,12 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1610313506}
     m_Modifications:
+    - target: {fileID: 837988759078052778, guid: 060040a0af7b4b14d9f65a5d23322866, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 48e6a73ddd31abf458609191e37930c9, type: 3}
     - target: {fileID: 1854727686109935682, guid: 060040a0af7b4b14d9f65a5d23322866, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -15714,6 +15734,10 @@ PrefabInstance:
     - target: {fileID: 1909041213475315318, guid: 060040a0af7b4b14d9f65a5d23322866, type: 3}
       propertyPath: m_Name
       value: GameOverCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2128751954887151670, guid: 060040a0af7b4b14d9f65a5d23322866, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21060,8 +21084,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ed93af3b096122648bea8d97897e6ebe, type: 3}
-  m_Resource: {fileID: 8300000, guid: ed93af3b096122648bea8d97897e6ebe, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d3d44f35dba724945a402613e9148357, type: 3}
+  m_Resource: {fileID: 8300000, guid: d3d44f35dba724945a402613e9148357, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -22958,8 +22982,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2ddffb822948fde4da2a00071bdb17e8, type: 3}
-  m_Resource: {fileID: 8300000, guid: 2ddffb822948fde4da2a00071bdb17e8, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 707b4ffb56032da41a60083c5135a81c, type: 3}
+  m_Resource: {fileID: 8300000, guid: 707b4ffb56032da41a60083c5135a81c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -23055,8 +23079,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a0165b0190432ed49b24539977d638c5, type: 3}
-  m_Resource: {fileID: 8300000, guid: a0165b0190432ed49b24539977d638c5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 014a890c5c68cb549bba24f41794deda, type: 3}
+  m_Resource: {fileID: 8300000, guid: 014a890c5c68cb549bba24f41794deda, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -25421,7 +25445,7 @@ MonoBehaviour:
   closeDoor1Distance: 11
   closeDoor2Distance: 16
   closeDoor3Distance: 17
-  doorSlamSound: {fileID: 8300000, guid: 44e0d165a44e32548ab6ac596ddfec3c, type: 3}
+  doorSlamSound: {fileID: 8300000, guid: 827de5f229be9164a940240306f0b44a, type: 3}
   runningGhost: {fileID: 1261670339}
   spawnRunningGhostCheckPoint: {fileID: 1191801532}
   runningGhostTriggerDistance: 14
@@ -28157,6 +28181,14 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 3846
       objectReference: {fileID: 0}
+    - target: {fileID: 3055037656691772658, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 014a890c5c68cb549bba24f41794deda, type: 3}
+    - target: {fileID: 3055037656691772658, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 014a890c5c68cb549bba24f41794deda, type: 3}
     - target: {fileID: 3394949112679338335, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -28205,6 +28237,14 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 3846
       objectReference: {fileID: 0}
+    - target: {fileID: 5936649723852020570, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 707b4ffb56032da41a60083c5135a81c, type: 3}
+    - target: {fileID: 5936649723852020570, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 707b4ffb56032da41a60083c5135a81c, type: 3}
     - target: {fileID: 6151270780683849567, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -28277,9 +28317,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1906091617985023777, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1890796153}
-    - targetCorrespondingSourceObject: {fileID: 1906091617985023777, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1173179127}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1240773131634251163, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
       insertIndex: 3
@@ -30587,8 +30624,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -31320,8 +31357,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -39344,8 +39381,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ed93af3b096122648bea8d97897e6ebe, type: 3}
-  m_Resource: {fileID: 8300000, guid: ed93af3b096122648bea8d97897e6ebe, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d3d44f35dba724945a402613e9148357, type: 3}
+  m_Resource: {fileID: 8300000, guid: d3d44f35dba724945a402613e9148357, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -40072,8 +40109,8 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 0}
   itemSound: {fileID: 0}
-  itemPositionDeviation: {x: 0, y: 0, z: 0}
-  itemRotationDeviation: {x: 0, y: 0, z: 0}
+  itemPositionDeviation: {x: -0.447, y: 0.229, z: 0.704}
+  itemRotationDeviation: {x: 58.201607, y: 230.7144, z: 2.5845597}
 --- !u!1001 &861218656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40690,8 +40727,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -43415,8 +43452,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 73516b26ff0ea15418ecc406596bba7e, type: 3}
-  m_Resource: {fileID: 8300000, guid: 73516b26ff0ea15418ecc406596bba7e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 50362a548d032db4c9545cec5d99aff6, type: 3}
+  m_Resource: {fileID: 8300000, guid: 50362a548d032db4c9545cec5d99aff6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -48780,213 +48817,6 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
---- !u!1001 &1173179126
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 670970036}
-    m_Modifications:
-    - target: {fileID: 827690161393579737, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_RenderingLayerMask
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 827690161393579737, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 560097fe3ed18fd49a8761dce3181b07, type: 2}
-    - target: {fileID: 1961219839870422454, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1961219839870422454, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768626068818916423, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_Name
-      value: Broken Fuse
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768626068818916423, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2768626068818916423, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_TagString
-      value: Item
-      objectReference: {fileID: 0}
-    - target: {fileID: 4347192271552150487, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: itemSound
-      value: 
-      objectReference: {fileID: 1173179129}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.9300826
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.9300826
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.9300828
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.833
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.667
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.49999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.49999997
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.50000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.50000006
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2768626068818916423, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1173179129}
-  m_SourcePrefab: {fileID: 100100000, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
---- !u!4 &1173179127 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5253911181041268812, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-  m_PrefabInstance: {fileID: 1173179126}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1173179128 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2768626068818916423, guid: c342d8a89a303b042a57f9c66099eabf, type: 3}
-  m_PrefabInstance: {fileID: 1173179126}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1173179129
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1173179128}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &1174367544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 107502ee8d3dd844eb644444680fd949, type: 3}
@@ -49427,44 +49257,13 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 9104978069083346267, guid: d1c4277c7f7a8ab44b0b72316485f3d8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1295284854}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1587297202233258392, guid: d1c4277c7f7a8ab44b0b72316485f3d8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1177279489}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1c4277c7f7a8ab44b0b72316485f3d8, type: 3}
 --- !u!4 &1177279487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2111316080028150562, guid: d1c4277c7f7a8ab44b0b72316485f3d8, type: 3}
   m_PrefabInstance: {fileID: 1177279486}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1177279488 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1587297202233258392, guid: d1c4277c7f7a8ab44b0b72316485f3d8, type: 3}
-  m_PrefabInstance: {fileID: 1177279486}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1177279489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177279488}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1820bbf10b84c464e8f7c0aeacb70612, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doorType: 0
-  hinge: {fileID: 1828959196}
-  openAngle: -90
-  moveSpeed: 2
-  isOpen: 0
-  onActionTriggered:
-    m_PersistentCalls:
-      m_Calls: []
-  jumpScareDelay: 0.5
-  doorOpenSound: {fileID: 2083714694}
-  doorCloseSound: {fileID: 1295284855}
 --- !u!4 &1177279490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9104978069083346267, guid: d1c4277c7f7a8ab44b0b72316485f3d8, type: 3}
@@ -51807,6 +51606,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1d6b9348e44ff2644a32065ee80a8ad5, type: 3}
+      propertyPath: m_TagString
+      value: WrongPainting
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52555,8 +52358,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -54375,8 +54178,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 73516b26ff0ea15418ecc406596bba7e, type: 3}
-  m_Resource: {fileID: 8300000, guid: 73516b26ff0ea15418ecc406596bba7e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 50362a548d032db4c9545cec5d99aff6, type: 3}
+  m_Resource: {fileID: 8300000, guid: 50362a548d032db4c9545cec5d99aff6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -55548,8 +55351,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -56226,8 +56029,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
-  m_Resource: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
+  m_Resource: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -56601,8 +56404,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ed93af3b096122648bea8d97897e6ebe, type: 3}
-  m_Resource: {fileID: 8300000, guid: ed93af3b096122648bea8d97897e6ebe, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d3d44f35dba724945a402613e9148357, type: 3}
+  m_Resource: {fileID: 8300000, guid: d3d44f35dba724945a402613e9148357, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -56863,8 +56666,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
-  m_Resource: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
+  m_Resource: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -60946,6 +60749,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1d6b9348e44ff2644a32065ee80a8ad5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -61683,8 +61490,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
-  m_Resource: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
+  m_Resource: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -62468,7 +62275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSource: {fileID: 2003238912}
-  paintingSound: {fileID: 8300000, guid: f67c6783de7d050498199d615238a7f6, type: 3}
+  paintingSound: {fileID: 8300000, guid: 17de3d3226e1b1c4eb3dfbdfefb84b3f, type: 3}
 --- !u!54 &1491128220
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -66225,8 +66032,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -66445,6 +66252,11 @@ Transform:
 --- !u!1 &1538880205 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1909041213475315318, guid: 060040a0af7b4b14d9f65a5d23322866, type: 3}
+  m_PrefabInstance: {fileID: 364793716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1538880209 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1854727686109935682, guid: 060040a0af7b4b14d9f65a5d23322866, type: 3}
   m_PrefabInstance: {fileID: 364793716}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1547961295
@@ -68352,8 +68164,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ed93af3b096122648bea8d97897e6ebe, type: 3}
-  m_Resource: {fileID: 8300000, guid: ed93af3b096122648bea8d97897e6ebe, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d3d44f35dba724945a402613e9148357, type: 3}
+  m_Resource: {fileID: 8300000, guid: d3d44f35dba724945a402613e9148357, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -68578,8 +68390,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -68847,6 +68659,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1538880209}
   - {fileID: 311675637}
   - {fileID: 1243991048}
   - {fileID: 328080699}
@@ -70317,8 +70130,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -76328,19 +76141,19 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 47eaabb8223c73b438c28cfb2c58cc2b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 47eaabb8223c73b438c28cfb2c58cc2b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
+  m_Volume: 0.1
+  m_Pitch: 0.22
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  Priority: 228
+  DopplerLevel: 5
+  MinDistance: 5
+  MaxDistance: 10
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -76375,7 +76188,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.963
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -76625,8 +76438,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -80837,7 +80650,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSource: {fileID: 2003238912}
-  paintingSound: {fileID: 8300000, guid: f67c6783de7d050498199d615238a7f6, type: 3}
+  paintingSound: {fileID: 8300000, guid: 17de3d3226e1b1c4eb3dfbdfefb84b3f, type: 3}
 --- !u!54 &1944497997
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81885,51 +81698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - text: Now listen closely... your trial begins.
-    voiceClip: {fileID: 8300000, guid: 312447bbd64bc414e8e41022c1a992ff, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: Once you find the objects, Assemble them on the table and hand them to
-      me.
-    voiceClip: {fileID: 8300000, guid: 253d9f6475fd58b4aa32b362d032888e, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: Do not make me wait!!! I will Kill you
-    voiceClip: {fileID: 8300000, guid: f46df212972248248ae30bc04dbab4cf, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: Here is the First Riddle
-    voiceClip: {fileID: 8300000, guid: eb2ef2a700d10c940990a1141522e1f0, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: 'Bound by thread, sour and spice,
-
-      A charm to ward off evil''s vice.'
-    voiceClip: {fileID: 8300000, guid: 817953a6820fb604b8523e2045b1bff5, type: 3}
+  - text: "I\u2019m never eaten, yet always fresh; sour and spicy woven in one mesh."
+    voiceClip: {fileID: 8300000, guid: 974d517553e0fc64c8ae3a6d6f0c7d7f, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -81971,6 +81741,18 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: StartConveyorbeltSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2107912719}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
           m_MethodName: StartArtifactSpawning
           m_Mode: 1
           m_Arguments:
@@ -81986,7 +81768,7 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 1
     requiredItemName: nimbu_mirchi_together(Clone)
-  - text: Om Bhatt Swaha.
+  - text: Sanrakshan
     voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -82029,8 +81811,8 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
-          m_MethodName: StopArtifactSpawning
-          m_Mode: 6
+          m_MethodName: CompleteTask
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -82041,8 +81823,20 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
-          m_MethodName: CompleteTask
+          m_MethodName: StopConveyorbeltSound
           m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2107912719}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: StopArtifactSpawning
+          m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -82056,21 +81850,8 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
-  - text: Here is the Second Riddle
-    voiceClip: {fileID: 8300000, guid: 9dd9b597c9cd3f64ab2813d078bba0b6, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: 'Stitched with pins, a curse in play,
-
-      What happens to it, happens
-      your way.'
-    voiceClip: {fileID: 8300000, guid: 8ef7c45cb63f510429e770c7380860c6, type: 3}
+  - text: "Not a toy for child or kin, I\u2019m a vessel bound with pins."
+    voiceClip: {fileID: 8300000, guid: 10ff1d7124a5069488d7eadb139d2387, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82112,6 +81893,18 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: StartConveyorbeltSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2107912719}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
           m_MethodName: StartArtifactSpawning
           m_Mode: 1
           m_Arguments:
@@ -82127,7 +81920,7 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 1
     requiredItemName: CombinedDoll(Clone)
-  - text: Om Bhatt Swaha.
+  - text: Sanrakshan
     voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -82182,6 +81975,18 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: StopConveyorbeltSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2107912719}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
           m_MethodName: StopArtifactSpawning
           m_Mode: 6
           m_Arguments:
@@ -82197,30 +82002,8 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
-  - text: I really need this new Artifact!! Hurrryyyy
-    voiceClip: {fileID: 8300000, guid: 1e31d78a546d8d8468da279a22641e42, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: Here is the Third Riddle
-    voiceClip: {fileID: 8300000, guid: 1b37c97de8199eb4b988139ab4b5ca33, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: 'A tiny trinket, full of power,
-
-      Wards off misfortune every hour.'
-    voiceClip: {fileID: 8300000, guid: b640736042d62a9428d22b788034b0b8, type: 3}
+  - text: Around the neck or in the hand, I turn aside what shadows planned.
+    voiceClip: {fileID: 8300000, guid: 1adaa1449b60ba5459bdae185e7342f5, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82262,6 +82045,18 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: StartConveyorbeltSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2107912719}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
           m_MethodName: StartArtifactSpawning
           m_Mode: 1
           m_Arguments:
@@ -82277,7 +82072,7 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 1
     requiredItemName: talisman_combined(Clone)
-  - text: Om Bhatt Swaha.
+  - text: Sanrakshan
     voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -82332,6 +82127,18 @@ MonoBehaviour:
           m_CallState: 2
         - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
+          m_MethodName: StopConveyorbeltSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 2107912719}
+          m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
           m_MethodName: StopArtifactSpawning
           m_Mode: 6
           m_Arguments:
@@ -82359,8 +82166,10 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
-  - text: What was that? Check the room and turn the Electrical fuse back on!
-    voiceClip: {fileID: 8300000, guid: 61edb2e9c5501c745aefc8994c44e881, type: 3}
+  - text: "Viru, we are almost there\u2026 it\u2019s working. I am getting my powers
+      back. This happened due to that Mahagyani\u2019s curse. Check the room and
+      put all the fuses back in the fuse box. And bring me the negative fuse."
+    voiceClip: {fileID: 8300000, guid: fb6d563f96ad5604a9694fb0e6cd37c0, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82403,21 +82212,10 @@ MonoBehaviour:
     triggersQuest: 1
     questDescription: Turn on the FuseBox
     isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: There are 5 Fuses in this Room, Give me the Broken Fuse
-    voiceClip: {fileID: 8300000, guid: bb5c3cc97480d0842a15635466cb6003, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
     requiresItem: 1
     requiredItemName: BrokenFuse1
-  - text: The priest has turned this hotel into my prison. You must retrieve the
-      next object from another room.
-    voiceClip: {fileID: 8300000, guid: b408a76ed389b674e969ae6079541f8e, type: 3}
+  - text: Sanrakshan
+    voiceClip: {fileID: 0}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82474,8 +82272,10 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
-  - text: I will guide you with riddles, but you must solve them to survive.
-    voiceClip: {fileID: 8300000, guid: 4e7b488c8f85bc845aa358849ad0f100, type: 3}
+  - text: "Now listen\u2026 You will need to explore the entire motel and bring the
+      relics to me. But be aware of the dangers. Also, do not believe anyone, no
+      matter what they say. Now, this is the next riddle\u2026"
+    voiceClip: {fileID: 8300000, guid: 8a3b30e1822c5cb4da0c73d9a8b32d1d, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -82484,18 +82284,8 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 0
     requiredItemName: 
-  - text: "Now, listen carefully. Here\u2019s your next riddle"
-    voiceClip: {fileID: 0}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: "To wash away your Evil sins, Seek against the water\u2019s flow."
-    voiceClip: {fileID: 8300000, guid: 9902b947c739a534b881ec505014604d, type: 3}
+  - text: White as purity, hidden where impurities flow
+    voiceClip: {fileID: 8300000, guid: d4f850e61dcfa6d44add2c74b64e2a50, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82540,7 +82330,7 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 1
     requiredItemName: salt_bag
-  - text: Om Bhatt Swaha.
+  - text: Sanrakshan
     voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -82586,8 +82376,9 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
-  - text: Shadows dance as curtains rise, Fear waits where the theatre lies.
-    voiceClip: {fileID: 8300000, guid: 631c3e34e3c9bd94f969b2ae3e74457e, type: 3}
+  - text: Seek the fading glow resting on the corner of the place, where pictures
+      move.
+    voiceClip: {fileID: 8300000, guid: 7cdf17281dc038541a9c8d3a1cd750bd, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82632,7 +82423,7 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 1
     requiredItemName: Candle
-  - text: Om Bhatt Swaha.
+  - text: Sanrakshan
     voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -82678,21 +82469,8 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
-  - text: I am Feeling stronger and Angrierrrr!!
-    voiceClip: {fileID: 8300000, guid: 1665255a94a2c3d4383ee9fbda39672a, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: 'Where drinks pour and stories are shared,
-
-      Seek your clue near the
-      Dining prepared.'
-    voiceClip: {fileID: 8300000, guid: 706bac86735cafc4ab57a3019f6d1d4d, type: 3}
+  - text: "Behind the pourer\u2019s stage I stay, golden and pure, yet hidden away."
+    voiceClip: {fileID: 8300000, guid: 95e9f1a16c11ce9409bcfe8ddf559ab6, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82737,7 +82515,7 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 1
     requiredItemName: haldi
-  - text: Om Bhatt Swaha.
+  - text: Sanrakshan
     voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -82783,10 +82561,9 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
-  - text: 'Static screen, a melon grins,
-
-      A child''s show hides Evil sins.'
-    voiceClip: {fileID: 8300000, guid: 50177eef504e5ed4eb83d7bfef4cda0c, type: 3}
+  - text: Seek not elsewhere, the movie poster is your guide; from its clue, the
+      item shall come to my side
+    voiceClip: {fileID: 8300000, guid: b033e5036bdb3684c8e42753b6aa8e95, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82831,7 +82608,7 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 1
     requiredItemName: oil_can
-  - text: Om Bhatt Swaha.
+  - text: Sanrakshan
     voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -82877,31 +82654,8 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
-  - text: Yessss!!! Moree Powerrr!!! Mwahahaha!!
-    voiceClip: {fileID: 8300000, guid: cd3b865a215e13d4d87c62b8a9de1784, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: Do not Worry just Do as I say! (Menacing laughter)
-    voiceClip: {fileID: 8300000, guid: ec23f1df5fde5c34f96c1304163ebc31, type: 3}
-    onDialogueEvent:
-      m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
-    questDescription: 
-    isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: 'Through the window, still and wide,
-
-      Eight legged Spider wait on
-      the other side.'
-    voiceClip: {fileID: 8300000, guid: 1a87395cc4ed55542894716fcf5f73ae, type: 3}
+  - text: The thing I seek lies where someone is watching.
+    voiceClip: {fileID: 8300000, guid: 9bc2ecd029923e741a32ba336f35aa4f, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
@@ -82946,7 +82700,7 @@ MonoBehaviour:
     isQuestCompletion: 0
     requiresItem: 1
     requiredItemName: kumkum
-  - text: Om Bhatt Swaha.
+  - text: Sanrakshan
     voiceClip: {fileID: 8300000, guid: 7f3822499098b4e4bbb799bcf88c3c25, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -82992,21 +82746,84 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
-  - text: Mwahahaha!! No one can Stop me Now!!!
-    voiceClip: {fileID: 8300000, guid: 5611eddbf46aadc4e9ad08a5c0e10bc0, type: 3}
+  - text: "Turn the key where lost things sleep, the cursed one you\u2019re meant
+      to keep. That is where the item I seek"
+    voiceClip: {fileID: 8300000, guid: f341b8dff0b7079419aa921cb1aeeee8, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
-        m_Calls: []
-    triggersQuest: 0
+        m_Calls:
+        - m_Target: {fileID: 1124569448}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: EnablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1124569448}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: SetMaxPatienceTime
+          m_Mode: 4
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 300
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1124569448}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: InsertdeltaTime
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    triggersQuest: 1
     questDescription: 
     isQuestCompletion: 0
-    requiresItem: 0
-    requiredItemName: 
-  - text: Babaaaa?
+    requiresItem: 1
+    requiredItemName: GoodSpiritImage
+  - text: 'Sanrakshan
+
+'
     voiceClip: {fileID: 8300000, guid: d6dd4e2c644ece84582b62a79443b216, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1124569448}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: ResetPatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1124569448}
+          m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
+          m_MethodName: DisablePatienceBar
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 798692708}
           m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
           m_MethodName: GameOverCutscene
@@ -83985,7 +83802,7 @@ PrefabInstance:
     - target: {fileID: 402626803746385384, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: flashOn
       value: 
-      objectReference: {fileID: 8300000, guid: 1659b978b562f5040a5948ef54112bf5, type: 3}
+      objectReference: {fileID: 8300000, guid: 282679c184f198141bf70c7c75f1fc2b, type: 3}
     - target: {fileID: 402626803746385384, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: isFlashOn
       value: 0
@@ -84014,6 +83831,22 @@ PrefabInstance:
       propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2420815019151793550, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: 'footstepClips.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 39bb50e7ca3548e4b95b9cc82f557cd8, type: 3}
+    - target: {fileID: 2420815019151793550, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: 'footstepClips.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: fb6babe11f5dc904685febb020238329, type: 3}
+    - target: {fileID: 2420815019151793550, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: 'footstepClips.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: df8f74e1fe41db147a90d824715db652, type: 3}
+    - target: {fileID: 2420815019151793550, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
+      propertyPath: 'footstepClips.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 8bcecb7415fc66449915fc5fda60a537, type: 3}
     - target: {fileID: 2524602974551708556, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -84056,31 +83889,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -71.62
+      value: -99.91
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3
+      value: -25.3
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.56
+      value: 44.82
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9675479
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.2526878
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -84088,7 +83921,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -29.273
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 4054779143505582315, guid: d4006dd2b2462884585c915fd72b327f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -84561,7 +84394,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!224 &2038145860
 RectTransform:
@@ -85835,8 +85668,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
-  m_Resource: {fileID: 8300000, guid: a9f8ab943e04d194c878536ca976f28f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
+  m_Resource: {fileID: 8300000, guid: b1e703ef97a3e7a42b5a50434944b1b1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -87356,8 +87189,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
-  m_Resource: {fileID: 8300000, guid: 82f32012e8de10f4d9f54106465179f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
+  m_Resource: {fileID: 8300000, guid: 3b6d8bc0a3a7f5c4dafa8bb4f796858b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -87550,12 +87383,109 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2059994750822042416, guid: c201ad342ee53bd4fa0598fe9e7c99ce, type: 3}
   m_PrefabInstance: {fileID: 14404550}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 14404552}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81fe306d28a8b5744a9abdb6b77daf01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &2107912720
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14404552}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0bb2d7d7d1ac1804eb0282600a7beb33, type: 3}
+  m_Resource: {fileID: 8300000, guid: 0bb2d7d7d1ac1804eb0282600a7beb33, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.6
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 5
+  MinDistance: 1
+  MaxDistance: 14.180283
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.5
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2116869148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87949,8 +87879,8 @@ MonoBehaviour:
   canPickUp: 1
   door: {fileID: 0}
   itemSound: {fileID: 0}
-  itemPositionDeviation: {x: 0, y: 0, z: 0}
-  itemRotationDeviation: {x: 0, y: 0, z: 0}
+  itemPositionDeviation: {x: -0.447, y: 0.229, z: 0.704}
+  itemRotationDeviation: {x: 58.201607, y: 230.7144, z: 2.5845597}
 --- !u!1 &2131086316
 GameObject:
   m_ObjectHideFlags: 0
@@ -90428,6 +90358,5 @@ SceneRoots:
   - {fileID: 326782234}
   - {fileID: 265062036}
   - {fileID: 1927525933}
-  - {fileID: 364793716}
   - {fileID: 2018324867}
   - {fileID: 30669868}

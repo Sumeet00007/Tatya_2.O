@@ -17,5 +17,20 @@ public class Painting : MonoBehaviour, IInteractable
         rb.isKinematic = false;
         playerSource.PlayOneShot(paintingSound);
         Debug.Log("Player Interacted");
+
+        if (CompareTag("WrongPainting"))
+        {
+            Invoke(nameof(TriggerGameOver), 0.5f);
+        }
     }
+
+    private void TriggerGameOver()
+    {
+        GameManager.Instance.ShowGameOver();
+    }
+
+
+
+
+
 }

@@ -497,8 +497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myFX: {fileID: 219198668}
-  hoverFX: {fileID: 8300000, guid: 74509ddd087a3b747bb66c79384b5f2f, type: 3}
-  clickFX: {fileID: 8300000, guid: 17844999bbefb184ea270c5dff8d2d93, type: 3}
+  hoverFX: {fileID: 8300000, guid: ba31de21c5c89234cb66b2d48dcdd6e8, type: 3}
+  clickFX: {fileID: 8300000, guid: 7f83a697c464ddc479ae382a347b949d, type: 3}
 --- !u!82 &219198668
 AudioSource:
   m_ObjectHideFlags: 0
@@ -513,12 +513,12 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 2
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 75
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -850,8 +850,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myFX: {fileID: 432056070}
-  hoverFX: {fileID: 8300000, guid: 74509ddd087a3b747bb66c79384b5f2f, type: 3}
-  clickFX: {fileID: 8300000, guid: d6dd4e2c644ece84582b62a79443b216, type: 3}
+  hoverFX: {fileID: 8300000, guid: ba31de21c5c89234cb66b2d48dcdd6e8, type: 3}
+  clickFX: {fileID: 8300000, guid: 51e05b1662b029a458e8872a0ac2a936, type: 3}
 --- !u!82 &432056070
 AudioSource:
   m_ObjectHideFlags: 0
@@ -866,12 +866,12 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 2
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 75
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1053,10 +1053,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f6a3f2f06d167e54282c4be9ea436e8b, type: 3}
-  m_Resource: {fileID: 8300000, guid: f6a3f2f06d167e54282c4be9ea436e8b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d1ba78e987d92c542a82c5fee6e49ebd, type: 3}
+  m_Resource: {fileID: 8300000, guid: d1ba78e987d92c542a82c5fee6e49ebd, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1559,8 +1559,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myFX: {fileID: 772587273}
-  hoverFX: {fileID: 8300000, guid: 74509ddd087a3b747bb66c79384b5f2f, type: 3}
-  clickFX: {fileID: 8300000, guid: 17844999bbefb184ea270c5dff8d2d93, type: 3}
+  hoverFX: {fileID: 8300000, guid: ba31de21c5c89234cb66b2d48dcdd6e8, type: 3}
+  clickFX: {fileID: 8300000, guid: 7f83a697c464ddc479ae382a347b949d, type: 3}
 --- !u!82 &772587273
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1575,12 +1575,12 @@ AudioSource:
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 1
+  m_Pitch: 2
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 75
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
