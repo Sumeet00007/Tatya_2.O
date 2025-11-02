@@ -111,10 +111,10 @@ namespace MyGame.Dialogue
 
                 yield return StartCoroutine(TypeDialogue(currentLine.text));
 
-                currentLine.onDialogueEvent.Invoke();
-
                 if (currentLine.triggersQuest)
                     UpdateQuestUI(currentLine.questDescription);
+
+                currentLine.onDialogueEvent.Invoke();
 
                 if (currentLine.requiresItem && !awaitingItem)
                 {
@@ -127,8 +127,12 @@ namespace MyGame.Dialogue
                     UpdateQuestUI("Quest Completed!");
                 }
 
+                if (currentLine.voiceClip != null)
+                    yield return new WaitWhile(() => audioSource.isPlaying);
+
                 currentDialogueIndex++;
-                yield return new WaitForSeconds(dialogueInterval);
+               yield return new WaitForSeconds(dialogueInterval);
+               
             }
         }
 
