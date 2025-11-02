@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     public void DisplayGameOver()
     {
-        Invoke(nameof(RestartLevel), 5.5f);
+        Invoke(nameof(RestartLevel), 8.5f);
         //Play GameOver Cutscene
         gameOverCutScene.SetActive(true);
         //update CheckPoint

@@ -23,7 +23,7 @@ public class CutSceneManager : MonoBehaviour
 
     IEnumerator WelComeToMainLevel()
     {
-        yield return new WaitForSeconds(63.0f);
+        yield return new WaitForSeconds(176.0f);
         //Load Main Scene
         SceneManager.LoadScene(3);
     }

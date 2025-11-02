@@ -23,6 +23,7 @@ public class Items : MonoBehaviour, IInteractable
         rb = GetComponent<Rigidbody>();
         coll = GetComponent<Collider>();
         player = FindFirstObjectByType<Player>();
+        playerSource= GameObject.Find("Player (1)").GetComponent<AudioSource>();
 
         // Cache layer indices
         //originalLayer = LayerMask.NameToLayer("Items");

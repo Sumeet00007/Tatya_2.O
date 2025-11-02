@@ -110,11 +110,11 @@ namespace MyGame.Dialogue
                     audioSource.PlayOneShot(currentLine.voiceClip, dialogueVolume * volumeMultiplier);
 
                 yield return StartCoroutine(TypeDialogue(currentLine.text));
+                currentLine.onDialogueEvent.Invoke();
 
                 if (currentLine.triggersQuest)
                     UpdateQuestUI(currentLine.questDescription);
 
-                currentLine.onDialogueEvent.Invoke();
 
                 if (currentLine.requiresItem && !awaitingItem)
                 {
