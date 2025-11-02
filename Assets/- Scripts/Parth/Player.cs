@@ -154,6 +154,7 @@ public class Player : MonoBehaviour
 
     void DropCurrentItem()
     {
+        if (isHandsFree) return;
         currentItem = GetCurrentItem();
         currentItemRigidBody = currentItem.GetComponent<Rigidbody>();
         currentItemCollider = currentItem.GetComponent<Collider>();
