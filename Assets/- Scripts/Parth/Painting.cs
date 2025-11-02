@@ -26,7 +26,7 @@ public class Painting : MonoBehaviour, IInteractable
 
     private void TriggerGameOver()
     {
-        GameManager.Instance.ShowGameOver();
+        GameManager.Instance.ShowGameOverPlatformPuzzle();
     }
 
 

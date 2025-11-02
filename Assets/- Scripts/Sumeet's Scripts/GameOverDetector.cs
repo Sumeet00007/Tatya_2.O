@@ -16,7 +16,7 @@ public class GameOverDetector : MonoBehaviour
 
     private void TriggerGameOver()
     {
-        GameManager.Instance.ShowGameOver();
+        GameManager.Instance.ShowGameOverPlatformPuzzle();
     }
 
 

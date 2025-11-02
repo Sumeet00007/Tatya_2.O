@@ -6579,6 +6579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
+  playerSource: {fileID: 0}
   itemSound: {fileID: 312446064}
   itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
@@ -13703,6 +13704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
+  playerSource: {fileID: 0}
   itemSound: {fileID: 385669132}
   itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
@@ -20021,6 +20023,7 @@ MonoBehaviour:
     requiredItems:
     - {fileID: 8975758969295696034, guid: a403c886d4bdfae4a9be60109e6806fe, type: 3}
     - {fileID: 1175678060658609754, guid: 6fac10426759b6f42b9daf2d76055a8d, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1 &429230404
 GameObject:
   m_ObjectHideFlags: 0
@@ -28172,7 +28175,8 @@ MonoBehaviour:
   slideDistance: 1.5
   slideSpeed: 2
   isSlidingIn: 1
-  drawerSlide: {fileID: 618427937}
+  playerSource: {fileID: 0}
+  drawerSound: {fileID: 0}
   player: {fileID: 1455261769}
   activationRange: 5
   playerCamera: {fileID: 1455261781}
@@ -45545,7 +45549,8 @@ MonoBehaviour:
   player: {fileID: 1455261769}
   playerCamera: {fileID: 1455261781}
   correctRotationZ: 360
-  cubeRotate: {fileID: 960102295}
+  playerSource: {fileID: 0}
+  blockSound: {fileID: 0}
 --- !u!82 &960102295
 AudioSource:
   m_ObjectHideFlags: 0
@@ -61580,6 +61585,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
+  playerSource: {fileID: 0}
   itemSound: {fileID: 385669132}
   itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
@@ -65811,6 +65817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
+  playerSource: {fileID: 0}
   itemSound: {fileID: 385669132}
   itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
@@ -77067,6 +77074,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab5cffa5e5a9aa4d88c19cfaf52d473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSource: {fileID: 0}
+  paintingSound: {fileID: 0}
 --- !u!54 &1656284409
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -80565,6 +80574,9 @@ MonoBehaviour:
   dialogueVolume: 1
   volumeMultiplier: 2
   questUIText: {fileID: 1570624384}
+  questFadeDuration: 1
+  questDisplayTime: 3
+  questAppearSFX: {fileID: 0}
   itemContainer: {fileID: 1455261767}
   interactionRange: 10
 --- !u!1 &1717731202 stripped
@@ -81703,6 +81715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
+  playerSource: {fileID: 0}
   itemSound: {fileID: 312446064}
   itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
@@ -82340,6 +82353,7 @@ MonoBehaviour:
     requiredItems:
     - {fileID: 8975758969295696034, guid: a403c886d4bdfae4a9be60109e6806fe, type: 3}
     - {fileID: 1175678060658609754, guid: 6fac10426759b6f42b9daf2d76055a8d, type: 3}
+  audioSource: {fileID: 0}
 --- !u!4 &1749805695
 Transform:
   m_ObjectHideFlags: 0
@@ -83305,7 +83319,8 @@ MonoBehaviour:
   player: {fileID: 1455261769}
   playerCamera: {fileID: 1455261781}
   correctRotationZ: 270
-  cubeRotate: {fileID: 1781874869}
+  playerSource: {fileID: 0}
+  blockSound: {fileID: 0}
 --- !u!82 &1781874869
 AudioSource:
   m_ObjectHideFlags: 0
@@ -87997,7 +88012,8 @@ MonoBehaviour:
   player: {fileID: 1455261769}
   playerCamera: {fileID: 1455261781}
   correctRotationZ: 180
-  cubeRotate: {fileID: 1885632364}
+  playerSource: {fileID: 0}
+  blockSound: {fileID: 0}
 --- !u!82 &1885632364
 AudioSource:
   m_ObjectHideFlags: 0
@@ -89344,12 +89360,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorOpener: {fileID: 2058465039}
-  switchONSound2: {fileID: 1933537108}
---- !u!82 &1933537108 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 5936649723852020570, guid: 154fab7d091f9b444859f1caa10e2f8a, type: 3}
-  m_PrefabInstance: {fileID: 1933537102}
-  m_PrefabAsset: {fileID: 0}
+  fuse2Source: {fileID: 0}
+  fuseONSound: {fileID: 0}
 --- !u!1001 &1936965392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89884,6 +89896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
+  playerSource: {fileID: 0}
   itemSound: {fileID: 385669132}
   itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
@@ -92587,6 +92600,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 2063220270}
+  gameCanvasGroup: {fileID: 0}
+  dialogueAudioSource: {fileID: 0}
+  fadeDuration: 1
 --- !u!114 &2017803171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93800,6 +93816,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 0}
+  playerSource: {fileID: 0}
   itemSound: {fileID: 312446064}
   itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: 90, y: 0, z: 0}
@@ -98089,6 +98106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canPickUp: 1
   door: {fileID: 1783326613776186485}
+  playerSource: {fileID: 0}
   itemSound: {fileID: 8396155049051369796}
   itemPositionDeviation: {x: 0, y: 0, z: 0}
   itemRotationDeviation: {x: -90, y: 0, z: 360}
@@ -98179,7 +98197,8 @@ MonoBehaviour:
   - {fileID: 1457945168}
   - {fileID: 1359841464}
   - {fileID: 1948519027}
-  transistorDepSound: {fileID: 3055037654685132123}
+  fuseSource: {fileID: 0}
+  itemDepositSound: {fileID: 0}
 --- !u!1001 &2120301400376746391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101292,8 +101311,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointLight: {fileID: 8813892050956476431}
-  switchONSound: {fileID: 5936649722917024499}
+  fuseSource: {fileID: 0}
+  electricONSound: {fileID: 0}
   itemChecker: {fileID: 2012346410356697858}
+  bulbRenderer: {fileID: 0}
 --- !u!4 &7652556967944308918
 Transform:
   m_ObjectHideFlags: 0

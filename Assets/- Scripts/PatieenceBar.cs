@@ -87,7 +87,7 @@ public class PatienceBar : MonoBehaviour
         {
             Debug.Log("Player has died due to enemy’s patience running out!");
             isPlayerAlive = false;
-            GameManager.Instance.ShowGameOver();
+            GameManager.Instance.ShowGameOverPatienceEmpty();
             Invoke(nameof(ZeroFill), 1.5f);
         }
     }

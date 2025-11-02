@@ -32,10 +32,7 @@ public class Items : MonoBehaviour, IInteractable
 
     public void PlayerInteracted()
     {
-        if (gameObject.CompareTag("WrongDoll"))
-        {
-            Invoke(nameof(TriggerGameOver), 0.5f);
-        }
+        
 
         if (gameObject.CompareTag("DoorKey"))
         {
@@ -90,8 +87,5 @@ public class Items : MonoBehaviour, IInteractable
     //    }
     //}
 
-    private void TriggerGameOver()
-    {
-        GameManager.Instance.ShowGameOverImage();
-    }
+  
 }

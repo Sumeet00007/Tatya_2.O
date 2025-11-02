@@ -7,11 +7,12 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance; // Singleton pattern for easy access
-    public GameObject gameOverImage; // Reference to the Game Over UI Image
+    public GameObject patiencegameOverImage; // Reference to the Game Over UI Image
+    public GameObject platformgameOverImage;
     public float gameOverDelayforCutscene = 0.5f;
     //variable to play GameOverCutscene
     public GameObject gameOverCutScene;
-    public float gameOverDelayforImg;
+  
     void Awake()
     {
         if (Instance == null)
@@ -27,17 +28,22 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        if (gameOverImage != null)
+        if (patiencegameOverImage != null)
         {
-            gameOverImage.SetActive(false);
+            patiencegameOverImage.SetActive(false);
+        }
+
+        if(platformgameOverImage != null)
+        {
+            platformgameOverImage.SetActive(false);
         }
 
        gameOverCutScene.SetActive(false);
     }
 
-    public void ShowGameOver()
+    public void ShowGameOverPatienceEmpty()
     {
-        if (gameOverImage != null)
+        if (patiencegameOverImage != null)
         {
             Invoke(nameof(DisplayGameOver), gameOverDelayforCutscene);
         }
@@ -45,10 +51,12 @@ public class GameManager : MonoBehaviour
 
     public void DisplayGameOver()
     {
-        Invoke(nameof(RestartLevel), 8.5f);
+        
         //Play GameOver Cutscene
         gameOverCutScene.SetActive(true);
+        StartCoroutine(PatienceEmptyImage());
         //update CheckPoint
+        
     }
 
     private void RestartLevel()
@@ -67,9 +75,28 @@ public class GameManager : MonoBehaviour
         gameOverCutScene.SetActive(false);
     }
 
-    public void ShowGameOverImage()
+    public void ShowGameOverPlatformPuzzle()
     {
-        gameOverImage.SetActive(true);
-        Invoke(nameof(RestartLevel), gameOverDelayforImg);
+       
+        gameOverCutScene.SetActive(true);
+        StartCoroutine(PlatformDieImage());
+
+    }
+
+    IEnumerator PatienceEmptyImage()
+    {
+        yield return new WaitForSeconds(8.1f);
+        patiencegameOverImage.SetActive(true) ;
+        gameOverCutScene.SetActive(false);
+        Invoke(nameof(RestartLevel), 2.0f);
+    }
+
+    IEnumerator PlatformDieImage()
+    {
+        yield return new WaitForSeconds(8.1f);
+        platformgameOverImage.SetActive(true);
+        gameOverCutScene.SetActive(false);
+        Invoke(nameof(RestartLevel), 2.0f);
+
     }
 }
