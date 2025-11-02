@@ -36,17 +36,25 @@ namespace MyGame.Dialogue
 
         [Header("Audio Settings")]
         [SerializeField] private AudioSource audioSource;
-        public AudioSource itemGive;
-        public AudioSource itemReject;
+        public AudioClip itemGive;
+        public AudioClip itemReject;
         public float dialogueVolume = 1f;
         public float volumeMultiplier = 2f;
 
+        [Header("Ambient Horror System")]
+        [SerializeField] private AudioSource ambientSource;
+        [SerializeField] private AudioClip[] ambientClips;
+        [SerializeField] private float ambientStartDelay = 10f;
+        [SerializeField] private float ambientInterval = 30f;
+        private bool ambientActive = false;
+        private Coroutine ambientCoroutine;
+
         [Header("Quest UI")]
         [SerializeField] private TextMeshProUGUI questUIText;
-        [SerializeField] private float questFadeDuration = 1f;    // fade in/out speed
-        [SerializeField] private float questDisplayTime = 3f;     // how long text stays visible
+        [SerializeField] private float questFadeDuration = 1f;
+        [SerializeField] private float questDisplayTime = 3f;
         [SerializeField] private AudioClip questAppearSFX;
-        private Coroutine questFadeCoroutine;                     // track current fade
+        private Coroutine questFadeCoroutine;
 
         [Header("Player Interaction")]
         [SerializeField] private Transform itemContainer;
@@ -54,11 +62,11 @@ namespace MyGame.Dialogue
 
         private int currentDialogueIndex = 0;
         private bool awaitingItem = false;
-        private bool isPaused = false;          // ✅ new
+        private bool isPaused = false;
         private bool isDialogueActive = true;
         private Player player;
 
-        private Coroutine dialogueCoroutine;    // ✅ track main coroutine
+        private Coroutine dialogueCoroutine;
 
         void Start()
         {
@@ -79,13 +87,22 @@ namespace MyGame.Dialogue
             if (player == null || isPaused) return;
 
             float distance = Vector3.Distance(transform.position, player.transform.position);
-            if (awaitingItem && distance <= interactionRange && Input.GetKeyDown(KeyCode.E))
+            if (awaitingItem && distance <= interactionRange && (Input.GetKeyDown(KeyCode.E) || Input.GetMouseButtonDown(0)))
             {
                 TryToReceiveItem();
             }
         }
 
-        // ✅ PUBLIC API for Pause/Resume called by PauseMenu
+        // ✅ Publicly callable function to activate ambient system
+        public void ActivateAmbientHorror()
+        {
+            if (!ambientActive)
+            {
+                ambientActive = true;
+                Debug.Log("Ambient Horror System Activated.");
+            }
+        }
+
         public void PauseDialogue()
         {
             if (isPaused) return;
@@ -102,9 +119,12 @@ namespace MyGame.Dialogue
         {
             while (currentDialogueIndex < dialogueLines.Length)
             {
-                yield return WaitIfPaused(); // ⬅ pauses when game is paused
+                yield return WaitIfPaused();
 
                 DialogueLine currentLine = dialogueLines[currentDialogueIndex];
+
+                if (ambientSource && ambientSource.isPlaying)
+                    ambientSource.Stop(); // Stop ambient when dialogue starts
 
                 if (currentLine.voiceClip != null)
                     audioSource.PlayOneShot(currentLine.voiceClip, dialogueVolume * volumeMultiplier);
@@ -114,7 +134,6 @@ namespace MyGame.Dialogue
 
                 if (currentLine.triggersQuest)
                     UpdateQuestUI(currentLine.questDescription);
-
 
                 if (currentLine.requiresItem && !awaitingItem)
                 {
@@ -130,9 +149,16 @@ namespace MyGame.Dialogue
                 if (currentLine.voiceClip != null)
                     yield return new WaitWhile(() => audioSource.isPlaying);
 
+                // ✅ After each dialogue finishes
+                if (ambientActive)
+                {
+                    if (ambientCoroutine != null)
+                        StopCoroutine(ambientCoroutine);
+                    ambientCoroutine = StartCoroutine(RestartAmbientAfterDelay());
+                }
+
                 currentDialogueIndex++;
-               yield return new WaitForSeconds(dialogueInterval);
-               
+                yield return new WaitForSeconds(dialogueInterval);
             }
         }
 
@@ -141,12 +167,11 @@ namespace MyGame.Dialogue
             dialogueText.text = "";
             foreach (char letter in dialogue.ToCharArray())
             {
-                yield return WaitIfPaused(); // ⬅ pauses typing when game is paused
+                yield return WaitIfPaused();
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(typingSpeed);
             }
         }
-
 
         private void TryToReceiveItem()
         {
@@ -158,26 +183,33 @@ namespace MyGame.Dialogue
                     Destroy(item.gameObject);
                     player.isHandsFree = true;
                     awaitingItem = false;
-                    itemGive.Play();
+                    audioSource.PlayOneShot(itemGive);
                 }
                 else
                 {
-                    dialogueText.text = "This is not what I asked for!";
-                    itemReject.Play();
+                    StartCoroutine(ShowTemporaryLine("This is not what I asked for!"));
+                    audioSource.PlayOneShot(itemReject);
                 }
             }
             else
             {
-                dialogueText.text = "You don't have anything to give!";
-                itemReject.Play();
+                StartCoroutine(ShowTemporaryLine("You don't have anything to give!"));
+                audioSource.PlayOneShot(itemReject);
             }
+        }
+
+        private IEnumerator ShowTemporaryLine(string tempText)
+        {
+            string previousText = dialogueText.text;
+            dialogueText.text = tempText;
+            yield return new WaitForSeconds(2f);
+            dialogueText.text = previousText;
         }
 
         private void UpdateQuestUI(string questDescription)
         {
             if (questUIText == null) return;
 
-            // If another fade is running, stop it first
             if (questFadeCoroutine != null)
                 StopCoroutine(questFadeCoroutine);
 
@@ -188,17 +220,13 @@ namespace MyGame.Dialogue
         {
             questUIText.text = text;
             questUIText.gameObject.SetActive(true);
-
-            // Start from transparent
             Color c = questUIText.color;
             c.a = 0;
             questUIText.color = c;
 
-            // Fade In
-            float t = 0f;
-
             audioSource.PlayOneShot(questAppearSFX);
 
+            float t = 0f;
             while (t < questFadeDuration)
             {
                 t += Time.deltaTime;
@@ -207,12 +235,9 @@ namespace MyGame.Dialogue
                 yield return null;
             }
 
-            // Wait visible
             yield return new WaitForSeconds(questDisplayTime);
 
-            // Fade Out
             t = 0f;
-
             audioSource.PlayOneShot(questAppearSFX);
 
             while (t < questFadeDuration)
@@ -226,6 +251,34 @@ namespace MyGame.Dialogue
             questUIText.gameObject.SetActive(false);
         }
 
+        // ✅ Ambient System Routine
+        private IEnumerator AmbientRoutine()
+        {
+            int index = 0;
+            while (ambientActive)
+            {
+                if (!audioSource.isPlaying && ambientClips.Length > 0)
+                {
+                    ambientSource.clip = ambientClips[index];
+                    ambientSource.Play();
+
+                    index = (index + 1) % ambientClips.Length;
+                }
+
+                yield return new WaitForSeconds(ambientInterval);
+            }
+        }
+
+        // ✅ Wait before restarting ambient after each dialogue
+        private IEnumerator RestartAmbientAfterDelay()
+        {
+            yield return new WaitForSeconds(ambientStartDelay);
+
+            if (ambientActive)
+            {
+                ambientCoroutine = StartCoroutine(AmbientRoutine());
+            }
+        }
 
         public void ResetToCheckpoint(int checkpointIndex)
         {
@@ -242,10 +295,8 @@ namespace MyGame.Dialogue
 
         private IEnumerator WaitIfPaused()
         {
-            // Used inside dialogue coroutines to pause typing/dialogue when game is paused
             yield return new WaitWhile(() => !isDialogueActive);
         }
-
 
         void OnDrawGizmos()
         {
