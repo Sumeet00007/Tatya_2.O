@@ -80027,18 +80027,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-        - m_Target: {fileID: 798692709}
-          m_TargetAssemblyTypeName: RopeRemover, Assembly-CSharp
-          m_MethodName: RemoveRopes
-          m_Mode: 3
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 60
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
         - m_Target: {fileID: 2107912719}
           m_TargetAssemblyTypeName: ArtifactSpawner, Assembly-CSharp
           m_MethodName: CompleteTask
@@ -80186,7 +80174,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 1
+            m_IntArgument: 0
             m_FloatArgument: 60
             m_StringArgument: 
             m_BoolArgument: 0
@@ -80338,7 +80326,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 2
+            m_IntArgument: 1
             m_FloatArgument: 60
             m_StringArgument: 
             m_BoolArgument: 0
@@ -80410,7 +80398,7 @@ MonoBehaviour:
     requiredItemName: 
   - text: "Viru, we are almost there\u2026 it\u2019s working. I am getting my powers
       back. This happened due to that Mahagyani\u2019s curse. Check the room and
-      put all the fuses back in the fuse box. And bring me the negative fuse."
+      put all the fuses back in the fuse box. And bring me the broken fuse."
     voiceClip: {fileID: 8300000, guid: fb6d563f96ad5604a9694fb0e6cd37c0, type: 3}
     onDialogueEvent:
       m_PersistentCalls:
@@ -80492,7 +80480,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 3
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -80608,7 +80596,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 4
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -80701,7 +80689,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 5
+            m_IntArgument: 4
             m_FloatArgument: 60
             m_StringArgument: 
             m_BoolArgument: 0
@@ -80793,7 +80781,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 6
+            m_IntArgument: 5
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -80886,7 +80874,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 7
+            m_IntArgument: 6
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -80978,7 +80966,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 8
+            m_IntArgument: 7
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -81042,6 +81030,18 @@ MonoBehaviour:
     onDialogueEvent:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 798692709}
+          m_TargetAssemblyTypeName: RopeRemover, Assembly-CSharp
+          m_MethodName: RemoveRopes
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 8
+            m_FloatArgument: 60
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1124569448}
           m_TargetAssemblyTypeName: PatienceBar, Assembly-CSharp
           m_MethodName: ResetPatienceBar
@@ -81083,7 +81083,7 @@ MonoBehaviour:
     isQuestCompletion: 1
     requiresItem: 0
     requiredItemName: 
-  dialogueInterval: 4
+  dialogueInterval: 6
   typingSpeed: 0.05
   dialogueCanvas: {fileID: 311675640}
   dialogueText: {fileID: 76016092}
