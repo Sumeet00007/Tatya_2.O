@@ -154,9 +154,18 @@ public class Player : MonoBehaviour
 
     void DropCurrentItem()
     {
+        if (currentItem == null)
+        {
+            return;
+        }
         currentItem = GetCurrentItem();
         currentItemRigidBody = currentItem.GetComponent<Rigidbody>();
         currentItemCollider = currentItem.GetComponent<Collider>();
+
+        if (currentItemRigidBody == null || currentItemCollider == null)
+        {
+            return;
+        }
 
         //SetLayerRecursively(currentItem.gameObject, originalLayer);
         currentItemRigidBody.isKinematic = false;
@@ -177,6 +186,16 @@ public class Player : MonoBehaviour
 
     public Transform GetCurrentItem()
     {
+        if (itemContainer == null || itemContainer.transform == null)
+        {
+            return null;
+        }
+
+        // Check if it has at least one child
+        if (itemContainer.transform.childCount == 0)
+        {
+            return null;
+        }
         currentItem = itemContainer.transform.GetChild(0);
         return currentItem;
     }

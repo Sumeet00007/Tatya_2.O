@@ -51,7 +51,7 @@ public class DoorKnockingJS : MonoBehaviour
                     maleModel.SetActive(true);
                     player.GetComponent<Player>().TurnOffFlashlight();
                     destroyAfterAnimation = true;
-                    checkIfOutOfRange = true;
+                    //checkIfOutOfRange = true;
                 }
             }
         }
@@ -65,7 +65,7 @@ public class DoorKnockingJS : MonoBehaviour
             }
         }
 
-        if (Vector3.Distance(transform.position, player.position) > playerOutOfRangeDistance && checkIfOutOfRange)
+        if (Vector3.Distance(transform.position, player.position) > playerOutOfRangeDistance )
         {
             Destroy(gameObject);
         }
@@ -73,7 +73,7 @@ public class DoorKnockingJS : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        //Gizmos.color = Color.red;
-        //Gizmos.DrawWireSphere(transform.position, 50f);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 50f);
     }
 }
