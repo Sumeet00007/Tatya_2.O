@@ -4,7 +4,6 @@ using UnityEngine;
 public class TurnLightOn : MonoBehaviour, ICompletionHandler
 {
     [SerializeField] Light pointLight;
-    [SerializeField] AutoOpenFirstDoor autoOpenFirstDoor;
     public AudioSource fuseSource;
     public AudioClip electricONSound;
     [SerializeField] ElectricPanelChecker itemChecker;
@@ -27,8 +26,6 @@ public class TurnLightOn : MonoBehaviour, ICompletionHandler
         if (bulbRenderer != null)
             bulbRenderer.enabled = true; // ✅ turn bulb on
         lightIsOn = true;
-
-        autoOpenFirstDoor.FuseBoxCompleted();
     }
 
     void Update()
