@@ -154,8 +154,12 @@ public class Player : MonoBehaviour
 
     void DropCurrentItem()
     {
-       
         currentItem = GetCurrentItem();
+
+        if (currentItem == null)
+        {
+            return;
+        }
         currentItemRigidBody = currentItem.GetComponent<Rigidbody>();
         currentItemCollider = currentItem.GetComponent<Collider>();
 
