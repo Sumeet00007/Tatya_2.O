@@ -154,18 +154,10 @@ public class Player : MonoBehaviour
 
     void DropCurrentItem()
     {
-        if (currentItem == null)
-        {
-            return;
-        }
+       
         currentItem = GetCurrentItem();
         currentItemRigidBody = currentItem.GetComponent<Rigidbody>();
         currentItemCollider = currentItem.GetComponent<Collider>();
-
-        if (currentItemRigidBody == null || currentItemCollider == null)
-        {
-            return;
-        }
 
         //SetLayerRecursively(currentItem.gameObject, originalLayer);
         currentItemRigidBody.isKinematic = false;
